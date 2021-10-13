@@ -45,4 +45,4 @@ Tinder風UI ⇨ jTinder (ライブラリ)
 https://www.figma.com/file/ldNrVq05cxh1iMKeVnKX6c/PF-ゲーム実況者診断?node-id=11%3A2
 
 **ER図**
-https://drive.google.com/file/d/15LH6GCwofk0TMsYDVAydXvtN0AfUwEE8/view?usp=sharing
+https://drive.google.com/file/d/1p_zU993TDrp6Cqg9eObDciwa-xxAkJNH/view?usp=sharing
