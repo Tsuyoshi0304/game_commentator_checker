@@ -43,3 +43,6 @@ Tinder風UI ⇨ jTinder (ライブラリ)
 
 **画面遷移図**
 https://www.figma.com/file/ldNrVq05cxh1iMKeVnKX6c/PF-ゲーム実況者診断?node-id=11%3A2
+
+**ER図**
+https://drive.google.com/file/d/15LH6GCwofk0TMsYDVAydXvtN0AfUwEE8/view?usp=sharing
