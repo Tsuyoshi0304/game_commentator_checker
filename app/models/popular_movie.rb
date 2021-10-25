@@ -3,5 +3,4 @@ class PopularMovie < ApplicationRecord
 
   validates :movie, presence: true
   validates :commentator_id, presence: true
-  
 end
