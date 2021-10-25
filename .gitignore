@@ -9,6 +9,7 @@
 vendor/bundle
 .DS_Store
 database.yml
+yarn.lock
 # Ignore all logfiles and tempfiles.
 log/*
 /tmp/*
