@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_25_095336) do
+ActiveRecord::Schema.define(version: 2021_10_29_125641) do
 
   create_table "commentators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -18,13 +18,13 @@ ActiveRecord::Schema.define(version: 2021_10_25_095336) do
     t.text "youtube_icon", null: false
     t.integer "sex", null: false
     t.integer "age", null: false
-    t.boolean "single_play", null: false
-    t.boolean "enthusiastic_play", null: false
     t.boolean "appearance", null: false
     t.boolean "vtuber", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "movie_style_id", null: false
+    t.boolean "is_forming_a_group", null: false
+    t.integer "play_style", null: false
     t.index ["movie_style_id"], name: "index_commentators_on_movie_style_id"
   end
 

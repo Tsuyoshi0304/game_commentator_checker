@@ -9,10 +9,8 @@ class Commentator < ApplicationRecord
 	validates :youtube_icon, presence: true
 	validates :sex, presence: true
 	validates :age, presence: true
-	validates :single_play, presence: true
-	validates :enthusiastic_play, presence: true
+	validates :is_forming_a_group, presence: true
+	validates :play_style, presence: true
 	validates :appearance, presence: true
-	validates :vtuber, presence: true
-	validates :voice, presence: true
-	validates :movie_style_id, presence: true
+	validates :vtuber, presence: true 
 end
