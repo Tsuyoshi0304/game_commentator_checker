@@ -2,15 +2,25 @@ class Commentator < ApplicationRecord
 	has_many :popular_movies, dependent: :destroy
 	has_many :games, through: :playings
 	has_many :playings
-  belongs_to :movie_style
+  belongs_to :movie_style, optional: true
 
 	validates :name, presence: true
-	validates :voice, presence: true
-	validates :youtube_icon, presence: true
 	validates :sex, presence: true
 	validates :age, presence: true
 	validates :is_forming_a_group, presence: true
 	validates :play_style, presence: true
 	validates :appearance, presence: true
 	validates :vtuber, presence: true 
+
+	enum sex: { unknown_sex: 0, male: 1, female: 2 }
+	enum age: { unknown_age: 0, around_10: 5, teenager: 10, twenties: 20, thirties: 30, forties: 40, after_fifties: 50 }
+	enum play_style: {
+		good_talk: 10,
+		astringent_voice: 20,
+		changing_voice: 30,
+		playing_well: 40,
+		playing_noisy: 50,
+		playing_happily: 60,
+		healing_playing: 70
+	}
 end
