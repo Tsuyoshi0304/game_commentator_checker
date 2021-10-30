@@ -1,7 +1,7 @@
 class Commentator < ApplicationRecord
 	has_many :popular_movies, dependent: :destroy
-	has_many :games, through: :playings
-	has_many :playings
+	has_many :playings, dependent: :destroy
+	has_many :playing_games, through: :playings, source: :game
   belongs_to :movie_style, optional: true
 
 	validates :name, presence: true
