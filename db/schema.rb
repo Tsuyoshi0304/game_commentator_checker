@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2021_10_29_125641) do
 
   create_table "commentators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
-    t.text "voice", null: false
-    t.text "youtube_icon", null: false
+    t.text "voice"
+    t.text "youtube_icon"
     t.integer "sex", null: false
     t.integer "age", null: false
     t.boolean "appearance", null: false
@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 2021_10_29_125641) do
   end
 
   create_table "movie_styles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.boolean "short", null: false
-    t.boolean "single_shot", null: false
-    t.boolean "live", null: false
+    t.integer "length", null: false
+    t.integer "single_shot", null: false
+    t.integer "live", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

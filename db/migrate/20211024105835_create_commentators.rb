@@ -2,8 +2,8 @@ class CreateCommentators < ActiveRecord::Migration[6.0]
   def change
     create_table :commentators do |t|
       t.string :name, null: false
-      t.text :voice, null: false
-      t.text :youtube_icon, null: false
+      t.text :voice
+      t.text :youtube_icon
       t.integer :sex, null: false
       t.integer :age, null: false
       t.boolean :single_play, null: false
