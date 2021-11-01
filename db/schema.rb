@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_29_125641) do
+ActiveRecord::Schema.define(version: 2021_11_01_083420) do
 
   create_table "commentators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -28,11 +28,18 @@ ActiveRecord::Schema.define(version: 2021_10_29_125641) do
     t.index ["movie_style_id"], name: "index_commentators_on_movie_style_id"
   end
 
-  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "title", null: false
-    t.string "genre", null: false
+  create_table "game_genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "genre_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "game_genre_id", null: false
+    t.index ["game_genre_id"], name: "index_games_on_game_genre_id"
   end
 
   create_table "movie_styles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -61,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_10_29_125641) do
   end
 
   add_foreign_key "commentators", "movie_styles"
+  add_foreign_key "games", "game_genres"
   add_foreign_key "playings", "commentators"
   add_foreign_key "playings", "games"
   add_foreign_key "popular_movies", "commentators"
