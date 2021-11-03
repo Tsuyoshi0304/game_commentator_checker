@@ -1,5 +1,34 @@
 <%= form_with url: search_path, method: :get, local: true do |f| %>
-  <%= f.check_box :game_genre %>
-	<p>マイクラ</p>
+	<div class="games">
+		<p>ゲームジャンル</p>
+      <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name) %>
+	</div>
+
+	<div class="commentators">
+    <p>実況者</p>
+		<%= f.label '性別' %>
+		<%= f.select 'search[sex]', options_for_select({ '男性' => '1', '女性' => '2', '不明' => '0' }) %><br>
+		<%= f.label '年齢' %>
+		<%= f.select 'search[age]', options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }) %><br>
+		<%= f.label 'プレイスタイル' %>
+		<%= f.select 'search[play_style]', options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }) %><br>
+		<%= f.label 'グループを組んでいる' %>
+		<%= f.check_box :is_forming_a_group, id: 'グループを組んでいる' %><br>
+		<%= f.label '顔出ししている' %>
+		<%= f.check_box :appearance, id: '顔出ししている' %><br>
+		<%= f.label 'vtuberである' %>
+		<%= f.check_box :vtuber, id: 'vtuberである' %>
+  </div>
+
+	<div class="movie-styles">
+		<p>動画のスタイル</p>
+		<%= f.label '長さ' %>
+		<%= f.select 'search[length]', options_for_select({ '20分以内' => '1', '30分から40分' => '2', '1時間以上' => '3' }) %><br>
+		<%= f.label '単発実況の割合' %>
+		<%= f.select 'search[single_shot]', options_for_select({ '単発実況メイン' => '1', '半々くらい' => '2', 'シリーズものメイン' => '3' }) %><br>
+		<%= f.label 'ライブの割合' %>
+		<%= f.select 'search[live]', options_for_select({ 'ライブ多め' => '1', '半々くらい' => '2', '編集動画多め' => '3' }) %>
+	</div>
+
 	<%= f.submit '検索' %>
 <% end %>
