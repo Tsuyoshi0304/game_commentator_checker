@@ -1,3 +1,12 @@
-<% @datas.each do |commentator| %>
-  <%= commentator.name %>
+<p>オススメ実況者は...</p>
+
+<% if @datas.blank? %>
+	<p>見つかりませんでした。</p>
+<% else %>
+	<% @datas.each do |commentator| %>
+    <%= commentator.name %>
+  <% end %>
 <% end %>
+
+<%= link_to 'タイトルに戻る', root_path %>
+
