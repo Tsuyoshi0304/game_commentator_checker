@@ -4,6 +4,7 @@ class CreateCommentators < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.text :voice
       t.text :youtube_icon
+      t.text :youtube_channel_url
       t.integer :sex, null: false
       t.integer :age, null: false
       t.boolean :single_play, null: false

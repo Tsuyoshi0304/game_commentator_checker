@@ -5,6 +5,8 @@
 <% else %>
 	<% @datas.each do |commentator| %>
     <%= commentator.name %>
+		
+		<%= link_to image_tag(commentator.youtube_icon), commentator.youtube_channel_url %>
   <% end %>
 <% end %>
 
