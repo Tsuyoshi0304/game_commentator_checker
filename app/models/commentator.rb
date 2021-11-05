@@ -4,6 +4,8 @@ class Commentator < ApplicationRecord
 	has_many :playing_games, through: :playings, source: :game
   belongs_to :movie_style, optional: true
 
+	has_one_attached :youtube_icon
+
 	validates :name, presence: true
 	validates :sex, presence: true
 	validates :age, presence: true

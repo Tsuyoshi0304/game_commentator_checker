@@ -7,9 +7,7 @@
 # Ignore bundler config.
 /.bundle
 vendor/bundle
-.DS_Store
-database.yml
-yarn.lock
+
 # Ignore all logfiles and tempfiles.
 log/*
 /tmp/*
@@ -37,3 +35,9 @@ log/*
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+.DS_Store
+database.yml
+yarn.lock
+/app/assets/images/
+/db/fixtures/youtube_icons/
