@@ -1,14 +1,23 @@
-<p>オススメ実況者は...</p>
+<div class="container">
+	<div class="title round">
+		<h1>オススメ実況者は...</h1>
+	</div>	
 
-<% if @datas.blank? %>
-	<p>見つかりませんでした。</p>
-<% else %>
-	<% @datas.each do |commentator| %>
-    <%= commentator.name %>
-		
-		<%= link_to image_tag(commentator.youtube_icon), commentator.youtube_channel_url %>
-  <% end %>
-<% end %>
+  <div class="result">
+		<% if @datas.blank? %>
+			<p>見つかりませんでした。</p>
+		<% else %>
+		<div class="commentator">
+			<% @datas.each do |commentator| %>
+				<div class="commentator-name round">
+					<%= commentator.name %>
+				</div>
+					<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
+      <% end %>
+		</div>
+		<% end %>
+	</div>
 
-<%= link_to 'タイトルに戻る', root_path %>
+	<%= link_to 'タイトルに戻る', root_path, class: 'btn btn-primary round' %>
+</div>
 
