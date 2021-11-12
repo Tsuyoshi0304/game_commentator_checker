@@ -1,5 +1,5 @@
-class SearchsController < ApplicationController
-  def top; end
+class SearchesController < ApplicationController
+  def new; end
 
   def search
     @genre_id = params['genre_name'] 

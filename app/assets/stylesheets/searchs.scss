@@ -7,8 +7,8 @@
   font-size: 20px;
   background-color: white;
   width: 200px;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 2em;
   margin-top: 30px;
   
 }
@@ -24,11 +24,13 @@
   }
 }
 
-.gamegenre-checkbox {
+/*.gamegenre-checkbox {
   height: 200px;
+  width: 600px;
   background-color: white;
   border-radius: 100px;
-}
+
+}*/
 
 .result {
   background-color: white;
@@ -63,11 +65,42 @@
   border-radius: 100px;
 }
 
-.btn-primary {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+.video {
+  position: absolute;
+  top: 85px;
+  left: 250px;
 }
+
+.btn-primary {
+  margin-left: 300px;
+  margin-top: 30px;
+  width: 150px;
+}
+
+label{
+  cursor: pointer;
+  padding:5px;
+  margin: 3px; 
+  border: 1px solid #434343;
+  border-radius: 10px;
+  background-color:#ccd1e2;
+  color: black;
+
+}
+.attribute {
+  border: none;
+  background-color: white;
+  border-radius: 100px;
+}
+
+/*input{
+  display: none;
+}*/
+.check_box:checked + .label {
+  background-color: orange;
+}
+
+
 
 
 
