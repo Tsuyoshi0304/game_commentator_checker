@@ -3,37 +3,43 @@
 		<h1>以下から好きなタイプを選択</h1>
 	</div>
 
-	<%= form_with url: search_path, method: :get, local: true do |f| %>
+	<%= form_with url: searches_search_path, method: :get, local: true do |f| %>
     <div class="games">
 			<h3 class="round sector">ゲームジャンル</h3>
-			<div>
-        <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name, class: 'gamegenre-checkbox') %>
+			<div class="gamegenre-checkbox">
+        <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name) do |b| %>
+					<%= b.label class: 'check_box label' do %>
+						<%= b.check_box + b.text %>
+					<% end %>
+				<% end %>
+				<!-- <input type="checkbox" class="check_box" id="hoge1" />
+        <label class="label" for="hoge1">HOGE！だよ！</label> -->
 			</div>
 		</div>
 
 		<div class="commentators">
       <h3 class="round sector">実況者</h3>
-				<%= f.label '性別' %>
+				<%= f.label '性別', class: 'attribute' %>
 				<%= f.select 'search[sex]', options_for_select({ '男性' => '1', '女性' => '2', '不明' => '0' }) %><br>
-				<%= f.label '年齢' %>
+				<%= f.label '年齢', class: 'attribute' %>
 				<%= f.select 'search[age]', options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }) %><br>
-				<%= f.label 'プレイスタイル' %>
+				<%= f.label 'プレイスタイル', class: 'attribute' %>
 				<%= f.select 'search[play_style]', options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }) %><br>
-				<%= f.label 'グループを組んでいる' %>
+				<%= f.label 'グループを組んでいる', class: 'attribute' %>
 				<%= f.check_box :is_forming_a_group, id: 'グループを組んでいる' %><br>
-				<%= f.label '顔出ししている' %>
+				<%= f.label '顔出ししている', class: 'attribute' %>
 				<%= f.check_box :appearance, id: '顔出ししている' %><br>
-				<%= f.label 'vtuberである' %>
+				<%= f.label 'vtuberである', class: 'attribute' %>
 				<%= f.check_box :vtuber, id: 'vtuberである' %>
     </div>
 
 		<div class="movie-styles">
 			<h3 class="round sector">動画のスタイル</h3>
-			<%= f.label '長さ' %>
+			<%= f.label '長さ', class: 'attribute' %>
 			<%= f.select 'search[length]', options_for_select({ '20分以内' => '1', '30分から40分' => '2', '1時間以上' => '3' }) %><br>
-			<%= f.label '単発実況の割合' %>
+			<%= f.label '単発実況の割合', class: 'attribute' %>
 			<%= f.select 'search[single_shot]', options_for_select({ '単発実況メイン' => '1', '半々くらい' => '2', 'シリーズものメイン' => '3' }) %><br>
-			<%= f.label 'ライブの割合' %>
+			<%= f.label 'ライブの割合', class: 'attribute' %>
 			<%= f.select 'search[live]', options_for_select({ 'ライブ多め' => '1', '半々くらい' => '2', '編集動画多め' => '3' }) %>
 		</div>
 

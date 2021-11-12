@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
-  get '/search/top', to: 'searchs#top'
-  get '/search', to: 'searchs#search'
-  get '/result', to: 'results#result'
+
+  get 'searches/new', to: 'searches#new'
+  get 'searches/search', to: 'searches#search'
 end
