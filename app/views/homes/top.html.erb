@@ -1,7 +1,12 @@
-<div class="home-title">
-	<h2>あなたに合ったゲーム実況者が見つかる</h2>
+<div class="container">
+	<div class="row">
+		<div class="home-title">
+			<h2>あなたに合うゲーム実況者が見つかる</h2>
 	
-	<h1>ゲーム実況者診断</h1>
+			<h1>ゲーム実況者診断</h1>
+		</div>
+
+		<%= link_to t('.start'), searches_new_path, class: 'btn-start' %>
+	</div>
 </div>
 
-<%= link_to '始める', searches_new_path, class: 'btn-start' %>

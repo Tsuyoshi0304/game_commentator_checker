@@ -1,0 +1,12 @@
+ja:
+  homes:
+    top:
+      start: 始める
+  searches:
+    new: 
+      choice_type: 以下から好きなタイプを選択
+      submit: 検索
+    search:
+      recommendation_commentator: オススメ実況者は...
+      not_found: 見つかりませんでした。
+      to_title: タイトルに戻る
