@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="title round">
-		<h1>オススメ実況者は...</h1>
+		<h1><%= t('.recommendation_commentator') %></h1>
 	</div>	
 
   <div class="result">
 		<% if @datas.blank? %>
-			<p>見つかりませんでした。</p>
+			<p><%= t('.not_found') %></p>
 		<% else %>
 		<div class="commentator">
 			<% @datas.each do |commentator| %>
@@ -21,6 +21,6 @@
 		<% end %>
 	</div>
 
-	<%= link_to 'タイトルに戻る', root_path, class: 'btn btn-primary round' %>
+	<%= link_to t('.to_title'), root_path, class: 'btn btn-primary round to-title' %>
 </div>
 
