@@ -1,6 +1,12 @@
+/* 検索画面  */
+
 .round {
   border-radius: 100px;
   text-align: center;
+}
+
+.form {
+  margin: 0 auto;
 }
 
 .sector {
@@ -9,8 +15,7 @@
   width: 200px;
   height: 40px;
   line-height: 2em;
-  margin-top: 30px;
-  
+  margin: 30px auto;
 }
 
 .title {
@@ -24,19 +29,49 @@
   }
 }
 
-/*.gamegenre-checkbox {
-  height: 200px;
-  width: 600px;
-  background-color: white;
-  border-radius: 100px;
+label{
+  cursor: pointer;
+  padding:5px;
+  margin: 3px; 
+  border: 1px solid #434343;
+  border-radius: 10px;
+  background-color:#ccd1e2;
+  color: black;
 
+}
+.attribute {
+  border: none;
+  padding: 5px 50px;
+  background-color: #ccd1e2;
+  border-radius: 100px;
+}
+
+/*input{
+  display: none;
 }*/
+
+.check_box:checked + label {
+  background-color: orange;
+}
+
+.btn-primary {
+  width: 40%;
+}
+
+.search {
+  margin-top: 80px;
+  margin-left: 30%;
+  margin-bottom: 100px;
+}
+
+/* 結果画面 */
 
 .result {
   background-color: white;
   height: 300px;
+  
   border-radius: 100px;
-  margin-top: 30px;
+  margin: 30px auto;
   position: relative;
   p {
     position: absolute;
@@ -61,44 +96,25 @@
 .youtube-icon {
   position: absolute;
   top: 30%;
-  left: 5%;
+  left: 7%;
   border-radius: 100px;
 }
 
 .video {
   position: absolute;
-  top: 85px;
-  left: 250px;
+  left: 45%;
+  top: 30%;
+  width: 40%;
+  height: 50%;
 }
 
-.btn-primary {
-  margin-left: 300px;
+.to-title {
+  margin-left: 60%;
   margin-top: 30px;
-  width: 150px;
 }
 
-label{
-  cursor: pointer;
-  padding:5px;
-  margin: 3px; 
-  border: 1px solid #434343;
-  border-radius: 10px;
-  background-color:#ccd1e2;
-  color: black;
 
-}
-.attribute {
-  border: none;
-  background-color: white;
-  border-radius: 100px;
-}
 
-/*input{
-  display: none;
-}*/
-.check_box:checked + .label {
-  background-color: orange;
-}
 
 
 

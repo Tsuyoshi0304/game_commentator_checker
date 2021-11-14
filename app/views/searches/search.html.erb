@@ -1,26 +1,28 @@
 <div class="container">
-	<div class="title round">
-		<h1><%= t('.recommendation_commentator') %></h1>
-	</div>	
+	<div class="row">
+		<div class="title round">
+			<h1><%= t('.recommendation_commentator') %></h1>
+		</div>	
 
-  <div class="result">
-		<% if @datas.blank? %>
-			<p><%= t('.not_found') %></p>
-		<% else %>
-		<div class="commentator">
-			<% @datas.each do |commentator| %>
-				<div class="commentator-name round">
-					<%= commentator.name %>
-				</div>
-					<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
-					<div class="video">
-						<iframe width="230" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  	<div class="col-12 col-md-10 col-lg-6 result">
+			<% if @datas.blank? %>
+				<p><%= t('.not_found') %></p>
+			<% else %>
+			<div class="commentator">
+				<% @datas.each do |commentator| %>
+					<div class="commentator-name round">
+						<%= commentator.name %>
 					</div>
-      <% end %>
+						<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
+						<div class="video">
+							<iframe width="120%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+      	<% end %>
+			</div>
+			<% end %>
 		</div>
-		<% end %>
-	</div>
 
-	<%= link_to t('.to_title'), root_path, class: 'btn btn-primary round to-title' %>
+		<%= link_to t('.to_title'), root_path, class: 'btn btn-primary round to-title' %>
+	</div>
 </div>
 
