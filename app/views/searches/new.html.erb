@@ -1,3 +1,4 @@
+<%= render 'flash_messages' %>
 <div class="container">
 	<div class="row">
 		<div class="title round">
@@ -8,13 +9,13 @@
     	  <div class="games">
 					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
 					<div class="gamegenre-checkbox">
-    	      <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name) do |b| %>
+    	      <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name, options ={class: 'check_box'}) do |b| %>
 							<%= b.label class: 'check_box' do %>
 								<%= b.check_box + b.text %>
 							<% end %>
 						<% end %>
-						<!-- <input type="checkbox" class="check_box" id="hoge1" />
-    	      <label class="label" for="hoge1">HOGE！だよ！</label> -->
+					  <input type="checkbox" class="check_box" id="hoge1" />
+    	      <label class="label" for="hoge1">HOGE</label> 
 					</div>
 				</div>
 
