@@ -102,3 +102,10 @@ GameGenre.seed do |s|
 	s.id = 21
 	s.genre_name = 'バカゲー'
 end
+
+GameGenre.seed do |s|
+	s.id = 22
+	s.genre_name = '格闘'
+end
+
+
