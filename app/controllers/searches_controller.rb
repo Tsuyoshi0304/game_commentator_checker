@@ -13,7 +13,7 @@ class SearchesController < ApplicationController
       @length = params['search']['length']
       @single_shot = params['search']['single_shot']
       @live = params['search']['live']
-      @datas = search_for(@genre_id, @sex, @age, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @single_shot, @live)
+      @commentators = search_for(@genre_id, @sex, @age, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @single_shot, @live)
     else
       flash.now[:warning] = 'ゲームジャンルを選択してください'
       render :new

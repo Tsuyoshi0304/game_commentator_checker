@@ -28,3 +28,6 @@ PopularMovie.seed do |s|
 	s.commentator_id = 5
 end
 
+#実験
+
+

@@ -825,3 +825,8 @@ Playing.seed do |s|
 	s.game_id = 38
   s.commentator_id = 7
 end
+
+#実験
+
+
+

@@ -137,3 +137,6 @@ Commentator.seed do |s|
 	s.vtuber = 0
 	s.movie_style_id = 25
 end
+
+#実験
+
