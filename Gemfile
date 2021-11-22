@@ -6,7 +6,7 @@ ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -44,6 +44,8 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'mysql2', '>= 0.4.4'
+  #gem 'google-api-client', '0.7', require: 'google/api_client'
 end
 
 group :development do
@@ -58,6 +60,10 @@ end
 group :test do
   gem 'capybara'
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'pg', '1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
