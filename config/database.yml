@@ -49,6 +49,10 @@ test:
 #
 production:
   <<: *default
-  database: game_commentator_checker_production
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: db/production.postgresql
+  url: <%= ENV['DATABASE_URL'] %>
   username: game_commentator_checker
   password: <%= ENV['GAME_COMMENTATOR_CHECKER_DATABASE_PASSWORD'] %>
