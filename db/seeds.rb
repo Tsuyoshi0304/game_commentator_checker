@@ -3,7 +3,7 @@ file_names = %w(
 )
 
 file_names.each do |file_name|
-	path = Rails.root.join("db/fixtures/#{Rails.env}/#{file_name}.rb")
+	path = "db/fixtures/#{Rails.env}/#{file_name}.rb"
 
 	path = path.sub(Rails.env, "development") unless File.exist?(path)
 
