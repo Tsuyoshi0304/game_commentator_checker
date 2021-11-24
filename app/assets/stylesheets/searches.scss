@@ -1,0 +1,127 @@
+/* 検索画面  */
+
+.round {
+  border-radius: 100px;
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+}
+
+.sector {
+  font-size: 20px;
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  line-height: 2em;
+  margin: 30px auto;
+}
+
+.title {
+  background-color: black;
+  margin-top: 30px;
+  height: 50px;
+  h1 {
+    color: white;
+    line-height: 50px;
+    font-size: 30px;
+  }
+}
+
+label{
+  cursor: pointer;
+  padding:5px;
+  margin: 3px; 
+  border: 1px solid #434343;
+  border-radius: 10px;
+  background-color:#ccd1e2;
+  color: black;
+
+}
+.attribute {
+  border: none;
+  padding: 5px 50px;
+  background-color: #ccd1e2;
+  border-radius: 100px;
+}
+
+/*input{
+  display: none;
+}*/
+
+.check_box:checked + label {
+  background-color: orange;
+}
+
+.btn-primary {
+  width: 40%;
+}
+
+.search {
+  margin-top: 80px;
+  margin-left: 30%;
+  margin-bottom: 100px;
+}
+
+/* 結果画面 */
+
+.result {
+  background-color: white;
+  height: 300px;
+  border-radius: 100px;
+  margin: 30px auto;
+  position: relative;
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.commentator-name {
+  background-color: black;
+  width: 80%;
+  height: 15%;
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.youtube-icon {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  border-radius: 100px;
+}
+
+.video {
+  position: absolute;
+  left: 45%;
+  top: 30%;
+  width: 40%;
+  height: 50%;
+}
+
+.to-title {
+  margin-left: 60%;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
