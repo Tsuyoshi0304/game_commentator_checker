@@ -1,7 +1,0 @@
-ja:
-  enums:
-    movie_style:
-      length:
-        within_20_minutes: 20分以内
-        from_30_to_40_minutes: 30分から40分ほど
-        over_1_hour: 1時間以上
