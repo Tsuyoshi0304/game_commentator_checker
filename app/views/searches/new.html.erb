@@ -1,0 +1,56 @@
+<%= render 'flash_messages' %>
+<div class="container">
+	<div class="row">
+		<div class="title round">
+			<h1><%= t('.choice_type') %></h1>
+		</div>
+		<div class="col-12 col-md-12 col-lg-7 form">
+			<%= form_with url: searches_search_path, method: :get, local: true do |f| %>
+    	  <div class="games">
+					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
+					<div class="gamegenre-checkbox">
+    	      <%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name, options ={class: 'check_box'}) do |b| %>
+							<%= b.label class: 'check_box' do %>
+								<%= b.check_box + b.text %>
+							<% end %>
+						<% end %>
+					  <input type="checkbox" class="check_box" id="hoge1" />
+    	      <label class="label" for="hoge1">HOGE</label> 
+					</div>
+				</div>
+
+				<div class="commentators">
+    	    <h3 class="round sector"><%= Commentator.model_name.human %></h3>
+					<div class="commentator-searches">
+						<%= f.label Commentator.human_attribute_name(:sex), class: 'attribute' %>
+						<%= f.select 'search[sex]', options_for_select({ '男性' => '1', '女性' => '2', '不明' => '0' }) %><br>
+						<%= f.label Commentator.human_attribute_name(:age), class: 'attribute' %>
+						<%= f.select 'search[age]', options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }) %><br>
+						<%= f.label Commentator.human_attribute_name(:play_style), class: 'attribute' %>
+						<%= f.select 'search[play_style]', options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }) %><br>
+						<%= f.label Commentator.human_attribute_name(:is_forming_a_group), class: 'attribute' %>
+						<%= f.check_box :is_forming_a_group, id: Commentator.human_attribute_name(:is_forming_a_group) %><br>
+						<%= f.label Commentator.human_attribute_name(:appearance), class: 'attribute' %>
+						<%= f.check_box :appearance, id: Commentator.human_attribute_name(:appearance) %><br>
+						<%= f.label Commentator.human_attribute_name(:vtuber), class: 'attribute' %>
+						<%= f.check_box :vtuber, id: Commentator.human_attribute_name(:vtuber) %>
+					</div>
+    	  </div>
+
+				<div class="movie-styles">
+					<h3 class="round sector"><%= MovieStyle.model_name.human %></h3>
+					<div class="movie-style-searches">
+						<%= f.label MovieStyle.human_attribute_name(:length), class: 'attribute' %>
+						<%= f.select 'search[length]', options_for_select({ '20分以内' => '1', '30分から40分' => '2', '1時間以上' => '3' }) %><br>
+						<%= f.label MovieStyle.human_attribute_name(:single_shot), class: 'attribute' %>
+						<%= f.select 'search[single_shot]', options_for_select({ '単発実況メイン' => '1', '半々くらい' => '2', 'シリーズものメイン' => '3' }) %><br>
+						<%= f.label MovieStyle.human_attribute_name(:live), class: 'attribute' %>
+						<%= f.select 'search[live]', options_for_select({ 'ライブ多め' => '1', '半々くらい' => '2', '編集動画多め' => '3' }) %>
+					</div>
+				</div>
+
+				<%= f.submit t('.submit'), class: 'btn btn-primary round search' %>
+    	<% end %>
+		</div>
+	</div>
+</div>
