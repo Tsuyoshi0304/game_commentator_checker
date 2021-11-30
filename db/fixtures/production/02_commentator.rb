@@ -1,7 +1,7 @@
 Commentator.seed do |s|
     s.id = 1
       s.name = 'キヨ。'
-      s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open(Rails.root.join('assets/images/kiyo.jpeg')), filename: 'kiyo.jpeg' )
+      s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/kiyo.jpeg'), filename: 'kiyo.jpeg' )
       s.youtube_channel_url = 'https://www.youtube.com/user/KIYOisGOD'
       s.sex = 1
       s.age = 30
