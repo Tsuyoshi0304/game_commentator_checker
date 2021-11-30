@@ -34,8 +34,8 @@ gem 'ransack'
 gem 'pry-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'aws-sdk-s3'
-gem 'fog-aws'
+gem 'aws-sdk-s3', require: false
+gem 'ancestry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
