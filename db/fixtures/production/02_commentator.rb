@@ -29,7 +29,7 @@ Commentator.seed do |s|
   Commentator.seed do |s|
     s.id = 3
       s.name = '牛沢'
-      s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('.app/assets/images/ushizawa.jpeg'), filename: 'ushizawa.jpeg' )
+      s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/ushizawa.jpeg'), filename: 'ushizawa.jpeg' )
       s.youtube_channel_url = 'https://www.youtube.com/c/ushizawa16'
       s.sex = 1
       s.age = 30
