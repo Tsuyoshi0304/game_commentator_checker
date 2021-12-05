@@ -8,14 +8,12 @@
 			<%= form_with url: searches_search_path, method: :get, local: true do |f| %>
         <div class="games">
 					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
-					
-		<!--- <div class="gamegenre-checkbox">
-						<%= f.collection_check_boxes(:genre_name, GameGenre.all, :id, :genre_name, options ={class: 'check_box'}) do |b| %>
-							<%= b.label class: 'check_box' do %>
-								<%= b.check_box + b.text %>
-							<% end %>
-						<% end %>
-					</div> -->
+					<div class="games-genre">
+						<%= f.label :genre_name, '大カテゴリー' %>
+						<div class="parent-select">
+							<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {id: 'parent_gamegenre'}) %>
+						</div>
+					</div>
 				</div>
 
 				<div class="commentators">
