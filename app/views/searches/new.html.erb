@@ -1,4 +1,4 @@
-<%= render 'flash_messages' %>
+<!-- <%= render 'flash_messages' %> -->
 <div class="container">
 	<div class="row">
 		<div class="title round">
@@ -9,9 +9,9 @@
         <div class="games">
 					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
 					<div class="games-genre">
-						<%= f.label :genre_name, '大カテゴリー' %>
-						<div class="parent-select">
-							<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {id: 'parent_gamegenre'}) %>
+						<%= f.label :genre_name, '大カテゴリー', class: 'label' %>
+						<div class="select-wrapper gamegenre">
+							<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {class: 'select', id: 'parent_gamegenre'}) %>
 						</div>
 					</div>
 				</div>
@@ -19,30 +19,100 @@
 				<div class="commentators">
           <h3 class="round sector"><%= Commentator.model_name.human %></h3>
 					<div class="commentator-searches">
-						<%= f.label Commentator.human_attribute_name(:sex), class: 'attribute' %>
-						<%= f.select 'search[sex]', options_for_select({ '男性' => '1', '女性' => '2', '不明' => '0' }) %><br>
-						<%= f.label Commentator.human_attribute_name(:age), class: 'attribute' %>
-						<%= f.select 'search[age]', options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }) %><br>
-						<%= f.label Commentator.human_attribute_name(:play_style), class: 'attribute' %>
-						<%= f.select 'search[play_style]', options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }) %><br>
-						<%= f.label Commentator.human_attribute_name(:is_forming_a_group), class: 'attribute' %>
-						<%= f.check_box :is_forming_a_group, id: Commentator.human_attribute_name(:is_forming_a_group) %><br>
-						<%= f.label Commentator.human_attribute_name(:appearance), class: 'attribute' %>
-						<%= f.check_box :appearance, id: Commentator.human_attribute_name(:appearance) %><br>
-						<%= f.label Commentator.human_attribute_name(:vtuber), class: 'attribute' %>
-						<%= f.check_box :vtuber, id: Commentator.human_attribute_name(:vtuber) %>
+						<%= f.label :sex, Commentator.human_attribute_name(:sex), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-secondary" id="btn-unknown" style="width:30%">
+								<%= f.radio_button :sex, :unknown_sex, class: 'radio-button', id: 'radio-button-unknown' %>不明
+							</label>
+							<label class="btn btn-outline-primary", id="btn-male" style="width:30%">
+								<%= f.radio_button :sex, :male, checked: true, class: 'radio-button', id: 'radio-button-male' %>男性
+							</label>
+							<label class="btn btn-outline-danger", id="btn-female" style="width:30%">
+								<%= f.radio_button :sex, :female, class: 'radio-button', id: 'radio-button-female' %>女性
+							</label>
+						</div>
+						
+						
+						<div class="label-wrapper">
+							<%= f.label Commentator.human_attribute_name(:age), class: 'label' %>
+							<div class="select-wrapper age">
+								<%= f.select :age, options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }), {}, {class: 'select select-age'} %><br>
+							</div>
+						</div>
+						<%= f.label Commentator.human_attribute_name(:play_style), class: 'label' %>
+						<div class="select-wrapper play-style">
+							<%= f.select :play_style, options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }), {}, {class: 'select select-play-style'} %><br>
+						</div>
+						<%= f.label Commentator.human_attribute_name(:is_forming_a_group), class: 'label attribute' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-success", id="btn-is-forming-a-group-1" style="width:30%">
+								<%= f.radio_button :is_forming_a_group, '1', class: 'radio-button', id: 'radio-button-is-forming-a-group-true' %>はい
+							</label>
+							<label class="btn btn-outline-danger", id="btn-is-forming-a-group-0" style="width:30%">
+								<%= f.radio_button :is_forming_a_group, '0', class: 'radio-button', id: 'radio-button-is-forming-a-group-false' %>いいえ
+							</label>
+						</div>
+
+						<%= f.label Commentator.human_attribute_name(:appearance), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-success", id="btn-appearance-1" style="width:30%">
+								<%= f.radio_button :appearance, '1', class: 'radio-button', id: 'radio-button-appearance-true' %>はい
+							</label>
+							<label class="btn btn-outline-danger", id="btn-appearance-0" style="width:30%">
+								<%= f.radio_button :appearance, '0', class: 'radio-button', id: 'radio-button-appearance-false' %>いいえ
+							</label>
+						</div>
+						<%= f.label Commentator.human_attribute_name(:vtuber), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-success", id="btn-vtuber-1" style="width:30%">
+								<%= f.radio_button :vtuber, '1', class: 'radio-button', id: 'radio-button-vtuber-true' %>はい
+							</label>
+							<label class="btn btn-outline-danger", id="btn-vtuber-0" style="width:30%">
+								<%= f.radio_button :vtuber, '0', class: 'radio-button', id: 'radio-button-vtuber-false' %>いいえ
+							</label>
+						</div>
 					</div>
         </div>
 
 				<div class="movie-styles">
 					<h3 class="round sector"><%= MovieStyle.model_name.human %></h3>
 					<div class="movie-style-searches">
-						<%= f.label MovieStyle.human_attribute_name(:length), class: 'attribute' %>
-						<%= f.select 'search[length]', options_for_select({ '20分以内' => '1', '30分から40分' => '2', '1時間以上' => '3' }) %><br>
-						<%= f.label MovieStyle.human_attribute_name(:single_shot), class: 'attribute' %>
-						<%= f.select 'search[single_shot]', options_for_select({ '単発実況メイン' => '1', '半々くらい' => '2', 'シリーズものメイン' => '3' }) %><br>
-						<%= f.label MovieStyle.human_attribute_name(:live), class: 'attribute' %>
-						<%= f.select 'search[live]', options_for_select({ 'ライブ多め' => '1', '半々くらい' => '2', '編集動画多め' => '3' }) %>
+						<%= f.label MovieStyle.human_attribute_name(:length), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-secondary", id="btn-length-within-20-minutes" style="width:30%">
+								<%= f.radio_button :length, '1', checked: true, class: 'radio-button', id: 'radio-button-within-20-minutes' %>20分以内
+							</label>
+							<label class="btn btn-outline-primary", id="btn-length-from-30-to-40-minutes" style="width:30%">
+								<%= f.radio_button :length, '2', class: 'radio-button', id: 'radio-button-from-30-to-40-minutes' %>30分から40分
+							</label>
+							<label class="btn btn-outline-danger", id="btn-length-over-1-hour" style="width:30%">
+								<%= f.radio_button :length, '3', class: 'radio-button', id: 'radio-button-over-1-hour' %>1時間以上
+							</label>
+						</div>
+						<%= f.label MovieStyle.human_attribute_name(:single_shot), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+						<label class="btn btn-outline-secondary", id="btn-single-shot-main" style="width:30%">
+							<%= f.radio_button :single_shot, '1', checked: true, class: 'radio-button', id: 'radio-button-single-shot-main' %>単発実況メイン
+						</label>
+						<label class="btn btn-outline-primary", id="btn-half-and-half-single-shot" style="width:30%">
+							<%= f.radio_button :single_shot, '2', class: 'radio-button', id: 'radio-button-half-and-half-single-shot' %>半々くらい
+						</label>
+						<label class="btn btn-outline-danger", id="btn-series-main" style="width:30%">
+							<%= f.radio_button :single_shot, '3', class: 'radio-button', id: 'radio-button-series-main' %>シリーズメイン
+						</label>
+						</div>
+						<%= f.label MovieStyle.human_attribute_name(:live), class: 'label' %>
+						<div class="radio-buttons" data-toggle="buttons">
+							<label class="btn btn-outline-secondary", id="btn-live-main" style="width:30%">
+							<%= f.radio_button :live, '1', checked: true, class: 'radio-button', id: 'radio-button-live-main' %>ライブ多め
+						</label>
+						<label class="btn btn-outline-primary", id="btn-half-and-half-live" style="width:30%">
+							<%= f.radio_button :live, '2', class: 'radio-button', id: 'radio-button-half-and-half-live' %>半々くらい
+						</label>
+						<label class="btn btn-outline-danger", id="btn-edit-main" style="width:30%">
+							<%= f.radio_button :live, '3', class: 'radio-button', id: 'radio-button-edit-main' %>編集動画多め
+						</label>
+						</div>
 					</div>
 				</div>
 

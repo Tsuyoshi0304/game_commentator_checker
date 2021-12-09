@@ -10,15 +10,15 @@ class SearchesController < ApplicationController
   def search
     @genre_name = params['child_genre_name'] == nil ? params['parent_genre_name'] : params['child_genre_name']
 
-    @sex = params['search']['sex']
-    @age = params['search']['age']
-    @play_style = params['search']['play_style']
+    @sex = params['sex']
+    @age = params['age']
+    @play_style = params['play_style']
     @is_forming_a_group = params['is_forming_a_group']
     @appearance = params['appearance']
     @vtuber = params['vtuber']
-    @length = params['search']['length']
-    @single_shot = params['search']['single_shot']
-    @live = params['search']['live']
+    @length = params['length']
+    @single_shot = params['single_shot']
+    @live = params['live']
     @commentators = search_for(@genre_name, @sex, @age, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @single_shot, @live)
   end
 

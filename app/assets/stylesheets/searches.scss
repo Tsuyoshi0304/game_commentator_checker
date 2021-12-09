@@ -1,4 +1,11 @@
 /* 検索画面  */
+.commentators {
+  text-align: center;
+}
+
+.movie-styles {
+  text-align: center;
+}
 
 .round {
   border-radius: 100px;
@@ -29,29 +36,126 @@
   }
 }
 
-label{
+.label{
   cursor: pointer;
-  padding:5px;
-  margin: 3px; 
-  border: 1px solid #434343;
-  border-radius: 10px;
+  padding:5px 50px;
+  margin: 20px; 
+  border-radius: 100px;
   background-color:#ccd1e2;
   color: black;
-
-}
-.attribute {
-  border: none;
-  padding: 5px 50px;
-  background-color: #ccd1e2;
-  border-radius: 100px;
 }
 
 .games-genre {
   text-align: center;
 }
 
+.select {
+  padding-left: 8px;
+  border: 2px solid skyblue;
+  border-radius: 50px;
+  background: #ffffff;
+  height: 2em;
+  width: 50%;
+  padding-right: 1em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.select-age {
+  margin-left: 100%;
+}
+
+.select-play-style {
+  margin-left: 75%;
+}
+
+.label-wrapper {
+  width: 100%;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.age {
+  display: block;
+  width: 40%;
+}
+
+.play-style {
+  display: block;
+  width: 50%;
+}
+
+.select-wrapper::before {
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid skyblue;
+  pointer-events: none;
+}
+
+.gamegenre::before {
+  position: absolute;
+  top: 44%;
+  right: 27%;
+}
+
+.age::before {
+  position: absolute;
+  top: 44%;
+  left: 140%;
+}
+
+.play-style::before {
+  position: absolute;
+  top: 44%;
+  left: 117%;
+}
+
+
 #children_wrapper {
   text-align: center;
+}
+
+/* ラジオボタン */
+
+.btn-unknown-active, .btn-length-within-20-minutes-active, .btn-single-shot-main-active, .btn-live-main-active {
+  color: white !important; 
+  background-color: #6c757d !important;
+}
+
+.btn-male-active, .btn-length-from-30-to-40-minutes-active, .btn-half-and-half-single-shot-active, .btn-half-and-half-live-active {
+  color: white !important; 
+  background-color: #0d6efd !important;
+}
+
+.btn-female-active, .btn-is-forming-a-group-0-active, .btn-appearance-0-active, .btn-vtuber-0-active, .btn-length-over-1-hour-active, .btn-series-main-active, .btn-edit-main-active {
+  color: white !important; 
+  background-color: #dc3545 !important;
+}
+
+.btn-is-forming-a-group-1-active, .btn-appearance-1-active, .btn-vtuber-1-active {
+  color: white !important;
+  background-color: #198754 !important;
+}
+
+.btn {
+  border-radius: 50px;
+}
+
+.radio-buttons label {
+  background-color: white;
+}
+
+.radio-button {
+  appearance: none;
 }
 
 .btn-primary {
