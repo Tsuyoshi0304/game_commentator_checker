@@ -9,7 +9,9 @@ Commentator.seed do |s|
 	s.play_style = 10
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 15
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 4
 end
 
 Commentator.seed do |s|
@@ -23,7 +25,9 @@ Commentator.seed do |s|
 	s.play_style = 70
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 18
+	s.feeling = 2
+	s.famous = 1
+	s.movie_style_id = 4
 end
 
 Commentator.seed do |s|
@@ -37,7 +41,9 @@ Commentator.seed do |s|
 	s.play_style = 20
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 18
+	s.feeling = 2
+	s.famous = 1
+	s.movie_style_id = 2
 end
 
 Commentator.seed do |s|
@@ -51,7 +57,9 @@ Commentator.seed do |s|
 	s.play_style = 20
   s.appearance = 1
 	s.vtuber = 1
-	s.movie_style_id = 18
+	s.feeling = 2
+	s.famous = 1
+	s.movie_style_id = 4
 end
 
 Commentator.seed do |s|
@@ -65,7 +73,9 @@ Commentator.seed do |s|
 	s.play_style = 60
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 26
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 3
 end
 
 Commentator.seed do |s|
@@ -79,7 +89,9 @@ Commentator.seed do |s|
 	s.play_style = 60
   s.appearance = 0
 	s.vtuber = 0
-	s.movie_style_id = 15
+	s.feeling = 2
+	s.famous = 2
+	s.movie_style_id = 4
 end
 
 Commentator.seed do |s|
@@ -93,7 +105,9 @@ Commentator.seed do |s|
 	s.play_style = 70
   s.appearance = 1
 	s.vtuber = 1
-	s.movie_style_id = 22
+	s.feeling = 2
+	s.famous = 2
+	s.movie_style_id = 3
 end
 
 Commentator.seed do |s|
@@ -107,7 +121,9 @@ Commentator.seed do |s|
 	s.play_style = 50
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 14
+	s.feeling = 1
+	s.famous = 2
+	s.movie_style_id = 2
 end
 
 Commentator.seed do |s|
@@ -121,7 +137,9 @@ Commentator.seed do |s|
 	s.play_style = 50
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 15
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
 end
 
 Commentator.seed do |s|
@@ -135,7 +153,9 @@ Commentator.seed do |s|
 	s.play_style = 10
   s.appearance = 1
 	s.vtuber = 0
-	s.movie_style_id = 25
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 3
 end
 
 #実験

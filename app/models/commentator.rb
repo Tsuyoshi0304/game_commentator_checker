@@ -25,4 +25,5 @@ class Commentator < ApplicationRecord
 		playing_happily: 60,
 		healing_playing: 70
 	}
+	enum feeling: { excitement: 1, calm: 2 }
 end

@@ -67,25 +67,12 @@
   display: none;
 }
 
-.select-age {
-  margin-left: 100%;
-}
-
 .select-play-style {
   margin-left: 75%;
 }
 
-.label-wrapper {
-  width: 100%;
-}
-
 .select-wrapper {
   position: relative;
-}
-
-.age {
-  display: block;
-  width: 40%;
 }
 
 .play-style {
@@ -107,12 +94,6 @@
   right: 27%;
 }
 
-.age::before {
-  position: absolute;
-  top: 44%;
-  left: 140%;
-}
-
 .play-style::before {
   position: absolute;
   top: 44%;
@@ -126,17 +107,17 @@
 
 /* ラジオボタン */
 
-.btn-unknown-active, .btn-length-within-20-minutes-active, .btn-single-shot-main-active, .btn-live-main-active {
+.btn-unknown-active {
   color: white !important; 
   background-color: #6c757d !important;
 }
 
-.btn-male-active, .btn-length-from-30-to-40-minutes-active, .btn-half-and-half-single-shot-active, .btn-half-and-half-live-active {
+.btn-male-active, .btn-length-within-30-minutes-active, .btn-live-main-active {
   color: white !important; 
   background-color: #0d6efd !important;
 }
 
-.btn-female-active, .btn-is-forming-a-group-0-active, .btn-appearance-0-active, .btn-vtuber-0-active, .btn-length-over-1-hour-active, .btn-series-main-active, .btn-edit-main-active {
+.btn-female-active, .btn-is-forming-a-group-0-active, .btn-appearance-0-active, .btn-vtuber-0-active, .btn-length-over-30-minutes-active, .btn-edit-main-active {
   color: white !important; 
   background-color: #dc3545 !important;
 }

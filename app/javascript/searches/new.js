@@ -49,51 +49,37 @@ $(function(){
 		$('#btn-vtuber-0').toggleClass('btn-vtuber-0-active');
 	});
 	//長さボタン
-	$('#radio-button-within-20-minutes').on('click', function(){
-		$('#btn-length-over-1-hour').removeClass('btn-length-over-1-hour-active');
-		$('#btn-length-from-30-to-40-minutes').removeClass('btn-length-from-30-to-40-minutes-active');
-		$('#btn-length-within-20-minutes').toggleClass('btn-length-within-20-minutes-active');
+	$('#radio-button-within-30-minutes').on('click', function(){
+		$('#btn-length-over-30-minutes').removeClass('btn-length-over-30-minutes-active');
+		$('#btn-length-within-30-minutes').toggleClass('btn-length-within-30-minutes-active');
 	});
-	$('#radio-button-from-30-to-40-minutes').on('click', function(){
-		$('#btn-length-over-1-hour').removeClass('btn-length-over-1-hour-active');
-		$('#btn-length-within-20-minutes').removeClass('btn-length-within-20-minutes-active');
-		$('#btn-length-from-30-to-40-minutes').toggleClass('btn-length-from-30-to-40-minutes-active');
-	});
-	$('#radio-button-over-1-hour').on('click', function(){
-		$('#btn-length-within-20-minutes').removeClass('btn-length-within-20-minutes-active');
-		$('#btn-length-from-30-to-40-minutes').removeClass('btn-length-from-30-to-40-minutes-active');
-		$('#btn-length-over-1-hour').toggleClass('btn-length-over-1-hour-active');
+	$('#radio-button-over-30-minutes').on('click', function(){
+		$('#btn-length-within-30-minutes').removeClass('btn-length-within-30-minutes-active');
+		$('#btn-length-over-30-minutes').toggleClass('btn-length-over-30-minutes-active');
 	});
 	//単発実況ボタン
-	$('#radio-button-single-shot-main').on('click', function(){
-		$('#btn-half-and-half-single-shot').removeClass('btn-half-and-half-single-shot-active');
-		$('#btn-series-main').removeClass('btn-series-main-active');
-		$('#btn-single-shot-main').toggleClass('btn-single-shot-main-active');
-	});
-	$('#radio-button-half-and-half-single-shot').on('click', function(){
-		$('#btn-single-shot-main').removeClass('btn-single-shot-main-active');
-		$('#btn-series-main').removeClass('btn-series-main-active');
-		$('#btn-half-and-half-single-shot').toggleClass('btn-half-and-half-single-shot-active');
-	});
-	$('#radio-button-series-main').on('click', function(){
-		$('#btn-single-shot-main').removeClass('btn-single-shot-main-active');
-		$('#btn-half-and-half-single-shot').removeClass('btn-half-and-half-single-shot-active');
-		$('#btn-series-main').toggleClass('btn-series-main-active');
-	});
+	//$('#radio-button-single-shot-main').on('click', function(){
+	//	$('#btn-half-and-half-single-shot').removeClass('btn-half-and-half-single-shot-active');
+	//	$('#btn-series-main').removeClass('btn-series-main-active');
+	//	$('#btn-single-shot-main').toggleClass('btn-single-shot-main-active');
+	//});
+	//$('#radio-button-half-and-half-single-shot').on('click', function(){
+	//	$('#btn-single-shot-main').removeClass('btn-single-shot-main-active');
+	//	$('#btn-series-main').removeClass('btn-series-main-active');
+	//	$('#btn-half-and-half-single-shot').toggleClass('btn-half-and-half-single-shot-active');
+	//});
+	//$('#radio-button-series-main').on('click', function(){
+	//	$('#btn-single-shot-main').removeClass('btn-single-shot-main-active');
+	//	$('#btn-half-and-half-single-shot').removeClass('btn-half-and-half-single-shot-active');
+	//	$('#btn-series-main').toggleClass('btn-series-main-active');
+	//});
 	//ライブボタン
 	$('#radio-button-live-main').on('click', function(){
-		$('#btn-half-and-half-live').removeClass('btn-half-and-half-live-active');
 		$('#btn-edit-main').removeClass('btn-edit-main-active');
 		$('#btn-live-main').toggleClass('btn-live-main-active');
 	});
-	$('#radio-button-half-and-half-live').on('click', function(){
-		$('#btn-live-main').removeClass('btn-live-main-active');
-		$('#btn-series-main').removeClass('btn-series-main-active');
-		$('#btn-half-and-half-live').toggleClass('btn-half-and-half-live-active');
-	});
 	$('#radio-button-edit-main').on('click', function(){
 		$('#btn-live-main').removeClass('btn-live-main-active');
-		$('#btn-half-and-half-live').removeClass('btn-half-and-half-live-active');
 		$('#btn-edit-main').toggleClass('btn-edit-main-active');
 	});
 });
