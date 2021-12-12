@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_143355) do
+ActiveRecord::Schema.define(version: 2021_12_12_102335) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 2021_11_28_143355) do
     t.bigint "movie_style_id", null: false
     t.boolean "is_forming_a_group", null: false
     t.integer "play_style", null: false
+    t.integer "feeling", null: false
+    t.boolean "famous", null: false
     t.index ["movie_style_id"], name: "index_commentators_on_movie_style_id"
   end
 
@@ -67,7 +69,6 @@ ActiveRecord::Schema.define(version: 2021_11_28_143355) do
 
   create_table "movie_styles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "length", null: false
-    t.integer "single_shot", null: false
     t.integer "live", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

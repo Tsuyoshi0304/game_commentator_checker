@@ -32,13 +32,7 @@
 							</label>
 						</div>
 						
-						
-						<div class="label-wrapper">
-							<%= f.label Commentator.human_attribute_name(:age), class: 'label' %>
-							<div class="select-wrapper age">
-								<%= f.select :age, options_for_select({ '不明' => '0', '10歳前後' => '5', '10代後半' => '10', '20代' => '20', '30代' => '30', '40代' => '40', '50代以降' => '50' }), {}, {class: 'select select-age'} %><br>
-							</div>
-						</div>
+
 						<%= f.label Commentator.human_attribute_name(:play_style), class: 'label' %>
 						<div class="select-wrapper play-style">
 							<%= f.select :play_style, options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }), {}, {class: 'select select-play-style'} %><br>
@@ -79,17 +73,14 @@
 					<div class="movie-style-searches">
 						<%= f.label MovieStyle.human_attribute_name(:length), class: 'label' %>
 						<div class="radio-buttons" data-toggle="buttons">
-							<label class="btn btn-outline-secondary", id="btn-length-within-20-minutes" style="width:30%">
-								<%= f.radio_button :length, '1', checked: true, class: 'radio-button', id: 'radio-button-within-20-minutes' %>20分以内
+							<label class="btn btn-outline-primary", id="btn-length-within-30-minutes" style="width:30%">
+								<%= f.radio_button :length, '1', checked: true, class: 'radio-button', id: 'radio-button-within-30-minutes' %>30分以内
 							</label>
-							<label class="btn btn-outline-primary", id="btn-length-from-30-to-40-minutes" style="width:30%">
-								<%= f.radio_button :length, '2', class: 'radio-button', id: 'radio-button-from-30-to-40-minutes' %>30分から40分
-							</label>
-							<label class="btn btn-outline-danger", id="btn-length-over-1-hour" style="width:30%">
-								<%= f.radio_button :length, '3', class: 'radio-button', id: 'radio-button-over-1-hour' %>1時間以上
+							<label class="btn btn-outline-danger", id="btn-length-over-30-minutes" style="width:30%">
+								<%= f.radio_button :length, '2', class: 'radio-button', id: 'radio-button-over-30-minutes' %>30分以上
 							</label>
 						</div>
-						<%= f.label MovieStyle.human_attribute_name(:single_shot), class: 'label' %>
+						<!-- <%= f.label MovieStyle.human_attribute_name(:single_shot), class: 'label' %>
 						<div class="radio-buttons" data-toggle="buttons">
 						<label class="btn btn-outline-secondary", id="btn-single-shot-main" style="width:30%">
 							<%= f.radio_button :single_shot, '1', checked: true, class: 'radio-button', id: 'radio-button-single-shot-main' %>単発実況メイン
@@ -100,18 +91,15 @@
 						<label class="btn btn-outline-danger", id="btn-series-main" style="width:30%">
 							<%= f.radio_button :single_shot, '3', class: 'radio-button', id: 'radio-button-series-main' %>シリーズメイン
 						</label>
-						</div>
+						</div> -->
 						<%= f.label MovieStyle.human_attribute_name(:live), class: 'label' %>
 						<div class="radio-buttons" data-toggle="buttons">
-							<label class="btn btn-outline-secondary", id="btn-live-main" style="width:30%">
-							<%= f.radio_button :live, '1', checked: true, class: 'radio-button', id: 'radio-button-live-main' %>ライブ多め
-						</label>
-						<label class="btn btn-outline-primary", id="btn-half-and-half-live" style="width:30%">
-							<%= f.radio_button :live, '2', class: 'radio-button', id: 'radio-button-half-and-half-live' %>半々くらい
-						</label>
-						<label class="btn btn-outline-danger", id="btn-edit-main" style="width:30%">
-							<%= f.radio_button :live, '3', class: 'radio-button', id: 'radio-button-edit-main' %>編集動画多め
-						</label>
+							<label class="btn btn-outline-primary", id="btn-live-main" style="width:30%">
+								<%= f.radio_button :live, '1', checked: true, class: 'radio-button', id: 'radio-button-live-main' %>ライブ多め
+							</label>
+							<label class="btn btn-outline-danger", id="btn-edit-main" style="width:30%">
+								<%= f.radio_button :live, '2', class: 'radio-button', id: 'radio-button-edit-main' %>編集動画多め
+							</label>
 						</div>
 					</div>
 				</div>
