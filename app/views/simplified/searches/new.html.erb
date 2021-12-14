@@ -1,0 +1,95 @@
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md-12 col-lg-7 form">
+			<%= form_with url: simplified_searches_search_path, method: :get, local: true do |f| %>
+				<div id="q_01" class="q-wrapper fit">
+					<div class="title round">
+						<p>今の気持ちは？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+						<%= image_tag 'search_item/computer_nekorogaru_man.png', size: '480x400' %>
+					</div>
+					<label class="btn btn-outline-primary">
+						<%= f.radio_button :feeling, '1', class: 'radio-button' %>わいわい楽しみたい
+					</label>
+					<label class="btn btn-outline-danger">
+						<%= f.radio_button :feeling, '2', class: 'radio-button' %>しっとり楽しみたい
+					</label>
+					</div>
+				</div>
+
+				<div id="q_02" class="q-wrapper">
+					<div class="title round">
+						<p>とりあえず有名な実況者が見たい？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+							<%= image_tag 'search_item/picture_pc_83f62a2949cb19ec2451053f21041c35.png', class: 'round image-tag', size: '450x360' %>
+						</div>
+						<label class="btn btn-outline-primary">
+							<%= f.radio_button :feeling, '1', class: 'radio-button' %>はい
+						</label>
+						<label class="btn btn-outline-danger">
+							<%= f.radio_button :feeling, '2', class: 'radio-button' %>そうでもない
+						</label>
+					</div>
+				</div>
+
+				<div id="q_03" class="q-wrapper">
+					<div class="title round">
+						<p>Vtuberが見たい？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+							<%= image_tag 'search_item/youtuber_virtual.png', class: 'image-tag', size: '480x400' %>
+						</div>
+						<label class="btn btn-outline-primary">
+							<%= f.radio_button :vtuber, '1', class: 'radio-button' %>はい
+						</label>
+						<label class="btn btn-outline-danger">
+							<%= f.radio_button :vtuber, '0', class: 'radio-button' %>そうでもない
+						</label>
+					</div>
+				</div>
+
+				<div id="q_04" class="q-wrapper">
+					<div class="title round">
+						<p>性別は？</p>
+					</div>
+					<div class="search-item round" id="search-item-4">
+						<div class="image" id="slider">
+							<%= image_tag 'search_item/game_jikkyou_man.png', class: 'image-tag', id: 'image-male' %>
+							<%= image_tag 'search_item/game_jikkyou_woman.png', class: 'image-tag', id: 'image-female' %>
+						</div>
+						<label class="btn btn-outline-primary">
+							<%= f.radio_button :sex, :male, class: 'radio-button' %>男性
+						</label>
+						<label class="btn btn-outline-danger">
+							<%= f.radio_button :sex, :female, class: 'radio-button' %>女性
+						</label>
+					</div>
+				</div>
+
+				<div id="q_05" class="q-wrapper">
+					<div class="title round">
+						<p>動画の長さは？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+							<%= image_tag 'search_item/動画再生ボタンのアイコン 3.png', class: 'image-tag', size: '480x400' %>
+						</div>
+						<label class="btn btn-outline-primary">
+							<%= f.radio_button :length, '1', class: 'radio-button' %>短い
+						</label>
+						<label class="btn btn-outline-danger">
+							<%= f.radio_button :length, '2', class: 'radio-button' %>長い
+						</label>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<%= link_to 'ホーム', root_path %>
+	</div>
+</div>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

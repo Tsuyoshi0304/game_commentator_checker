@@ -40,6 +40,6 @@ yarn-debug.log*
 .DS_Store
 database.yml
 yarn.lock
-#/app/assets/images/
+/app/assets/images/
 /db/fixtures/youtube_icons/
 /test-api/
