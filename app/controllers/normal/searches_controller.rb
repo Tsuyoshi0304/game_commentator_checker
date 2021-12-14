@@ -1,4 +1,4 @@
-class SearchesController < ApplicationController
+class Normal::SearchesController < ApplicationController
   before_action :set_gamegenre, only: %w[new]
 
   def get_gamegenre_children

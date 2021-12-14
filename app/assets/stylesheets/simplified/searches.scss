@@ -1,0 +1,97 @@
+//検索項目
+.title {
+	font-size: 200%;
+	text-align: center;
+	line-height: 170%;
+	color: white;
+	background-color: black;
+}
+
+.round {
+	border-radius: 100px;
+}
+
+// search-item
+.search-item {
+	text-align: center;
+	background-color: white;
+	margin-top: 50px;
+	padding-bottom: 40px;
+	height: 480px;
+}
+
+.btn {
+	margin: 10px 20px 0 0;
+}
+
+.btn-primary:hover {
+	color: white;
+	background-color: #0d6efd;
+}
+
+.btn-danger:hover {
+	color: white;
+	background-color: #dc3545;
+}
+
+.radio-button {
+	appearance: none;
+}
+
+//image
+.image {
+	width: 100%;
+}
+
+.image-tag {
+	padding-top: 40px;
+	width: 80%;
+	height: 400px;
+	object-fit: cover;
+	
+}
+
+#image-male, #image-female {
+	border-radius: 10%;
+	//object-position: 0 ;
+}
+
+#image-female {
+	transform: scale(-1, 1);
+}
+
+//slick
+.slick-arrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+//slickの矢印を消す
+#q_04 {
+	position: relative;
+}
+
+#search-item-4::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #41DBD2;
+	position: absolute;
+	top: 290px;
+	left: -25px;
+	z-index: 10;
+}
+
+#search-item-4::after {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #41DBD2;
+	position: absolute;
+	top: 290px;
+	right: -25px;
+	z-index: 10;
+}

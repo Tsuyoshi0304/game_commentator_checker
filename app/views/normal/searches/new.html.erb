@@ -5,7 +5,7 @@
 			<h1><%= t('.choice_type') %></h1>
 		</div>
 		<div class="col-12 col-md-12 col-lg-7 form">
-			<%= form_with url: searches_search_path, method: :get, local: true do |f| %>
+			<%= form_with url: normal_searches_search_path, method: :get, local: true do |f| %>
         <div class="games">
 					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
 					<div class="games-genre">

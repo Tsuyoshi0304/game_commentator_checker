@@ -1,0 +1,2 @@
+module Simplified::SearchesHelper
+end
