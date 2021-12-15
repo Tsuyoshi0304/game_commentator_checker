@@ -1,3 +1,7 @@
+.fit {
+	display: block;
+}
+
 //検索項目
 .title {
 	font-size: 200%;
@@ -68,7 +72,7 @@
 }
 
 //slickの矢印を消す
-#q_04 {
+#q-04 {
 	position: relative;
 }
 
@@ -95,3 +99,101 @@
 	right: -25px;
 	z-index: 10;
 }
+
+//診断ボタン
+.btn-search {
+	position: relative;
+	display: block;
+	width:200px;
+	height: 130px;
+	margin: 300px 0 0 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn-search-top {
+	position: absolute;
+	top: 0;
+	left: 20px;
+
+	width: 160px;
+	height: 60px;
+	margin-top: 30px;
+	transition: all 0.3s;
+	border-radius: 0 0 50% 50%;
+	background: #d62d2d;
+}
+
+.btn-search-top:before {
+  position: absolute;
+  top: -30px;
+  left: 0;
+
+  width: 160px;
+  height: 60px;
+
+  content: "";
+
+  border-radius: 80px / 30px;
+  background: #ed4c4c;
+
+	z-index: 1;
+}
+
+.btn-search:hover .btn-search-top {
+  top: 10px;
+  height: 50px;
+}
+
+.btn-search:active .btn-search-top {
+  top: 20px;
+  height: 40px;
+}
+
+
+.btn-search-top span {
+  font-size: 40px;
+	font-weight: bold;
+
+  position: absolute;
+  top: -31px;
+  left: 0;
+
+  width: 100%;
+
+  -webkit-transform: scaleY(0.75);
+
+  transform: scaleY(0.75);
+  text-align: center;
+
+	z-index: 1;
+}
+
+.btn-submit {
+	color: #f6a3a3;
+	background-color: #ed4c4c;
+	border: none;
+}
+
+.btn-search-bottom {
+  position: absolute;
+  top: 38px;
+  left: 0;
+
+  width: 200px;
+  height: 80px;
+
+  border-radius: 100px / 40px;
+  background: #d8e4ea;
+  -webkit-box-shadow: 0 8px 0 #c4cacc;
+  box-shadow: 0 8px 0 #c4cacc;
+}
+
+//結果画面
+
+.to-title {
+	margin-bottom: 50px;
+}
+
+
+
+
