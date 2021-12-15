@@ -3,11 +3,19 @@ ja:
     top:
       simplified: サクッと探す
       normal: じっくり探す
+  simplified:
+    searches:
+      new:
+        submit: 診断!
+      search:
+        recommendation_commentator: オススメ実況者は...
+        not_found: 見つかりませんでした。
+        to_title: タイトルに戻る
   normal:
     searches:
       new: 
         choice_type: 以下から好きなタイプを選択
-        submit: 検索
+        submit: 診断!
       search:
         recommendation_commentator: オススメ実況者は...
         not_found: 見つかりませんでした。

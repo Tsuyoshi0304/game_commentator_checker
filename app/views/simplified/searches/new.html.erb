@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-12 col-md-12 col-lg-7 form">
 			<%= form_with url: simplified_searches_search_path, method: :get, local: true do |f| %>
-				<div id="q_01" class="q-wrapper fit">
+				<div id="q-01" class="q-wrapper fit">
 					<div class="title round">
 						<p>今の気持ちは？</p>
 					</div>
@@ -11,15 +11,15 @@
 						<%= image_tag 'search_item/computer_nekorogaru_man.png', size: '480x400' %>
 					</div>
 					<label class="btn btn-outline-primary">
-						<%= f.radio_button :feeling, '1', class: 'radio-button' %>わいわい楽しみたい
+						<%= f.radio_button :feeling, '1', class: 'radio-button', href: '#q-02' %>わいわい楽しみたい
 					</label>
 					<label class="btn btn-outline-danger">
-						<%= f.radio_button :feeling, '2', class: 'radio-button' %>しっとり楽しみたい
+						<%= f.radio_button :feeling, '2', class: 'radio-button', href: '#q-02' %>しっとり楽しみたい
 					</label>
 					</div>
 				</div>
 
-				<div id="q_02" class="q-wrapper">
+				<div id="q-02" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>とりあえず有名な実況者が見たい？</p>
 					</div>
@@ -28,15 +28,15 @@
 							<%= image_tag 'search_item/picture_pc_83f62a2949cb19ec2451053f21041c35.png', class: 'round image-tag', size: '450x360' %>
 						</div>
 						<label class="btn btn-outline-primary">
-							<%= f.radio_button :feeling, '1', class: 'radio-button' %>はい
+							<%= f.radio_button :famous, '1', class: 'radio-button', href: '#q-03' %>はい
 						</label>
 						<label class="btn btn-outline-danger">
-							<%= f.radio_button :feeling, '2', class: 'radio-button' %>そうでもない
+							<%= f.radio_button :famous, '0', class: 'radio-button', href: '#q-03' %>そうでもない
 						</label>
 					</div>
 				</div>
 
-				<div id="q_03" class="q-wrapper">
+				<div id="q-03" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>Vtuberが見たい？</p>
 					</div>
@@ -45,15 +45,15 @@
 							<%= image_tag 'search_item/youtuber_virtual.png', class: 'image-tag', size: '480x400' %>
 						</div>
 						<label class="btn btn-outline-primary">
-							<%= f.radio_button :vtuber, '1', class: 'radio-button' %>はい
+							<%= f.radio_button :vtuber, '1', class: 'radio-button', id: 'vtuber-yes', href: '#q-04' %>はい
 						</label>
 						<label class="btn btn-outline-danger">
-							<%= f.radio_button :vtuber, '0', class: 'radio-button' %>そうでもない
+							<%= f.radio_button :vtuber, '0', class: 'radio-button', href: '#q-04' %>そうでもない
 						</label>
 					</div>
 				</div>
 
-				<div id="q_04" class="q-wrapper">
+				<div id="q-04" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>性別は？</p>
 					</div>
@@ -63,29 +63,37 @@
 							<%= image_tag 'search_item/game_jikkyou_woman.png', class: 'image-tag', id: 'image-female' %>
 						</div>
 						<label class="btn btn-outline-primary">
-							<%= f.radio_button :sex, :male, class: 'radio-button' %>男性
+							<%= f.radio_button :sex, :male, class: 'radio-button', href: '#q-05' %>男性
 						</label>
 						<label class="btn btn-outline-danger">
-							<%= f.radio_button :sex, :female, class: 'radio-button' %>女性
+							<%= f.radio_button :sex, :female, class: 'radio-button', href: '#q-05' %>女性
 						</label>
 					</div>
 				</div>
 
-				<div id="q_05" class="q-wrapper">
+				<div id="q-05" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>動画の長さは？</p>
 					</div>
 					<div class="search-item round">
 						<div class="image">
-							<%= image_tag 'search_item/動画再生ボタンのアイコン 3.png', class: 'image-tag', size: '480x400' %>
+							<%= image_tag 'search_item/313531.png', class: 'image-tag', size: '480x400' %>
 						</div>
 						<label class="btn btn-outline-primary">
-							<%= f.radio_button :length, '1', class: 'radio-button' %>短い
+							<%= f.radio_button :length, '1', class: 'radio-button', href: '#q-06' %>短い
 						</label>
 						<label class="btn btn-outline-danger">
-							<%= f.radio_button :length, '2', class: 'radio-button' %>長い
+							<%= f.radio_button :length, '2', class: 'radio-button', href: '#q-06' %>長い
 						</label>
 					</div>
+				</div>
+
+				<div id="q-06" style="display: none;">
+					<a class="btn-search">
+  					<span class="btn-search-bottom"></span>
+  					<span class="btn-search-top"><span><%= f.submit t('.submit'), class: 'btn-submit' %></span></span>
+					</a>
+					
 				</div>
 			<% end %>
 		</div>
