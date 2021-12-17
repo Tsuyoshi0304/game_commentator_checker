@@ -8,7 +8,7 @@ $(function(){
 	function appendChildrenBox(insertHTML) {
 		var childSelectHTML = '';
 		childSelectHTML = `<div id='children_wrapper'>
-												<label for="child_gamegenre" class="label">小カテゴリー</label>
+												<label for="child_gamegenre" class="label" id="small-category">小カテゴリー</label>
 												<div class='select-wrapper gamegenre'>
 													<select class="select" id="child_gamegenre" name="child_genre_name">
 														<option value>選択してください</option>

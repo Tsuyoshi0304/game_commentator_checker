@@ -1,9 +1,24 @@
 <!-- <%= render 'flash_messages' %> -->
 <div class="container">
 	<div class="row">
-		<div class="col-12 col-md-12 col-lg-7 form">
+		<div class="col-xs-12 col-md-12 col-lg-8 form">
 			<%= form_with url: normal_searches_search_path, method: :get, local: true do |f| %>
-				
+				<div id="q-02" class="q-wrapper">
+					<div class="title round">
+						<p>ゲームジャンルは？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+							<%= image_tag 'search_item/582309.png', id:'image-tag-1' %>
+						</div>
+						<div class="games-genre">
+							<%= f.label :genre_name, '大カテゴリー', class: 'label', id: 'big-category' %>
+							<div class="select-wrapper gamegenre">
+								<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {class: 'select', id: 'parent_gamegenre'}) %>
+							</div>
+						</div>
+					</div>
+				</div>
 				
 				<div id="q-03" class="q-wrapper">
 					<div class="title round">

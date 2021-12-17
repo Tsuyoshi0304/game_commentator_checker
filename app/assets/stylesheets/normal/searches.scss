@@ -45,6 +45,49 @@
   color: white;
 }
 
+/* ゲームジャンル */
+#image-tag-1 {
+  height: 360px;
+  width: 90%;
+  object-fit: cover;
+}
+
+.games-genre {
+  display: flex;
+  position: relative;
+  margin-top: 2%;
+  margin-left: 25%;
+}
+
+#big-category {
+  position: absolute;
+  top: -10%;
+  left: -25%;
+}
+
+#parent_gamegenre {
+  //position: absolute;
+  top: 10%;
+  left: 50%;
+  //margin-top: 3%;
+  margin-left: 40%;
+  width: 100%;
+}
+
+#small-category {
+  position: absolute;
+  top: 120%;
+  left: -25%;
+}
+
+#child_gamegenre {
+  position: absolute;
+  top: 120%;
+  left: 25%;
+  //margin-top: 3%;
+  //margin-left: 40%;
+}
+
 .select {
   padding-left: 8px;
   border: 2px solid skyblue;
@@ -63,13 +106,25 @@
   display: none;
 }
 
+.gamegenre::before {
+  position: absolute;
+  top: 44%;
+  right: -36%;
+}
+
+#children_wrapper {
+  display: flex;
+  text-align: center;
+}
+
+/* プレイスタイル */
 .select-play-style {
   margin-left: 75%;
 }
 
-.select-wrapper {
-  position: relative;
-}
+//.select-wrapper {
+//  position: relative;
+//}
 
 .play-style {
   display: block;
@@ -84,12 +139,6 @@
   pointer-events: none;
 }
 
-.gamegenre::before {
-  position: absolute;
-  top: 44%;
-  right: 27%;
-}
-
 .play-style::before {
   position: absolute;
   top: 44%;
@@ -100,17 +149,8 @@
   width: 85%;
 }
 
-//#image-tag3 {
-//  height: 70%;
-//}
-
 #image-tag4 {
   width: 92%;
-}
-
-
-#children_wrapper {
-  text-align: center;
 }
 
 /* ラジオボタン */
