@@ -38,15 +38,11 @@
 
 .label{
   cursor: pointer;
-  padding:5px 50px;
-  margin: 20px; 
+  padding:5px 5px;
+  margin-right: 10px;
   border-radius: 100px;
-  background-color:#ccd1e2;
-  color: black;
-}
-
-.games-genre {
-  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .select {
@@ -98,6 +94,18 @@
   position: absolute;
   top: 44%;
   left: 117%;
+}
+
+.image-tag {
+  width: 85%;
+}
+
+//#image-tag3 {
+//  height: 70%;
+//}
+
+#image-tag4 {
+  width: 92%;
 }
 
 

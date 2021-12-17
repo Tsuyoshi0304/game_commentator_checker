@@ -4,10 +4,11 @@
 
 //検索項目
 .title {
-	font-size: 200%;
+	font-size: 180%;
 	text-align: center;
 	line-height: 170%;
 	color: white;
+	box-sizing: border-box;
 	background-color: black;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .btn {
-	margin: 10px 20px 0 0;
+	margin: 10px 10px 0 0;
 }
 
 .btn-primary:hover {
@@ -39,6 +40,7 @@
 }
 
 .radio-button {
+	border-radius: 50px;
 	appearance: none;
 }
 
@@ -49,56 +51,47 @@
 
 .image-tag {
 	padding-top: 40px;
-	width: 80%;
+	width: 65%;
 	height: 400px;
 	object-fit: cover;
 	
 }
 
-#image-male, #image-female {
-	border-radius: 10%;
-	//object-position: 0 ;
-}
-
-#image-female {
-	transform: scale(-1, 1);
-}
-
-//slick
-.slick-arrow {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-//slickの矢印を消す
-#q-04 {
-	position: relative;
-}
-
-#search-item-4::before {
-	content: '';
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background-color: #41DBD2;
-	position: absolute;
-	top: 290px;
-	left: -25px;
-	z-index: 10;
-}
-
-#search-item-4::after {
-	content: '';
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background-color: #41DBD2;
-	position: absolute;
-	top: 290px;
-	right: -25px;
-	z-index: 10;
-}
+////slick
+//.slick-arrow {
+//  -webkit-appearance: none;
+//  -moz-appearance: none;
+//  appearance: none;
+//}
+//
+////slickの矢印を消す
+//#q-04 {
+//	position: relative;
+//}
+//
+//#search-item-4::before {
+//	content: '';
+//	display: inline-block;
+//	width: 20px;
+//	height: 20px;
+//	background-color: #41DBD2;
+//	position: absolute;
+//	top: 290px;
+//	left: -25px;
+//	z-index: 10;
+//}
+//
+//#search-item-4::after {
+//	content: '';
+//	display: inline-block;
+//	width: 20px;
+//	height: 20px;
+//	background-color: #41DBD2;
+//	position: absolute;
+//	top: 290px;
+//	right: -25px;
+//	z-index: 10;
+//}
 
 //診断ボタン
 .btn-search {
@@ -190,10 +183,27 @@
 
 //結果画面
 
+.result p{
+	font-weight: bold;
+	font-size: 100%;
+}
+
 .to-title {
 	margin-bottom: 50px;
 }
 
+//スマホレスポンシブ
+@media screen and (max-width: 512px){
+	.youtube-icon {
+		width: 35%;
+		position: absolute;
+		top: 30%;
+	}
 
+	//.video {
+	//	width: 30%;
+	//	height: 10%;
+	//}
+}
 
 

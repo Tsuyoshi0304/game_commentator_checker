@@ -1,4 +1,6 @@
 .home-title {
+	position: relative;
+
 	h2 {
 		margin-top: 100px;
 		width: 100%;
@@ -10,6 +12,28 @@
 		width: 100%;
 		text-align: center;
 	}
+}
+
+.top-image {
+	object-fit: cover;
+}
+
+#top-image-1 {
+	position: absolute;
+	top: 30%;
+	left: -15%;
+}
+
+#top-image-2 {
+	position: absolute;
+	top: 85%;
+	left: -15%;
+}
+
+#top-image-3 {
+	position: absolute;
+	top: 45%;
+	right: -15%;
 }
 
 .btn-start {
