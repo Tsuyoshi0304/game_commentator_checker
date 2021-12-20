@@ -3,7 +3,24 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-12 col-lg-8 form">
 			<%= form_with url: normal_searches_search_path, method: :get, local: true do |f| %>
-				<div id="q-02" class="q-wrapper">
+				<div id="q-01" class="q-wrapper fit">
+					<div class="title round">
+						<p>プレイスタイルは？</p>
+					</div>
+					<div class="search-item round">
+						<div class="image">
+							<%= image_tag 'search_item/job_sports_jikkyou.png', id:'image-tag-1' %>
+						</div>
+						<div class="games-genre">
+							<div class="select-wrapper play-style">
+								<%= f.select :play_style, options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }), {}, {class: 'select select-play-style'} %><br>
+							</div>
+						</div>
+					</div>
+					<input type="button" class="btn btn-dark radio-button next-button" href="#q-02" value="次へ">
+				</div>
+
+				<div id="q-02" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>ゲームジャンルは？</p>
 					</div>
@@ -14,13 +31,16 @@
 						<div class="games-genre">
 							<%= f.label :genre_name, '大カテゴリー', class: 'label', id: 'big-category' %>
 							<div class="select-wrapper gamegenre">
-								<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {class: 'select', id: 'parent_gamegenre'}) %>
+								<%= f.collection_select(:parent_genre_name, @parents, :genre_name, :genre_name, {prompt: '選択してください'}, {class: 'select', id: 'parent_gamegenre'} ) %>
 							</div>
 						</div>
 					</div>
+					<input type="button" class="btn btn-dark radio-button next-button" href="#q-03" value="次へ">
 				</div>
+
 				
-				<div id="q-03" class="q-wrapper">
+				
+				<div id="q-03" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>Vtuberが見たい？</p>
 					</div>
@@ -37,14 +57,14 @@
 					</div>
 				</div>
 
-				<div id="q-04" class="q-wrapper">
+				<div id="q-04" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>性別は？</p>
 					</div>
 					<div class="search-item round">
 						<div class="image">
 							<%= image_tag 'search_item/1571715.png', class: 'image-tag', id: 'image-tag4' %>
-							
+						</div>
 						<label class="btn btn-outline-primary">
 							<%= f.radio_button :sex, :male, class: 'radio-button', href: '#q-05' %>男性
 						</label>
@@ -54,7 +74,7 @@
 					</div>
 				</div>
 
-				<div id="q-05" class="q-wrapper">
+				<div id="q-05" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>グループを組んでいる？</p>
 					</div>
@@ -71,7 +91,7 @@
 					</div>
 				</div>
 
-				<div id="q-06" class="q-wrapper" >
+				<div id="q-06" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>顔出ししている？</p>
 					</div>
@@ -88,7 +108,7 @@
 					</div>
 				</div>
 
-				<div id="q-07" class="q-wrapper">
+				<div id="q-07" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>動画の長さは？</p>
 					</div>
@@ -105,7 +125,7 @@
 					</div>
 				</div>
 
-				<div id="q-08" class="q-wrapper">
+				<div id="q-08" class="q-wrapper" style="display: none;">
 					<div class="title round">
 						<p>ライブの割合は？</p>
 					</div>
@@ -120,6 +140,14 @@
 							<%= f.radio_button :live, '2', class: 'radio-button', href: '#q-09' %>編集動画多め
 						</label>
 					</div>
+				</div>
+
+				<div id="q-09" style="display: none;">
+					<a class="btn-search">
+  					<span class="btn-search-bottom"></span>
+  					<span class="btn-search-top"><span><%= f.submit t('.submit'), class: 'btn-submit' %></span></span>
+					</a>
+					
 				</div>
         <!-- <div class="games">
 					<h3 class="round sector"><%= GameGenre.model_name.human %></h3>
@@ -219,7 +247,6 @@
 					</div>
 				</div> -->
 
-				<%= f.submit t('.submit'), class: 'btn btn-primary round search' %>
       <% end %>
 		</div>
 	</div>
