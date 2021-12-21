@@ -134,13 +134,13 @@
 //  width: 100%;
 //}
 
-.select-wrapper::before {
-  content: '';
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 8px solid skyblue;
-  pointer-events: none;
-}
+//.select-wrapper::before {
+//  content: '';
+//  border-left: 6px solid transparent;
+//  border-right: 6px solid transparent;
+//  border-top: 8px solid skyblue;
+//  pointer-events: none;
+//}
 
 .play-style::before {
   position: absolute;
@@ -157,26 +157,6 @@
 }
 
 /* ラジオボタン */
-
-.btn-unknown-active {
-  color: white !important; 
-  background-color: #6c757d !important;
-}
-
-.btn-male-active, .btn-length-within-30-minutes-active, .btn-live-main-active {
-  color: white !important; 
-  background-color: #0d6efd !important;
-}
-
-.btn-female-active, .btn-is-forming-a-group-0-active, .btn-appearance-0-active, .btn-vtuber-0-active, .btn-length-over-30-minutes-active, .btn-edit-main-active {
-  color: white !important; 
-  background-color: #dc3545 !important;
-}
-
-.btn-is-forming-a-group-1-active, .btn-appearance-1-active, .btn-vtuber-1-active {
-  color: white !important;
-  background-color: #198754 !important;
-}
 
 .btn {
   border-radius: 50px;
@@ -330,6 +310,20 @@
   top: 30%;
   width: 40%;
   height: 50%;
+}
+
+.twitter-share {
+  background-color: white;
+  text-decoration: none;
+  width: 30%;
+  height: 5%;
+  padding: 5px 2%;
+  display: block;
+  .fa-twitter {
+    color: #3399FF;
+    padding-right: 5%;
+  }
+  
 }
 
 .to-title {
