@@ -28,6 +28,123 @@ PopularMovie.seed do |s|
 	s.commentator_id = 5
 end
 
-#実験
+PopularMovie.seed do |s|
+	s.id = 6
+	s.movie = 'https://www.youtube.com/embed/Sk_yHt4PXLk'
+	s.commentator_id = 6
+end
 
+PopularMovie.seed do |s|
+	s.id = 7
+	s.movie = 'https://www.youtube.com/embed/d_Sc0W50Bi0'
+	s.commentator_id = 7
+end
+
+PopularMovie.seed do |s|
+	s.id = 8
+	s.movie = 'https://www.youtube.com/embed/aWwHm5YE6Sk'
+	s.commentator_id = 8
+end
+
+PopularMovie.seed do |s|
+	s.id = 9
+	s.movie = 'https://www.youtube.com/embed/VeySEClZ1rg'
+	s.commentator_id = 9
+end
+
+PopularMovie.seed do |s|
+	s.id = 10
+	s.movie = 'https://www.youtube.com/embed/nnmzYgKfohU'
+	s.commentator_id = 10
+end
+
+PopularMovie.seed do |s|
+	s.id = 11
+	s.movie = 'https://www.youtube.com/embed/kH91ohl1IaY'
+	s.commentator_id = 11
+end
+
+PopularMovie.seed do |s|
+	s.id = 12
+	s.movie = 'https://www.youtube.com/embed/hKqHW0fVqbs'
+	s.commentator_id = 12
+end
+
+PopularMovie.seed do |s|
+	s.id = 13
+	s.movie = 'https://www.youtube.com/embed/dbMnwOsMXmM'
+	s.commentator_id = 13
+end
+
+PopularMovie.seed do |s|
+	s.id = 14
+	s.movie = 'https://www.youtube.com/embed/TRa5CXiB9_4'
+	s.commentator_id = 14
+end
+
+PopularMovie.seed do |s|
+	s.id = 15
+	s.movie = 'https://www.youtube.com/embed/iBXN3wH-ZRI'
+	s.commentator_id = 15
+end
+
+PopularMovie.seed do |s|
+	s.id = 16
+	s.movie = 'https://www.youtube.com/embed/FZLtoWc7CDM'
+	s.commentator_id = 16
+end
+
+PopularMovie.seed do |s|
+	s.id = 17
+	s.movie = 'https://www.youtube.com/embed/bzrj-oF8XsA'
+	s.commentator_id = 17
+end
+
+PopularMovie.seed do |s|
+	s.id = 18
+	s.movie = 'https://www.youtube.com/embed/E53D9tfVi4E'
+	s.commentator_id = 18
+end
+
+PopularMovie.seed do |s|
+	s.id = 19
+	s.movie = 'https://www.youtube.com/embed/RMtGFIUT138'
+	s.commentator_id = 19
+end
+
+PopularMovie.seed do |s|
+	s.id = 20
+	s.movie = 'https://www.youtube.com/embed/W-p_wUW6AUo'
+	s.commentator_id = 20
+end
+
+PopularMovie.seed do |s|
+	s.id = 21
+	s.movie = 'https://www.youtube.com/embed/XadjSPSrpHk'
+	s.commentator_id = 21
+end
+
+PopularMovie.seed do |s|
+	s.id = 22
+	s.movie = 'https://www.youtube.com/embed/3v5JmmLZTvw'
+	s.commentator_id = 22
+end
+
+PopularMovie.seed do |s|
+	s.id = 23
+	s.movie = 'https://www.youtube.com/embed/XN7_JKQlZ3E'
+	s.commentator_id = 23
+end
+
+PopularMovie.seed do |s|
+	s.id = 24
+	s.movie = 'https://www.youtube.com/embed/pltT0vqiKS8'
+	s.commentator_id = 24
+end
+
+PopularMovie.seed do |s|
+	s.id = 25
+	s.movie = 'https://www.youtube.com/embed/gRyPjRrjS34'
+	s.commentator_id = 25
+end
 
