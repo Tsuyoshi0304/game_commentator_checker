@@ -49,6 +49,10 @@
 	width: 100%;
 }
 
+#image-1 {
+	height: 380px;
+}
+
 .image-tag {
 	padding-top: 40px;
 	width: 65%;
@@ -56,42 +60,6 @@
 	object-fit: cover;
 	
 }
-
-////slick
-//.slick-arrow {
-//  -webkit-appearance: none;
-//  -moz-appearance: none;
-//  appearance: none;
-//}
-//
-////slickの矢印を消す
-//#q-04 {
-//	position: relative;
-//}
-//
-//#search-item-4::before {
-//	content: '';
-//	display: inline-block;
-//	width: 20px;
-//	height: 20px;
-//	background-color: #41DBD2;
-//	position: absolute;
-//	top: 290px;
-//	left: -25px;
-//	z-index: 10;
-//}
-//
-//#search-item-4::after {
-//	content: '';
-//	display: inline-block;
-//	width: 20px;
-//	height: 20px;
-//	background-color: #41DBD2;
-//	position: absolute;
-//	top: 290px;
-//	right: -25px;
-//	z-index: 10;
-//}
 
 //診断ボタン
 .btn-search {
