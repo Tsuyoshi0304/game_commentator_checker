@@ -6,15 +6,15 @@
 					<div class="title round">
 						<p>今の気持ちは？</p>
 					</div>
-					<div class="search-item round" id="search-item-1">
-						<div class="image">
+					<div class="search-item round">
+						<div class="image" id="image-1">
 						<%= image_tag 'search_item/computer_nekorogaru_man.png', class: 'image-tag' %>
 					</div>
 					<label class="btn btn-outline-primary">
-						<%= f.radio_button :feeling, '1', class: 'radio-button', id: 'radio-button-1-1', href: '#q-02' %>わいわいしたい
+						<%= f.radio_button :feeling, '1', class: 'radio-button', href: '#q-02' %>わいわいしたい
 					</label>
 					<label class="btn btn-outline-danger">
-						<%= f.radio_button :feeling, '2', class: 'radio-button', id: 'radio-button-1-2', href: '#q-02' %>ゆっくりしたい
+						<%= f.radio_button :feeling, '2', class: 'radio-button', href: '#q-02' %>まったりしたい
 					</label>
 					</div>
 				</div>
