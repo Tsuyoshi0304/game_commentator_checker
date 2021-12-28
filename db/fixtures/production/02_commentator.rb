@@ -397,3 +397,147 @@ end
 		s.famous = 1
 		s.movie_style_id = 2
 	end
+
+	Commentator.seed do |s|
+  s.id = 26
+	s.name = 'Markiplier'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/markiplier.jpeg'), filename: 'markiplier.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/markiplier'
+	s.sex = 1
+	s.age = 30
+	s.is_forming_a_group = 0
+	s.play_style = 20
+  s.appearance = 1
+	s.vtuber = 0
+	s.feeling = 2
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 27
+	s.name = 'jacksepticeye'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/jacksepticeye.jpeg'), filename: 'jacksepticeye.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/jacksepticeye'
+	s.sex = 1
+	s.age = 30
+	s.is_forming_a_group = 0
+	s.play_style = 50
+  s.appearance = 1
+	s.vtuber = 0
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 28
+	s.name = 'まふまふ'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/mafumafu.jpeg'), filename: 'mafumafu.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/uni_mafumafu'
+	s.sex = 1
+	s.age = 20
+	s.is_forming_a_group = 0
+	s.play_style = 70
+  s.appearance = 0
+	s.vtuber = 1
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 29
+	s.name = 'アブ -abu-'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/abu.jpeg'), filename: 'abu.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/user/abuuuntv'
+	s.sex = 1
+	s.age = 30
+	s.is_forming_a_group = 0
+	s.play_style = 10
+  s.appearance = 0
+	s.vtuber = 0
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 30
+	s.name = 'ころん'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/koron.jpeg'), filename: 'koron.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/channel/UCJtMfSSPKuW22GXfkaN7DOA'
+	s.sex = 1
+	s.age = 20
+	s.is_forming_a_group = 0
+	s.play_style = 50
+  s.appearance = 0
+	s.vtuber = 0
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 31
+	s.name = 'ナポリの男たち'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/napori.jpeg'), filename: 'napori.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/napolimens'
+	s.sex = 1
+	s.age = 30
+	s.is_forming_a_group = 1
+	s.play_style = 60
+  s.appearance = 0
+	s.vtuber = 0
+	s.feeling = 2
+	s.famous = 0
+	s.movie_style_id = 3
+end
+
+Commentator.seed do |s|
+  s.id = 32
+	s.name = '戌神ころね'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/inugami.jpeg'), filename: 'inugami.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q'
+	s.sex = 2
+	s.age = 20
+	s.is_forming_a_group = 0
+	s.play_style = 30
+  s.appearance = 0
+	s.vtuber = 1
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 3
+end
+
+Commentator.seed do |s|
+  s.id = 33
+	s.name = 'さとみ'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/satomi.jpeg'), filename: 'satomi.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/%E3%81%95%E3%81%A8%E3%81%BF%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B'
+	s.sex = 1
+	s.age = 20
+	s.is_forming_a_group = 0
+	s.play_style = 50
+  s.appearance = 1
+	s.vtuber = 0
+	s.feeling = 1
+	s.famous = 1
+	s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 34
+	s.name = 'まいぜんシスターズ'
+	s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open('./app/assets/images/maizen.jpeg'), filename: 'maizen.jpeg' )
+	s.youtube_channel_url = 'https://www.youtube.com/c/maizen'
+	s.sex = 1
+	s.age = 0
+	s.is_forming_a_group = 1
+	s.play_style = 70
+  s.appearance = 0
+	s.vtuber = 0
+	s.feeling = 2
+	s.famous = 1
+	s.movie_style_id = 2
+end
