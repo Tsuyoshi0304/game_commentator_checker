@@ -6,9 +6,12 @@
 	z-index: -1;
 }
 
-body {
-	background: url("../images/1503791.png");
-	background-color: aqua;
+.background {
+	background-image: url("22182134.jpg");
+	background-size: contain;
+	margin-top: 100px;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .game-fonts { 
@@ -32,9 +35,7 @@ body {
 		text-align: center;
 		font-size: 330%;
 		display: inline-block;
-		position: absolute;
-		top: 60%;
-		left: 0%;
+		//margin-bottom: 50px;
 	}
 }
 
@@ -74,12 +75,12 @@ body {
 
 #left-start {
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 7%;
 }
 
 #right-start {
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 53%;
 }
