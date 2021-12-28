@@ -1,14 +1,11 @@
-.background-image {
-	height: 100px;
-	width: 100px;
-	opacity: 0.2;
-	position: relative;
-	z-index: -1;
-}
 
-body {
-	background: url("../images/1503791.png");
-	background-color: aqua;
+.background {
+	background: url("22182134.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-top: 130px;
+	
 }
 
 .game-fonts { 
@@ -17,9 +14,11 @@ body {
 
 .home-title {
 	position: relative;
-
+	
 	h2 {
-		margin-top: 100px;
+		position: absolute;
+		top: 20%;
+		left: 0%;
 		width: 100%;
 		text-align: center;
 		display: inline-block;
@@ -27,37 +26,15 @@ body {
 	}
 	
 	h1 {
-		margin-top: 150px;
+		//margin-top: 150px;
 		width: 100%;
 		text-align: center;
 		font-size: 330%;
 		display: inline-block;
-		position: absolute;
-		top: 60%;
-		left: 0%;
+		//position: absolute;
+		//top: 60%;
+		//left: 0%;
 	}
-}
-
-.top-image {
-	object-fit: cover;
-}
-
-#top-image-1 {
-	position: absolute;
-	top: 30%;
-	left: -15%;
-}
-
-#top-image-2 {
-	position: absolute;
-	top: 85%;
-	left: -15%;
-}
-
-#top-image-3 {
-	position: absolute;
-	top: 45%;
-	right: -15%;
 }
 
 .btn-start {
@@ -72,14 +49,19 @@ body {
 	width: 40%;
 }
 
+.link-to-mode {
+	position: relative;
+	height: 300px;
+}
+
 #left-start {
 	position: absolute;
-	top: 60%;
+	top: 200px;
 	left: 7%;
 }
 
 #right-start {
 	position: absolute;
-	top: 60%;
+	top: 200px;
 	left: 53%;
 }

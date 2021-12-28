@@ -1,18 +1,15 @@
 <div class="container">
 	<div class="row">
-		<div class="home-title">
-		<!-- <% 20.times.each do %>
-			<%= image_tag '1503791.png', class: 'background-image' %>
-		<% end %> -->
-			
-			<h2 class="game-fonts">あなたに合う<br>ゲーム実況者が見つかる</h2>
-			<!-- <%= image_tag 'search_item/Switch風なゲーム機のアイコン 2.png', size: '150x150', class: 'top-image', id: 'top-image-1' %>
-			<%= image_tag 'search_item/1817004.png', size: '200x200', class: 'top-image', id: 'top-image-2' %>
-			<%= image_tag 'search_item/1988574.png', size: '200x200', class: 'top-image', id: 'top-image-3' %> -->
-			<h1 class="game-fonts">ゲーム実況者診断</h1> 
+		<div class="background">
+			<div class="home-title">
+				<h2 class="game-fonts">あなたに合う<br>ゲーム実況者が見つかる</h2>
+				<h1 class="game-fonts">ゲーム実況者診断</h1> 
+			</div>
+			<div class="link-to-mode">
+				<%= link_to t('.simplified'), simplified_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'left-start' %>
+				<%= link_to t('.normal'), normal_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'right-start' %>
+			</div>
 		</div>
-		<%= link_to t('.simplified'), simplified_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'left-start' %>
-		<%= link_to t('.normal'), normal_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'right-start' %>
 	</div>
 </div>
 
