@@ -1,13 +1,3 @@
-$(window).on('load', function() {
-	//$('#slider').slick({
-	//	slidesToShow: 1,
-	//	slidesToScroll: 1,
-	//	autoplay: true,
-	//	adaptiveHeight: true,
-	//	autoplaySpeed: 1000
-	//});
-});
-
 $(function() {
 	$('.radio-button').on('click', function() {
 		//radio-buttonクラスをクリック後の関数処理
