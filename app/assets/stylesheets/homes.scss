@@ -1,3 +1,7 @@
+html,body {
+	height: 100%;
+}
+
 .background {
 	background: url("22182134.jpg");
 	background-size: contain;
@@ -44,6 +48,7 @@
 	margin: 100px auto;
 	padding: 20px 20px;
 	width: 40%;
+	z-index: -1;
 }
 
 .link-to-mode {
@@ -83,3 +88,22 @@ footer {
 		text-decoration: none;
 	}
 }
+
+//お問い合わせ
+#contact-modal {
+	margin-left: 10%;
+	width: 80%;
+}
+
+//プラポリ
+.modal-body {
+	h4 {
+		font-size: medium;
+		font-weight: bold;
+	}
+	p {
+		font-size: small;
+	}
+}
+
+//利用規約
