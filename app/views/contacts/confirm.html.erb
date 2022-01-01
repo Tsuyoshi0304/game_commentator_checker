@@ -28,7 +28,7 @@
 				<%= f.submit '戻る', url: contacts_back_path, class: 'btn btn-danger contacts-back' %>
 			<% end %>
 
-			<%= form_with model: @contact, local: true do |f| %>
+			<%= form_with model: @contact, url: contacts_path, local: true do |f| %>
 				<%= f.hidden_field :name %>
 				<%= f.hidden_field :email %>
 				<%= f.hidden_field :title %>

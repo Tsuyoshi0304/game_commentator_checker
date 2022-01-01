@@ -5,6 +5,10 @@ class ContactsController < ApplicationController
 
 	def confirm 
 		@contact = Contact.new(contact_params)
+		if @contact.invalid?
+			flash.now[:danger] = '入力内容が正しくありません。'
+			render :new
+		end
 	end
 
 	def back
@@ -15,8 +19,11 @@ class ContactsController < ApplicationController
 	def create
 		@contact = Contact.new(contact_params)
 		if @contact.save
-			ContactMailer.contact_mail(@contact).deliver
-			redirect_to 
+			ContactMailer.send_mail(@contact).deliver_now
+			redirect_to root_path, success: '正常にメールが送信されました！'
+		else
+			flash.now[:danger] = '入力内容が正しくありません。'
+			render :new
 		end
 	end
 

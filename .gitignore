@@ -43,3 +43,6 @@ yarn.lock
 
 /db/fixtures/youtube_icons/
 /test-api/
+
+
+/.env
