@@ -48,6 +48,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'mysql2', '>= 0.4.4'
+  gem 'dotenv-rails'
   #gem 'google-api-client', '0.7', require: 'google/api_client'
 end
 

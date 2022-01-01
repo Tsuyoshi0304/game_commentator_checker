@@ -1,9 +1,13 @@
+html,body {
+	height: 100%;
+}
+
 .background {
 	background: url("22182134.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin-top: 130px;
+	margin-top: 100px;
 	position: relative;
 }
 
@@ -12,10 +16,10 @@
 }
 
 .home-title {
-	height: 150px;
+	height: 120px;
 	h2 {
 		position: absolute;
-		top: -20%;
+		top: -15%;
 		left: 0%;
 		width: 100%;
 		text-align: center;
@@ -53,12 +57,52 @@
 
 #left-start {
 	position: absolute;
-	top: 210px;
+	top: 280px;
 	left: 7%;
 }
 
 #right-start {
 	position: absolute;
-	top: 210px;
+	top: 280px;
 	left: 53%;
 }
+
+/* footer */
+footer {
+	background: rgba(white, 0.6);
+	display: -webkit-flex;
+	display: flex;
+	position: absolute;
+	top: 740px;
+	height: 50px;
+	width: 100%;
+	justify-content: center;
+	line-height: 50px;
+	p {
+		padding: 0 3%;
+		font-size: 80%;
+	}
+	.footer-link {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+//お問い合わせ
+#contact-modal {
+	margin-left: 10%;
+	width: 80%;
+}
+
+//プラポリ
+.modal-body {
+	h4 {
+		font-size: medium;
+		font-weight: bold;
+	}
+	p {
+		font-size: small;
+	}
+}
+
+//利用規約
