@@ -1,7 +1,7 @@
 $(function () {
 	//お問い合わせ
   $("#contact-link").on('click', function(){
-		$('#contact-modal').fadeIn('slow').show();
+		//$('#contact-modal').fadeIn('slow').show();
 	});
 	//プラポリ
 	$("#privacy-link").on('click', function(){

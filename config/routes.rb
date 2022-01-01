@@ -18,5 +18,8 @@ Rails.application.routes.draw do
       end
     end
   end
-  
+
+  resources :contacts, only: %w[new create] 
+  post 'contacts/confirm', 'contacts#confirm'
+  post 'contacts/back', 'contacts#back'
 end

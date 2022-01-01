@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-12 col-lg-7 form">
+			<div class="title round">
+				<p>入力内容確認</p>
+			</div>
+			<%= form_with model: @contact, url: contacts_back_path, local: true do |f| %>
+				<div class="form-group">
+					<%= f.label :name, 'お名前*', class: 'label' %>
+					<%= f.text_field :name, readonly: true, class: 'form-control' %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :email, 'メールアドレス*', class: 'label' %>
+					<%= f.email_field :email, readonly: true, class: 'form-control' %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :title, 'タイトル*', class: 'label' %>
+					<%= f.text_field :title, readonly: true, class: 'form-control' %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :message, '内容*', class: 'label' %>
+					<%= f.text_area :message, readonly: true, class: 'form-control' %>
+				</div>
+
+				<%= f.submit '戻る', url: contacts_back_path, class: 'btn btn-danger contacts-back' %>
+			<% end %>
+
+			<%= form_with model: @contact, local: true do |f| %>
+				<%= f.hidden_field :name %>
+				<%= f.hidden_field :email %>
+				<%= f.hidden_field :title %>
+				<%= f.hidden_field :message %>
+				<%= f.submit '送信', class: 'btn btn-primary contacts-submit' %>
+			<% end %>
+		</div>
+	</div>
+</div>
