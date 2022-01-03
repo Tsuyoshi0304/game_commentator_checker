@@ -28,11 +28,11 @@
 						</div>
 					</div>
 				<% end %>
+				<%= link_to "https://twitter.com/share?url=https://game-commentator-checker.herokuapp.com&text=あなたへのオススメ実況者は、「#{ @commentators.pluck(:name).join('、') }」です！&hashtags=ゲーム,ゲーム実況,ゲーム実況者", target: '_blank', class: 'twitter-share round' do  %>
+					<i class="fa fa-twitter" aria-hidden="true"></i>Twitter
+				<% end %>
 			<% end %>
-		
-		<%= link_to "https://twitter.com/share?url=https://game-commentator-checker.herokuapp.com&text=あなたへのオススメ実況者は、「#{ @commentators.pluck(:name).join('、') }」です！&hashtags=ゲーム,ゲーム実況,ゲーム実況者", target: '_blank', class: 'twitter-share round' do  %>
-			<i class="fa fa-twitter" aria-hidden="true"></i>Twitterでシェア
-		<% end %>
+
 		<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
 	</div>
 </div>
