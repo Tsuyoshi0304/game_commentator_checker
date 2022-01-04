@@ -8,4 +8,10 @@ $(function() {
 		$(id).addClass("fit").fadeIn("slow").show();
 		//次の質問にfitをつけて出力。
 	});
+
+	$('.back-button').on('click', function() {
+		$(this).closest(".q-wrapper").css("display", "none");
+		id = $(this).attr("href");
+		$(id).addClass("fit").fadeIn("slow").show();
+	});
 });

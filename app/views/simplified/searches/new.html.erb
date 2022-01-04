@@ -8,14 +8,14 @@
 					</div>
 					<div class="search-item round">
 						<div class="image" id="image-1">
-						<%= image_tag 'search_item/computer_nekorogaru_man.png', class: 'image-tag' %>
-					</div>
-					<label class="btn btn-outline-primary">
-						<%= f.radio_button :feeling, '1', class: 'radio-button', href: '#q-02' %>わいわいしたい
-					</label>
-					<label class="btn btn-outline-danger">
-						<%= f.radio_button :feeling, '2', class: 'radio-button', href: '#q-02' %>まったりしたい
-					</label>
+							<%= image_tag 'search_item/computer_nekorogaru_man.png', class: 'image-tag' %>
+						</div>
+						<label class="btn btn-outline-primary button-1">
+							<%= f.radio_button :feeling, '1', class: 'radio-button', href: '#q-02' %>わいわいしたい
+						</label>
+						<label class="btn btn-outline-danger button-1">
+							<%= f.radio_button :feeling, '2', class: 'radio-button', href: '#q-02' %>まったりしたい
+						</label>
 					</div>
 				</div>
 
@@ -32,6 +32,9 @@
 						</label>
 						<label class="btn btn-outline-danger">
 							<%= f.radio_button :famous, '0', class: 'radio-button', href: '#q-03' %>そうでもない
+						</label>
+						<label>
+							<button type="button" href ="#q-01" class="btn btn-outline-secondary back-button round">⬅︎ ひとつ戻る</button>
 						</label>
 					</div>
 				</div>
@@ -50,6 +53,9 @@
 						<label class="btn btn-outline-danger">
 							<%= f.radio_button :vtuber, '0', class: 'radio-button', href: '#q-04' %>そうでもない
 						</label>
+						<label>
+							<button type="button" href ="#q-02" class="btn btn-outline-secondary back-button round">⬅︎ ひとつ戻る</button>
+						</label>
 					</div>
 				</div>
 
@@ -67,6 +73,9 @@
 						<label class="btn btn-outline-danger">
 							<%= f.radio_button :sex, :female, class: 'radio-button', href: '#q-05' %>女性
 						</label>
+						<label>
+							<button type="button" href ="#q-03" class="btn btn-outline-secondary back-button round">⬅︎ ひとつ戻る</button>
+						</label>
 					</div>
 				</div>
 
@@ -83,6 +92,9 @@
 						</label>
 						<label class="btn btn-outline-danger">
 							<%= f.radio_button :length, '2', class: 'radio-button', href: '#q-06' %>長い
+						</label>
+						<label>
+							<button type="button" href ="#q-04" class="btn btn-outline-secondary back-button round">⬅︎ ひとつ戻る</button>
 						</label>
 					</div>
 				</div>
