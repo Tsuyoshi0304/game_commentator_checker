@@ -16,7 +16,9 @@ class Normal::SearchesController < ApplicationController
     @vtuber = params['vtuber']
     @length = params['length']
     @live = params['live']
+
     @commentators = search_for(@genre_name, @sex, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @live)
+    @recommendation_commentators = recommendation_search_for(@genre_name, @play_style, @vtuber, @sex)
   end
 
   private
@@ -37,5 +39,20 @@ class Normal::SearchesController < ApplicationController
                       appearance: appearance,
                       vtuber: vtuber,
                       movie_style_id: movie_style.id)
+  end
+
+  def recommendation_search_for(genre_name, play_style, vtuber, sex)
+    game_genres = GameGenre.where(genre_name: genre_name)
+    games = Game.where(game_genre_id: game_genres.pluck(:id))
+    playings = Playing.where(game_id: games.pluck(:id))
+    movie_style = MovieStyle.all
+    Commentator.where(id: playings.pluck(:commentator_id),
+                      play_style: play_style, 
+                      vtuber: vtuber,
+                      sex: sex,
+                      is_forming_a_group: [0,1], 
+                      appearance: [0,1],
+                      movie_style_id: movie_style.pluck(:id)
+    )
   end
 end

@@ -8,20 +8,8 @@ class Simplified::SearchesController < ApplicationController
     @sex = params['sex']
     @length = params['length']
 
-    if params['length'] == '1'
-      @recommendation_length = '2'
-    else
-      @recommendation_length = '1'
-    end
-
-    #if params['famous'] == '1'
-    #  @recommendation_famous = '0'
-    #else
-    #  @recommendation_famous = '1'
-    #end 
-
     @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
-    @recommendation_commentators = recommendation_search_for(@feeling, @famous, @vtuber, @sex, @recommendation_length)
+    @recommendation_commentators = recommendation_search_for(@feeling, @vtuber, @sex)
   end
 
   private
@@ -36,10 +24,10 @@ class Simplified::SearchesController < ApplicationController
     )
   end
 
-  def recommendation_search_for(feeling, famous, vtuber, sex, recommendation_length)
-    movie_style = MovieStyle.where(length: recommendation_length)
+  def recommendation_search_for(feeling, vtuber, sex)
+    movie_style = MovieStyle.all
     Commentator.where(feeling: feeling,
-                      famous: famous,
+                      famous: [0,1],
                       vtuber: vtuber,
                       sex: sex,
                       movie_style_id: movie_style.pluck(:id)

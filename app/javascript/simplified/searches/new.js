@@ -18,7 +18,7 @@ $(function() {
 
 	//オススメボタン
 	$('#recommendation-button').on('click', function() {
-		$(this).closest(".result").css("display", "none");
-		$("#recommendation").fadeIn("slow").show();
+		$(".mini-result-wrapper").css("display", "none");
+		$(".recommendation").fadeIn("slow").show();
 	});
 });

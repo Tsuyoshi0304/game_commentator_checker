@@ -13,12 +13,14 @@
 					</div>
 				<% else %>
 					<div class="result-wrapper">
-						<div class="result">
-							<p class="not-found"><%= t('.not_found') %></p>
-							<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に似た実況者は...</button>
+						<div class="mini-result-wrapper">
+							<div class="col-12 col-md-10 col-lg-6 result">
+								<p class="not-found"><%= t('.not_found') %></p>
+							</div>
+							<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に近い実況者は...</button>
 						</div>
 						<% @recommendation_commentators.each.with_index(1) do |commentator, index| %>
-							<div id="recommendation" class="col-12 col-md-10 col-lg-6 result" style="display: none;">
+							<div class="col-12 col-md-10 col-lg-6 result recommendation" style="display: none;">
 								<div class="commentator">
 									<div class="commentator-info" id="commentator-id-<%= index %>">
 										<div class="commentator-name round">

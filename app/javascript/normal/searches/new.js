@@ -15,5 +15,11 @@ $(function(){
 		id = $(this).attr("href");
 		$(id).addClass("fit").fadeIn("slow").show();
 	});
+
+	//オススメボタン
+	$('#recommendation-button').on('click', function() {
+		$(".mini-result-wrapper").css("display", "none");
+		$(".recommendation").fadeIn("slow").show();
+	});
 });
 
