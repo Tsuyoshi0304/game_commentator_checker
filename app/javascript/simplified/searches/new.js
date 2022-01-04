@@ -9,9 +9,16 @@ $(function() {
 		//次の質問にfitをつけて出力。
 	});
 
+	//一つ戻るボタン
 	$('.back-button').on('click', function() {
 		$(this).closest(".q-wrapper").css("display", "none");
 		id = $(this).attr("href");
 		$(id).addClass("fit").fadeIn("slow").show();
+	});
+
+	//オススメボタン
+	$('#recommendation-button').on('click', function() {
+		$(this).closest(".result").css("display", "none");
+		$("#recommendation").fadeIn("slow").show();
 	});
 });
