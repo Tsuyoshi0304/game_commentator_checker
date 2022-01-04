@@ -7,7 +7,9 @@ class Simplified::SearchesController < ApplicationController
     @vtuber = params['vtuber']
     @sex = params['sex']
     @length = params['length']
+
     @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
+    @recommendation_commentators = recommendation_search_for(@feeling, @vtuber, @sex)
   end
 
   private
@@ -16,6 +18,16 @@ class Simplified::SearchesController < ApplicationController
     movie_style = MovieStyle.where(length: length)
     Commentator.where(feeling: feeling,
                       famous: famous,
+                      vtuber: vtuber,
+                      sex: sex,
+                      movie_style_id: movie_style.pluck(:id)
+    )
+  end
+
+  def recommendation_search_for(feeling, vtuber, sex)
+    movie_style = MovieStyle.all
+    Commentator.where(feeling: feeling,
+                      famous: [0,1],
                       vtuber: vtuber,
                       sex: sex,
                       movie_style_id: movie_style.pluck(:id)

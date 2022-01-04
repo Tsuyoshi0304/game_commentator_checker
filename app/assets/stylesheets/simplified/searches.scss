@@ -193,6 +193,29 @@
 	margin-bottom: 50px;
 }
 
+//近似をオススメ
+	.not-found {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: bold;
+	}
+	.recommendation-button {
+		width: 35%;
+		position: absolute;
+		top: 460px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border: none;
+		outline: none;
+	}
+
+	.fit {
+		display: block;
+	}
+
 //スマホレスポンシブ
 @media screen and (max-width: 512px){
 	.youtube-icon {
