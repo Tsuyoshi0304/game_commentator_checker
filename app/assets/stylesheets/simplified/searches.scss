@@ -170,10 +170,16 @@
 }
 
 //結果画面
-
-.result p{
+.result {
+	height: 350px;
+  p{
 	font-weight: bold;
 	font-size: 100%;
+  }
+}
+
+.commentator-info {
+	height: 100%;
 }
 
 .twitter {
@@ -208,16 +214,12 @@
 	.recommendation-button {
 		width: 35%;
 		position: absolute;
-		top: 460px;
+		top: 510px;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
 		border: none;
 		outline: none;
-	}
-
-	.fit {
-		display: block;
 	}
 
 //スマホレスポンシブ

@@ -19,47 +19,15 @@
 							</div>
 							<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に近い実況者は...</button>
 						</div>
-						<% @recommendation_commentators.each.with_index(1) do |commentator, index| %>
-							<div class="col-12 col-md-10 col-lg-6 result recommendation" style="display: none;">
-								<div class="commentator">
-									<div class="commentator-info" id="commentator-id-<%= index %>">
-										<div class="commentator-name round">
-											<%= commentator.name %>
-										</div>
-										<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
-										<div class="video">
-											<iframe width="110%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-										</div>
-									</div>
-								</div>
-							</div>
-						<% end %>
+						<%= render 'shared/recommendation_commentators', commentators: @recommendation_commentators %>
 					</div>
 					<div class="twitter" style="display: none;">
 						<%= render 'shared/twitter', commentators: 	@recommendation_commentators %>
 					</div>
 				<% end %>
 			<% else %>
-				<% @commentators.each.with_index(1) do |commentator, index| %>
-					<div class="result-wrapper">
-						<div class="col-12 col-md-10 col-lg-6 result">
-							<div class="commentator">
-								<div class="commentator-info" id="commentator-id-<%= index %>">
-									<div class="commentator-name round">
-										<%= commentator.name %>
-									</div>
-									<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
-									<div class="video">
-										<iframe width="110%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				<% end %>
-				<div class="twitter" style="display: none;">
-					<%= render 'shared/twitter', commentators: @commentators %>
-				</div>
+				<%= render 'shared/commentators', commentators: @commentators %>
+				<%= render 'shared/twitter', commentators: @commentators %>
 			<% end %>
 
 		<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>

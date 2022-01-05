@@ -1,0 +1,14 @@
+<% commentators.each.with_index(1) do |commentator, index| %>
+	<div class="col-12 col-md-10 col-lg-6 result recommendation" style="display: none;">
+		<div class="commentator-info" id="commentator-id-<%= index %>">
+			<div class="commentator-name round">
+				<%= commentator.name %>
+			</div>
+			<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
+			<div class="video">
+				<iframe width="110%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+			</div>
+      <button type="button" class="show-button round"><i class="fa fa-angle-down"></i></button>
+		</div>
+	</div>
+<% end %>

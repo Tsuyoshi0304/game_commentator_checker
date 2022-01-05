@@ -285,7 +285,7 @@
 
 .result {
   background-color: white;
-  height: 300px;
+  height: 350px;
   border-radius: 100px;
   margin: 30px auto;
   position: relative;
@@ -297,6 +297,10 @@
   }
 }
 
+.commentator-info {
+	height: 100%;
+  position: relative;
+}
 
 .commentator-name {
   background-color: black;
@@ -323,6 +327,23 @@
   top: 30%;
   width: 40%;
   height: 50%;
+}
+
+//詳細ボタン
+.show-button {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 85%;
+  left: 43%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
 }
 
 .twitter {
@@ -359,7 +380,7 @@
   display: inline-block;
   width: 35%;
   position: absolute;
-  top: 460px;
+  top: 510px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
