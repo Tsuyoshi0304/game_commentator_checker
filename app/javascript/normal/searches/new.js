@@ -1,5 +1,5 @@
-$(function(){
-	$('.radio-button').on('click', function() {
+$(function () {
+	$('.radio-button').on('click', function () {
 		//radio-buttonクラスをクリック後の関数処理
 		$(this).closest(".q-wrapper").css("display", "none");
 		//$("#children_wrapper").css("display", "none");
@@ -10,16 +10,17 @@ $(function(){
 		//次の質問にfitをつけて出力。
 	});
 
-	$('.back-button').on('click', function() {
+	$('.back-button').on('click', function () {
 		$(this).closest(".q-wrapper").css("display", "none");
 		id = $(this).attr("href");
 		$(id).addClass("fit").fadeIn("slow").show();
 	});
 
 	//オススメボタン
-	$('#recommendation-button').on('click', function() {
+	$('#recommendation-button').on('click', function () {
 		$(".mini-result-wrapper").css("display", "none");
 		$(".recommendation").fadeIn("slow").show();
+		$(".twitter").fadeIn("slow").show();
 	});
 });
 

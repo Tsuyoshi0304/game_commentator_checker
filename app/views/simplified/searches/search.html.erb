@@ -35,6 +35,9 @@
 							</div>
 						<% end %>
 					</div>
+					<div class="twitter" style="display: none;">
+					<%= render 'shared/twitter', commentators: @recommendation_commentators %>
+					</div>
 				<% end %>
 			<% else %>
 				<% @commentators.each.with_index(1) do |commentator, index| %>
@@ -54,9 +57,7 @@
 						</div>
 					</div>
 				<% end %>
-				<%= link_to "https://twitter.com/share?url=https://game-commentator-checker.herokuapp.com&text=あなたへのオススメ実況者は、「#{ @commentators.pluck(:name).join('、') }」です！&hashtags=ゲーム,ゲーム実況,ゲーム実況者", target: '_blank', class: 'twitter-share round' do  %>
-					<i class="fa fa-twitter" aria-hidden="true"></i>Twitter
-				<% end %>
+				<%= render 'shared/twitter', commentators: @commentators %>
 			<% end %>
 
 		<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
