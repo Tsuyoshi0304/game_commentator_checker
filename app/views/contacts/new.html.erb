@@ -6,6 +6,7 @@
 				<p>お問い合わせ</p>
 			</div>
 			<%= form_with model: @contact, url: contacts_confirm_path, local: true do |f| %>
+				<%= render 'shared/error_messages', model: f.object %>
 				<div class="form-group">
 					<%= f.label :name, 'お名前*', class: 'label' %>
 					<%= f.text_field :name, class: 'form-control' %>
@@ -26,6 +27,7 @@
 					<%= f.text_area :message, class: 'form-control' %>
 				</div>
 
+				<%= link_to 'トップへ戻る', root_path, data: {"turbolinks"=>false}, class: 'btn btn-secondary round to-title-2' %>
 				<%= f.submit '確認', class: 'btn btn-primary contacts-confirm' %>
 			<% end %>
 		</div>

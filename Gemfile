@@ -37,6 +37,8 @@ gem 'jquery-rails'
 gem 'aws-sdk-s3', require: false
 gem 'ancestry'
 gem 'font-awesome-rails'
+gem 'dotenv-rails'
+gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -48,7 +50,7 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'mysql2', '>= 0.4.4'
-  gem 'dotenv-rails'
+
   #gem 'google-api-client', '0.7', require: 'google/api_client'
 end
 
