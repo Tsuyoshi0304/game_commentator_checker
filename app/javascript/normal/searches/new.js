@@ -10,10 +10,27 @@ $(function () {
 		//次の質問にfitをつけて出力。
 	});
 
+	//一つ戻るボタン
 	$('.back-button').on('click', function () {
 		$(this).closest(".q-wrapper").css("display", "none");
 		id = $(this).attr("href");
 		$(id).addClass("fit").fadeIn("slow").show();
+	});
+
+	//詳細ボタン
+
+	$('.show-button').on('click', function () {
+		var index = $(this).val();
+		$(`#close-button-${index}`).fadeIn('slow').show();
+		$(`#show-button-${index}`).fadeOut('slow');
+		$(`#show-screen-${index}`).fadeIn('slow');
+	});
+
+	$('.close-button').on('click', function () {
+		var index = $(this).val();
+		$(`#close-button-${index}`).fadeOut('slow');
+		$(`#show-button-${index}`).fadeIn('slow');
+		$(`#show-screen-${index}`).fadeOut('slow');
 	});
 
 	//オススメボタン

@@ -330,7 +330,7 @@
 }
 
 //詳細ボタン
-.show-button {
+.detail-button {
   background-color: black;
   color: white;
   font-size: 150%;
@@ -344,6 +344,15 @@
   appearance: none;
   border: none;
   outline: none;
+}
+
+.show-screen {
+  position: absolute;
+    top: 100%;
+    margin-top: 20px;
+    height: 300px;
+    background-color: white;
+    width: 100%;
 }
 
 .twitter {

@@ -182,6 +182,32 @@
 	height: 100%;
 }
 
+//詳細ボタン
+.detail-button {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 85%;
+  left: 43%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.show-screen {
+  position: absolute;
+    top: 100%;
+    margin-top: 20px;
+    height: 300px;
+    background-color: white;
+    width: 100%;
+}
+
 .twitter {
 	height: 100%;
 }

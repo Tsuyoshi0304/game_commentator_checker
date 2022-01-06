@@ -16,6 +16,22 @@ $(function () {
 		$(id).addClass("fit").fadeIn("slow").show();
 	});
 
+	//詳細ボタン
+
+	$('.show-button').on('click', function () {
+		var index = $(this).val();
+		$(`#close-button-${index}`).fadeIn('slow').show();
+		$(`#show-button-${index}`).fadeOut('slow');
+		$(`#show-screen-${index}`).fadeIn('slow');
+	});
+
+	$('.close-button').on('click', function () {
+		var index = $(this).val();
+		$(`#close-button-${index}`).fadeOut('slow');
+		$(`#show-button-${index}`).fadeIn('slow');
+		$(`#show-screen-${index}`).fadeOut('slow');
+	});
+
 	//オススメボタン
 	$('#recommendation-button').on('click', function () {
 		$(".mini-result-wrapper").css("display", "none");
