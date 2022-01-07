@@ -26,4 +26,8 @@ class Commentator < ApplicationRecord
 		healing_playing: 70
 	}
 	enum feeling: { excitement: 1, calm: 2 }
+	enum famous: { famous_true: 1, famous_false: 0 }
+	enum vtuber: { vtuber_true: 1, vtuber_false: 0 }
+	enum is_forming_a_group: { is_forming_a_group_true: 1, is_forming_a_group_false: 0 }
+	enum appearance: { appearance_true: 1, appearance_false: 0 }
 end

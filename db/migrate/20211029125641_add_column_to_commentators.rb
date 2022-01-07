@@ -1,6 +1,6 @@
 class AddColumnToCommentators < ActiveRecord::Migration[6.0]
   def up
-    add_column :commentators, :is_forming_a_group, :boolean, null: false
+    add_column :commentators, :is_forming_a_group, :integer, null: false
     add_column :commentators, :play_style, :integer, null: false
     remove_column :commentators, :single_play
     remove_column :commentators, :enthusiastic_play

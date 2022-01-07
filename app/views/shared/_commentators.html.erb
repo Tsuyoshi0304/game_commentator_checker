@@ -1,0 +1,52 @@
+<% commentators.each.with_index(1) do |commentator, index| %>
+	<div id="result-r-<%= index %>" class="col-12 col-md-10 col-lg-6 round result-r recommendation">
+		<div class="commentator-info" id="commentator-info-<%= index %>">
+			<div class="commentator-name round">
+				<%= commentator.name %>
+			</div>
+			<%= link_to image_tag(commentator.youtube_icon, class: 'youtube-icon'), commentator.youtube_channel_url %>
+			<div class="video">
+				<iframe width="110%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+			</div>
+      <button id="show-button-<%= index %>" type="button" class="detail-button show-button round" value="<%= index %>"><i class="fa fa-angle-down"></i></button>
+			<button id="close-button-<%= index %>" type="button" class="detail-button close-button round" value="<%= index %>" style="display: none;"><i class="fa fa-angle-up"></i></button>  
+			
+      <div id="show-screen-<%= index %>" class="show-screen round" style="display: none;">
+				<p class="title round">特徴</p>
+				<table class="show-question">
+					<tbody>
+						<tr>
+							<td>プレイスタイル:</td>
+							<td><%= commentator.play_style_i18n %></td>
+						</tr>
+            <tr>
+							<td>顔出し:</td>
+							<td><%= commentator.appearance_i18n %></td>
+						</tr>
+            <tr>
+							<td>Vtuber:</td>
+							<td><%= commentator.vtuber_i18n %></td>
+						</tr>
+            <tr>
+							<td>性別:</td>
+							<td><%= commentator.sex_i18n %></td>
+						</tr>
+						<tr>
+							<td>グループ:</td>
+							<td><%= commentator.is_forming_a_group_i18n %></td>
+						</tr>
+						<tr>
+							<td>動画の長さ:</td>
+							<td><%= commentator.movie_style.length_i18n %></td>
+						</tr>
+            <tr>
+							<td>ライブの割合:</td>
+							<td><%= commentator.movie_style.live_i18n %></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+<% end %>

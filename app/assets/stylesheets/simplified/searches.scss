@@ -170,10 +170,94 @@
 }
 
 //結果画面
+.result {
+  background-color: white;
+  height: 350px;
+  border-radius: 100px;
+  margin: 30px auto;
+  position: relative;
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
-.result p{
-	font-weight: bold;
-	font-size: 100%;
+.result-r {
+	height: 350px;
+	background-color: white;
+	margin: 30px auto;
+}
+
+.commentator-info {
+	height: 100%;
+  position: relative;
+}
+
+.commentator-name {
+  background-color: black;
+  width: 80%;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  line-height: 3em;
+  position: absolute;
+  top: 40px;
+  left: 10%;
+}
+
+.youtube-icon {
+  position: absolute;
+  top: 110px;
+  left: 7%;
+  border-radius: 100px;
+}
+
+.video {
+  position: absolute;
+  left: 45%;
+  top: 110px;
+  width: 40%;
+  height: 50%;
+}
+
+//詳細ボタン
+.detail-button {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 300px;
+  left: 43%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.show-screen {
+	position: absolute;
+    top: 52%;
+    width: 100%;
+  margin-top: 20px;
+  height: 200px;
+  background-color: white;
+  width: 100%;
+	p {
+		width: 80%;
+    margin-left: 10%;
+		margin-top: 0;
+		font-size: x-large;
+		line-height: 50px;
+	}
+}
+
+.show-question {
+	margin: 20px auto;
 }
 
 .twitter {
@@ -208,16 +292,12 @@
 	.recommendation-button {
 		width: 35%;
 		position: absolute;
-		top: 460px;
+		top: 510px;
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
 		border: none;
 		outline: none;
-	}
-
-	.fit {
-		display: block;
 	}
 
 //スマホレスポンシブ

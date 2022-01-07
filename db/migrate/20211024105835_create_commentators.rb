@@ -9,8 +9,8 @@ class CreateCommentators < ActiveRecord::Migration[6.0]
       t.integer :age, null: false
       t.boolean :single_play, null: false
       t.boolean :enthusiastic_play, null: false
-      t.boolean :appearance, null: false
-      t.boolean :vtuber, null: false
+      t.integer :appearance, null: false
+      t.integer :vtuber, null: false
       
 
 

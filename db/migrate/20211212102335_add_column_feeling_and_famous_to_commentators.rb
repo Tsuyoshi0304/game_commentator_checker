@@ -1,7 +1,7 @@
 class AddColumnFeelingAndFamousToCommentators < ActiveRecord::Migration[6.0]
   def up
     add_column :commentators, :feeling, :integer, null: false
-    add_column :commentators, :famous, :boolean, null: false
+    add_column :commentators, :famous, :integer, null: false
   end
 
   def down

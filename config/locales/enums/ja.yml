@@ -1,0 +1,37 @@
+ja:
+  enums:
+    commentator:
+      feeling:
+        excitement: わいわい
+        calm: まったり
+      famous:
+        famous_true: はい
+        famous_false: そうでもない
+      vtuber:
+        vtuber_true: はい
+        vtuber_false: いいえ
+      sex:
+        male: 男性
+        female: 女性
+      appearance:
+        appearance_true: している
+        appearance_false: していない
+      is_forming_a_group:
+        is_forming_a_group_true: 組んでいる
+        is_forming_a_group_false: 組んでいない
+      play_style: 
+        good_talk: トーク系
+        astringent_voice: 渋い声
+        changing_voice: ボイチェン
+        playing_well: 上手い、攻略系
+        playing_noisy: テンション高い、うるさい系
+        playing_happily: それなりのテンション系
+        healing_playing: 癒し、優しい系
+    movie_style:
+      length:
+        within_30_minutes: 短い
+        over_30_minutes: 長い
+      live:
+        live_main: ライブ多め
+        edit_main: 編集動画多め
+
