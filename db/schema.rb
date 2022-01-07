@@ -40,15 +40,15 @@ ActiveRecord::Schema.define(version: 2021_12_31_150636) do
     t.text "youtube_channel_url"
     t.integer "sex", null: false
     t.integer "age", null: false
-    t.boolean "appearance", null: false
-    t.boolean "vtuber", null: false
+    t.integer "appearance", null: false
+    t.integer "vtuber", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "movie_style_id", null: false
-    t.boolean "is_forming_a_group", null: false
+    t.integer "is_forming_a_group", null: false
     t.integer "play_style", null: false
     t.integer "feeling", null: false
-    t.boolean "famous", null: false
+    t.integer "famous", null: false
     t.index ["movie_style_id"], name: "index_commentators_on_movie_style_id"
   end
 

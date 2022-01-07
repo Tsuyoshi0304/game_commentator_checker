@@ -23,14 +23,18 @@ $(function () {
 		var index = $(this).val();
 		$(`#close-button-${index}`).fadeIn('slow').show();
 		$(`#show-button-${index}`).fadeOut('slow');
-		$(`#show-screen-${index}`).fadeIn('slow');
+		$(`#result-r-${index}`).animate({ height: '700px' }, 400);
+
+		$(`#show-screen-${index}`).slideDown(400);
 	});
 
 	$('.close-button').on('click', function () {
 		var index = $(this).val();
 		$(`#close-button-${index}`).fadeOut('slow');
 		$(`#show-button-${index}`).fadeIn('slow');
-		$(`#show-screen-${index}`).fadeOut('slow');
+		$(`#result-r-${index}`).animate({ height: '350px' }, 400);
+
+		$(`#show-screen-${index}`).slideUp('fast');
 	});
 
 	//オススメボタン

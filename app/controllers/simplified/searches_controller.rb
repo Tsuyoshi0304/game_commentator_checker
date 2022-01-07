@@ -9,6 +9,7 @@ class Simplified::SearchesController < ApplicationController
     @length = params['length']
 
     @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
+
     @recommendation_commentators = recommendation_search_for(@feeling, @vtuber, @sex)
   end
 

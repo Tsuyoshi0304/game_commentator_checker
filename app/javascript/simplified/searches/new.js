@@ -5,7 +5,7 @@ $(function () {
 		//質問画面にあたる親要素div(class="q-wrapper")をdisplay:none;にする
 		id = $(this).attr("href");
 		//次の質問idをidに格納
-		$(id).addClass("fit").fadeIn("slow").show();
+		$(id).addClass("fit").fadeIn("slow");
 		//次の質問にfitをつけて出力。
 	});
 
@@ -13,23 +13,27 @@ $(function () {
 	$('.back-button').on('click', function () {
 		$(this).closest(".q-wrapper").css("display", "none");
 		id = $(this).attr("href");
-		$(id).addClass("fit").fadeIn("slow").show();
+		$(id).addClass("fit").fadeIn("slow");
 	});
 
 	//詳細ボタン
 
 	$('.show-button').on('click', function () {
 		var index = $(this).val();
-		$(`#close-button-${index}`).fadeIn('slow').show();
+		$(`#close-button-${index}`).fadeIn('slow');
 		$(`#show-button-${index}`).fadeOut('slow');
-		$(`#show-screen-${index}`).fadeIn('slow');
+		$(`#result-r-${index}`).animate({ height: '700px' }, 400);
+
+		$(`#show-screen-${index}`).slideDown(400);
 	});
 
 	$('.close-button').on('click', function () {
 		var index = $(this).val();
 		$(`#close-button-${index}`).fadeOut('slow');
 		$(`#show-button-${index}`).fadeIn('slow');
-		$(`#show-screen-${index}`).fadeOut('slow');
+		$(`#result-r-${index}`).animate({ height: '350px' }, 400);
+
+		$(`#show-screen-${index}`).slideUp('fast');
 	});
 
 	//オススメボタン
