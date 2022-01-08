@@ -346,7 +346,7 @@ end
 		s.appearance = 1
 		s.vtuber = 0
 		s.feeling = 1
-		s.famous = 2
+		s.famous = 0
 		s.movie_style_id = 4
 	end
 	
