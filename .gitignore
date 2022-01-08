@@ -45,4 +45,5 @@ yarn.lock
 /test-api/
 
 
-/.env
+/.env.local
+/.env.production
