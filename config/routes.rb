@@ -22,4 +22,6 @@ Rails.application.routes.draw do
   resources :contacts, only: %w[new create] 
   post 'contacts/confirm', 'contacts#confirm'
   post 'contacts/back', 'contacts#back'
+
+  get 'sitemap', to: redirect('https://s3-ap-northeast-1.amazonaws.com/game-commentator-checker/sitemaps/sitemap.xml.gz')
 end
