@@ -47,3 +47,5 @@ yarn.lock
 
 /.env.local
 /.env.production
+
+public/sitemap.xml.gz
