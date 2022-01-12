@@ -1,4 +1,9 @@
 /* 検索画面  */
+
+.q-wrapper, .btn-search {
+	font-family: 'Mochiy Pop P One', sans-serif; 
+}
+
 .commentators {
   text-align: center;
 }
@@ -282,6 +287,10 @@
 }
 
 /* 結果画面 */
+
+.result-wrapper, .result-r, .title, .twitter-wrapper, .twitter, .to-title {
+	font-family: 'Mochiy Pop P One', sans-serif; 
+}
 
 .result {
   background-color: white;

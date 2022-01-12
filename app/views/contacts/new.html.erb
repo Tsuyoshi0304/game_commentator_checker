@@ -8,22 +8,22 @@
 			<%= form_with model: @contact, url: contacts_confirm_path, local: true do |f| %>
 				<%= render 'shared/error_messages', model: f.object %>
 				<div class="form-group">
-					<%= f.label :name, 'お名前*', class: 'label' %>
+					<%= f.label :name, 'お名前', class: 'label' %>
 					<%= f.text_field :name, class: 'form-control' %>
 				</div>
 
 				<div class="form-group">
-					<%= f.label :email, 'メールアドレス*', class: 'label' %>
+					<%= f.label :email, 'メールアドレス', class: 'label' %>
 					<%= f.email_field :email, class: 'form-control' %>
 				</div>
 
 				<div class="form-group">
-					<%= f.label :title, 'タイトル*', class: 'label' %>
+					<%= f.label :title, 'タイトル', class: 'label' %>
 					<%= f.text_field :title, class: 'form-control' %>
 				</div>
 
 				<div class="form-group">
-					<%= f.label :message, '内容*', class: 'label' %>
+					<%= f.label :message, '内容', class: 'label' %>
 					<%= f.text_area :message, class: 'form-control' %>
 				</div>
 

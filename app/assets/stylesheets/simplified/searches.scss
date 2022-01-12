@@ -4,6 +4,10 @@
 
 //検索項目
 
+.q-wrapper, .btn-search {
+	font-family: 'Mochiy Pop P One', sans-serif; 
+}
+
 .title {
 	font-size: 180%;
 	text-align: center;
@@ -170,6 +174,11 @@
 }
 
 //結果画面
+
+.result-wrapper, .result-r, .title, .twitter-wrapper, .twitter, .to-title {
+	font-family: 'Mochiy Pop P One', sans-serif; 
+}
+
 .result {
   background-color: white;
   height: 350px;
