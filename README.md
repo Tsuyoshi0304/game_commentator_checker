@@ -22,9 +22,11 @@ https://game-commentator-checker.herokuapp.com
 ## 解決方法
 　
 **ゲームジャンル**
+
 アクション、RPG、シミュレーション、レース、カード、ボードゲーム、恋愛、バカゲーなど
 
 **質問項目**
+
 ● プレイスタイルはどれか（トークが上手い系、イケボ・渋い声系、癒し系、vtuber系など）
 
 ● 顔出ししているか
@@ -37,7 +39,7 @@ https://game-commentator-checker.herokuapp.com
 
 ● 性別
 
-● 動画の長さ　　など
+● 動画の長さ など
 
 ## 実装予定の機能
 録音 ⇨ UniConverter(録音ツール)
