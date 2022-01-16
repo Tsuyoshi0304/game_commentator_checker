@@ -18,6 +18,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 @import 'homes';
 @import 'contacts';
+@import 'users';
+@import 'user_sessions';
 
 /*
 *= require_tree .
@@ -26,4 +28,8 @@
 
 body {
   background-color: #41DBD2;
+}
+
+.alert {
+  margin-top: 60px;
 }
