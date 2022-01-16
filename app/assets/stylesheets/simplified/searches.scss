@@ -25,7 +25,7 @@
 .search-item {
 	text-align: center;
 	background-color: white;
-	margin-top: 50px;
+	margin-top: 10px;
 	padding-bottom: 40px;
 	height: 520px;
 	position: relative;
@@ -272,7 +272,8 @@
 
 .twitter {
 	position: relative;
-	height: 100%;
+	height: 80px;
+	width: 100%;
 }
 
 .twitter-share {
@@ -290,7 +291,14 @@
 	}
 }
 
+.to-more-function {
+	font-family: 'Mochiy Pop P One', sans-serif; 
+	height: 40px;
+	width: 40%;
+}
+
 .to-title {
+	margin-top: 0;
 	margin-bottom: 50px;
 }
 

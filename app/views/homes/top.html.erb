@@ -1,4 +1,3 @@
-<%= render 'shared/flash_messages' %>
 <div class="container">
 	<div class="row">
 		<div class="background">
@@ -8,7 +7,10 @@
 			</div>
 			<div class="link-to-mode">
 				<%= link_to t('.simplified'), simplified_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'left-start' %>
-				<%= link_to t('.normal'), normal_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'right-start' %>
+
+				<% if logged_in? %>
+					<%= link_to t('.normal'), normal_searches_new_path, data: {"turbolinks"=>false}, class: 'btn-start', id: 'right-start' %>
+				<% end %>
 			</div>
 		</div>
 	</div>

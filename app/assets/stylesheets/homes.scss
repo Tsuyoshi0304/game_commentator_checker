@@ -2,12 +2,38 @@ html,body {
 	height: 100%;
 }
 
+header {
+	background-color: rgba(58, 83, 83, 0.42);
+	width: 100%;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+}
+
+header nav{
+	height: 60px;
+}
+
+.navbar-brand {
+	padding-left: 20px;
+}
+
+.logout-button {
+	text-decoration: none;
+	color: rgba(black, 0.5);
+}
+
+.logout-button:hover {
+	text-decoration: none;
+	color: black;
+}
+
 .background {
 	background: url("22182134.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin-top: 100px;
+	margin-top: 130px;
 	position: relative;
 }
 
@@ -19,7 +45,7 @@ html,body {
 	height: 120px;
 	h2 {
 		position: absolute;
-		top: -15%;
+		top: -13%;
 		left: 0%;
 		width: 100%;
 		text-align: center;
@@ -58,19 +84,19 @@ html,body {
 
 .link-to-mode {
 	position: relative;
-	height: 300px;
+	height: 250px;
 }
 
 #left-start {
 	position: absolute;
-	top: 240px;
-	left: 7%;
+	top: 150px;
+	left: 30%;
 }
 
 #right-start {
 	position: absolute;
-	top: 240px;
-	left: 53%;
+	top: 230px;
+	left: 30%;
 }
 
 /* footer */
@@ -79,7 +105,7 @@ footer {
 	display: -webkit-flex;
 	display: flex;
 	position: absolute;
-	top: 740px;
+	top: 800px;
 	height: 50px;
 	width: 100%;
 	justify-content: center;

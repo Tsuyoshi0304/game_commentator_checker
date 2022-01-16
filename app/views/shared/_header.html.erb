@@ -1,0 +1,16 @@
+<header>
+  <nav class="navbar navbar-expand-lg navigation navbar-light">
+    <%= link_to root_path, class: 'navbar-brand' do %>
+      <%= image_tag 'abu.jpeg', size: '40x40' %>
+    <% end %>
+
+    <div id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item">
+          <%= link_to 'ログアウト', logout_path, class: 'logout-button', method: :delete %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
