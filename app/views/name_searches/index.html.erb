@@ -13,21 +13,20 @@
       </div>
     </div>
 
-    <div id="name-result-js-2">
-      <p>aaa</p>
-    </div>
-
     <div id="name-result-js" class="name-result">
-      <p class="title round">検索結果</p>
-      <% if @commentators.blank? %>
-				<div class="result-wrapper">
-					<div class="col-12 col-md-10 col-lg-6 result">
-						<p><%= '見つかりませんでした。' %></p>
-					</div>
-				</div>
-			<% else %>
-				<%= render 'shared/commentators', commentators: @commentators %>
-			<% end %>
+      <% if @commentators == {} %>
+      <% else %>
+        <p class="title round">検索結果</p>
+        <% if @commentators.blank? %>
+			    <div class="result-wrapper">
+			  		<div class="col-12 col-md-10 col-lg-6 result">
+			  			<p><%= '見つかりませんでした。' %></p>
+			  		</div>
+			  	</div>
+			  <% else %>
+			  	<%= render 'shared/commentators', commentators: @commentators %>
+			  <% end %>
+      <% end %>
     </div>
     <%= link_to 'タイトルに戻る', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
   </div>

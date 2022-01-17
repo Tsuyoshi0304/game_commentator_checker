@@ -1,5 +1,8 @@
 class NameSearchesController < ApplicationController
   def index
+    if name_params == {}
+      @commentators = {}
+    end
     return if name_params[:name].blank?
     @commentators = Commentator.commentator_search(name_params).includes(:movie_style)
   end
