@@ -18,7 +18,16 @@ header nav{
 	padding-left: 20px;
 }
 
-.logout-button {
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+}
+
+.nav-item {
+	padding-right: 5px;
+}
+
+.nav-button {
 	text-decoration: none;
 	color: rgba(black, 0.5);
 }

@@ -1,0 +1,33 @@
+.container-1, .row-1 {
+  height: 100%;
+}
+
+.name-searches-wrapper {
+  height: 100px;
+  margin-top: 100px;
+
+  .name-searches {
+    position: relative;
+
+    .field {
+      input {
+        width: 70%;
+        margin-left: 15%;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 15%;
+    }
+  }
+}
+
+.to-title {
+  height: 40px;
+}
+
+
+
+
