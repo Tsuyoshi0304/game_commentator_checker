@@ -24,6 +24,38 @@
   }
 }
 
+.name-search-commentator {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  height: 380px;
+	background-color: white;
+	margin: 30px auto;
+  position: relative;
+}
+
+.detail-button-2 {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+	padding-left: 11px;
+  position: absolute;
+  top: 320px;
+  left: 60%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.similar-button-2 {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  position: absolute;
+  top: 300px;
+  left: 15%;
+}
+
 .to-title {
   height: 40px;
 }

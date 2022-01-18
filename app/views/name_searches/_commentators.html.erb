@@ -1,5 +1,5 @@
 <% commentators.each.with_index(1) do |commentator, index| %>
-	<div id="result-r-<%= index %>" class="col-12 col-md-10 col-lg-6 round result-r recommendation similar-commentator" style="display: none;">
+	<div id="result-r-<%= index %>" class="col-12 col-md-10 col-lg-6 round name-search-commentator">
 		<div class="commentator-info" id="commentator-info-<%= index %>">
 			<div class="commentator-name round">
 				<%= commentator.name %>
@@ -8,10 +8,10 @@
 			<div class="video">
 				<iframe width="110%" height="180" src="<%= commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 			</div>
-      <button id="show-button-<%= index %>" type="button" class="detail-button show-button round" value="<%= index %>"><i class="fa fa-angle-down"></i></button>
-			<button id="close-button-<%= index %>" type="button" class="detail-button close-button round" value="<%= index %>" style="display: none;"><i class="fa fa-angle-up"></i></button>
-
-			<div id="show-screen-<%= index %>" class="show-screen round" style="display: none;">
+      <button id="show-button-<%= index %>" type="button" class="detail-button-2 show-button-2 round" value="<%= index %>"><i class="fa fa-angle-down"></i></button>
+			<button id="close-button-<%= index %>" type="button" class="detail-button-2 close-button-2 round" value="<%= index %>" style="display: none;"><i class="fa fa-angle-up"></i></button>  
+			
+      <div id="show-screen-<%= index %>" class="show-screen round" style="display: none;">
 				<p class="title round">特徴</p>
 				<table class="show-question">
 					<tbody>
@@ -46,7 +46,7 @@
 					</tbody>
 				</table>
 			</div>
-
 		</div>
+    <!-- <button type="button" class="btn btn-danger recommendation-button round similar-button-2" id="<%= index %>">似ている実況者は...</button> -->
 	</div>
 <% end %>

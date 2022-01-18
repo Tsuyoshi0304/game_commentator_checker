@@ -24,7 +24,9 @@
 			  		</div>
 			  	</div>
 			  <% else %>
-			  	<%= render 'shared/commentators', commentators: @commentators %>
+			  	<%= render 'name_searches/commentators', commentators: @commentators %>
+            
+          <!-- <%= render 'shared/recommendation_commentators', commentators: @similar_commentators %> -->
 			  <% end %>
       <% end %>
     </div>
