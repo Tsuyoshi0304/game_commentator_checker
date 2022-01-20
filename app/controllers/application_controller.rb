@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include NameSearchesHelper
+  
   add_flash_types :danger, :success
 
   before_action :require_login

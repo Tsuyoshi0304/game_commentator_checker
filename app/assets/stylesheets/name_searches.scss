@@ -1,0 +1,84 @@
+.container-1, .row-1 {
+  height: 100%;
+}
+
+.name-search-title {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  color: white;
+  background-color: black;
+  margin-bottom: 30px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.name-searches-wrapper {
+  height: 0;
+  margin-top: 100px;
+
+  .name-searches {
+    position: relative;
+
+    .field {
+      input {
+        width: 70%;
+        margin-left: 15%;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 0;
+      right: 15%;
+    }
+  }
+}
+
+.name-search-commentator {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  height: 380px;
+	background-color: white;
+	margin: 30px auto;
+  position: relative;
+}
+
+.detail-button-2 {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+	padding-left: 11px;
+  position: absolute;
+  top: 320px;
+  left: 43%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.show-screen {
+  position: absolute;
+    top: 37%;
+  height: 610px;
+}
+
+.show-question {
+  margin: 20px auto;
+}
+
+.similar-button-2 {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  position: absolute;
+  top: 300px;
+  left: 15%;
+}
+
+.to-title {
+  height: 40px;
+}
+
+
+
+

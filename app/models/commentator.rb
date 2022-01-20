@@ -30,4 +30,14 @@ class Commentator < ApplicationRecord
 	enum vtuber: { vtuber_true: 1, vtuber_false: 0 }
 	enum is_forming_a_group: { is_forming_a_group_true: 1, is_forming_a_group_false: 0 }
 	enum appearance: { appearance_true: 1, appearance_false: 0 }
+
+	scope :aggregate_game_genre, -> (commentator) { commentator.playing_games.pluck(:game_genre_id) }
+
+	scope :commentator_search, -> (name_params) do
+		return if name_params[:name].blank?
+
+		name_like(name_params[:name])
+	end
+
+	scope :name_like, ->  (name) { where('name LIKE ?', "%#{name}%") if name.present? } 
 end
