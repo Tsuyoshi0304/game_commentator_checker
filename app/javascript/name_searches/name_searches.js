@@ -1,11 +1,16 @@
 $(function () {
+  //検索ボタン
+  //$('#name_searches_submit').on('click', function () {
+  //  $('.name-search-title').css('display', 'none');
+  //});
+
   //詳細ボタン（最初の検索）
 
   $('.show-button-2').on('click', function () {
     var index = $(this).val();
     $(`#close-button-${index}`).fadeIn('slow').show();
     $(`#show-button-${index}`).fadeOut('slow');
-    $(`#result-r-${index}`).animate({ height: '700px' }, 400);
+    $(`#result-r-${index}`).animate({ height: '1130px' }, 400);
 
     $(`#show-screen-${index}`).slideDown(400);
   });

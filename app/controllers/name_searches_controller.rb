@@ -6,6 +6,7 @@ class NameSearchesController < ApplicationController
 
     return if name_params[:name].blank?
     @commentators = Commentator.commentator_search(name_params).includes(:movie_style)
+
     @similar_commentators = @commentators
   end
 

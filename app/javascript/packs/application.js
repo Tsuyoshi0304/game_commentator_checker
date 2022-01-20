@@ -8,6 +8,8 @@ require("@rails/activestorage").start()
 require("channels")
 
 require('jquery')
+import "chartkick/chart.js"
+
 require('simplified/searches/new')
 require('normal/searches/new')
 require('normal/searches/gamegenre')

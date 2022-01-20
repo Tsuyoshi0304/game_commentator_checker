@@ -13,6 +13,8 @@
 			
       <div id="show-screen-<%= index %>" class="show-screen round" style="display: none;">
 				<p class="title round">特徴</p>
+				<p>ゲームジャンルの割合</p>
+				<%= pie_chart aggregate(commentator), height: '40%', width: '100%' %>
 				<table class="show-question">
 					<tbody>
 						<tr>

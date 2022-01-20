@@ -2,6 +2,15 @@
   height: 100%;
 }
 
+.name-search-title {
+  font-family: 'Mochiy Pop P One', sans-serif;
+  color: white;
+  background-color: black;
+  margin-bottom: 30px;
+  height: 50px;
+  line-height: 50px;
+}
+
 .name-searches-wrapper {
   height: 0;
   margin-top: 100px;
@@ -41,12 +50,22 @@
 	padding-left: 11px;
   position: absolute;
   top: 320px;
-  left: 60%;
+  left: 43%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: none;
   outline: none;
+}
+
+.show-screen {
+  position: absolute;
+    top: 37%;
+  height: 610px;
+}
+
+.show-question {
+  margin: 20px auto;
 }
 
 .similar-button-2 {
