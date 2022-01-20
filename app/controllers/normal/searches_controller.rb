@@ -1,4 +1,6 @@
 class Normal::SearchesController < ApplicationController
+  include Normal::SearchesHelper
+
   before_action :set_gamegenre, only: %w[new]
 
   def get_gamegenre_children
@@ -19,6 +21,8 @@ class Normal::SearchesController < ApplicationController
 
     @commentators = search_for(@genre_name, @sex, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @live)
     @recommendation_commentators = recommendation_search_for(@genre_name, @play_style, @vtuber, @sex)
+
+    diagnosis_save
   end
 
   private

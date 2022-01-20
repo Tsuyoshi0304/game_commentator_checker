@@ -1,4 +1,6 @@
 class Simplified::SearchesController < ApplicationController
+  include Simplified::SearchesHelper
+  
   skip_before_action :require_login, only: %i[new search]
   
   def new; end
@@ -13,6 +15,8 @@ class Simplified::SearchesController < ApplicationController
     @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
 
     @recommendation_commentators = recommendation_search_for(@feeling, @vtuber, @sex)
+
+    diagnosis_save
   end
 
   private

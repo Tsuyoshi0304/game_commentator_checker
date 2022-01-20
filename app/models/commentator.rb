@@ -2,6 +2,7 @@ class Commentator < ApplicationRecord
 	has_many :popular_movies, dependent: :destroy
 	has_many :playings, dependent: :destroy
 	has_many :playing_games, through: :playings, source: :game
+	has_many :diagnosis_histories, dependent: :destroy
   belongs_to :movie_style, optional: true
 
 	has_one_attached :youtube_icon

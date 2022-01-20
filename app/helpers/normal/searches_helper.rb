@@ -1,4 +1,4 @@
-module Simplified::SearchesHelper
+module Normal::SearchesHelper
   def diagnosis_save
     if current_user
       if @commentators.present?

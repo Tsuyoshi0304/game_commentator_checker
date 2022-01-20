@@ -22,8 +22,7 @@ $(function () {
 		var index = $(this).val();
 		$(`#close-button-${index}`).fadeIn('slow');
 		$(`#show-button-${index}`).fadeOut('slow');
-		$(`#result-r-${index}`).animate({ height: '700px' }, 400);
-
+		$(`#result-r-${index}`).animate({ height: '1130px' }, 400);
 		$(`#show-screen-${index}`).slideDown(400);
 	});
 
@@ -31,8 +30,7 @@ $(function () {
 		var index = $(this).val();
 		$(`#close-button-${index}`).fadeOut('slow');
 		$(`#show-button-${index}`).fadeIn('slow');
-		$(`#result-r-${index}`).animate({ height: '350px' }, 400);
-
+		$(`#result-r-${index}`).animate({ height: '380px' }, 400);
 		$(`#show-screen-${index}`).slideUp('fast');
 	});
 
