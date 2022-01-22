@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get 'diagnosis_histories/index'
   root to: 'homes#top'
 
-  resources :users, only: %i[new create show destroy]
+  resources :users, only: %i[new create destroy]
+  resources :users do
+    member do
+      get 'diagnosis_histories'
+    end
+  end
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'

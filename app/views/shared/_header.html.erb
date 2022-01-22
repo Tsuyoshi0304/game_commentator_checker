@@ -10,7 +10,7 @@
           <%= link_to '実況者検索', name_searches_path, class: 'nav-button' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'マイページ', user_path(current_user), class: 'nav-button' %>
+          <%= link_to '診断履歴', diagnosis_histories_user_path(current_user), class: 'nav-button' %>
         </li>
         <li class="nav-item">
           <%= link_to 'ログアウト', logout_path, class: 'nav-button', method: :delete %>
