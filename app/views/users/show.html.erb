@@ -1,10 +1,33 @@
 <div class="col-11 container">
   <div class="row">
-    <div class="profile-edit-wrapper">
-      <h1 class="title round">プロフィール編集</h1>
+    <div class="col-12 col-md-10 col-lg-9 profile-edit-wrapper">
+      <h1 class="title round">プロフィール</h1>
     </div>
-    <div class="diagnosis-history-wrapper">
+    <div class="col-12 col-md-10 col-lg-9 diagnosis-history-wrapper">
       <h1 class="title round">診断履歴</h1>
+      <div class="diagnosis-back">
+        <% @diagnoses.each.with_index(1).reverse_each do |diagnosis, index| %>
+          <div class="diagnosis-history">
+            <div class="diagnosis-count">
+              <%= index %>回目
+              <button type="button" class="down-button-wrapper" value="<%= index %>"><i class="fa fa-angle-down" id="angle-down-<%= index %>"></i></button>
+              <button type="button" class="up-button-wrapper" value="<%= index %>"><i class="fa fa-angle-up" id="angle-up-<%= index %>" style="display: none;"></i></button>
+            </div>
+            <div id="diagnosis-contents-<%= index %>" class="diagnosis-contents" style="display: none;">
+              <h2>モード</h2>
+              <p><%= diagnosis[1][0].mode_i18n %></p>
+              <h2>オススメ実況者名</h2>
+              <% diagnosis[1].size.times do |sizeindex| %>
+                <div class="diagnosis-commentator">
+                  
+                    <%= diagnosis[1][sizeindex].commentator.name %><br>
+                  
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

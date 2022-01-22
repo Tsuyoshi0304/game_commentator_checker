@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @diagnoses = current_user.diagnosis_histories.order(diagnosed_at: :asc).group_by {|d| [d[:diagnosed_at]]}
   end
 
   def destroy
