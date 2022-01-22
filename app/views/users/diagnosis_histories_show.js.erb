@@ -1,0 +1,15 @@
+//モーダルを取得
+var commentator_modal = $('#commentator-modal').get(0);
+
+//マスクを取得
+var mask = $('#mask').get(0);
+
+commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnoses: @diagnoses ) %>" ;
+
+commentator_modal.classList.remove('hidden');
+mask.classList.remove('hidden');
+
+$('#mask').on('click', function() {
+  commentator_modal.classList.add('hidden');
+  mask.classList.add('hidden');
+});

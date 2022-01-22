@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: %i[new create destroy]
+  skip_before_action :require_login, only: %i[new create diagnosis_histories destroy]
 
   def new
     @user = User.new
@@ -17,6 +17,13 @@ class UsersController < ApplicationController
 
   def diagnosis_histories
     @diagnoses = current_user.diagnosis_histories.order(diagnosed_at: :asc).group_by {|d| [d[:diagnosed_at]]}
+  end
+
+  def diagnosis_histories_show
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def destroy

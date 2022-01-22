@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get 'diagnosis_histories'
+      get 'diagnosis_histories_show'
     end
   end
 

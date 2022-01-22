@@ -1,2 +1,0 @@
-module DiagnosisHistoriesHelper
-end
