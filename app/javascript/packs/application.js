@@ -15,7 +15,7 @@ require('normal/searches/new')
 require('normal/searches/gamegenre')
 require('footer')
 require('name_searches/name_searches')
-require('users/show')
+require('users/diagnosis_histories')
 
 window.$ = jQuery;
 

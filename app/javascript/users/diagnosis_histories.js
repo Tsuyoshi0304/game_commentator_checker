@@ -1,5 +1,5 @@
 $(function () {
-  //詳細ボタン
+  //詳細ボタン(診断履歴)
   $('.down-button-wrapper').on('click', function () {
     var index = $(this).val();
     $(`#diagnosis-contents-${index}`).slideDown(400);

@@ -4,7 +4,7 @@ var commentator_modal = $('#commentator-modal').get(0);
 //マスクを取得
 var mask = $('#mask').get(0);
 
-commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnoses: @diagnoses ) %>" ;
+commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index ) %>" ;
 
 commentator_modal.classList.remove('hidden');
 mask.classList.remove('hidden');
@@ -12,4 +12,24 @@ mask.classList.remove('hidden');
 $('#mask').on('click', function() {
   commentator_modal.classList.add('hidden');
   mask.classList.add('hidden');
+});
+
+
+//詳細ボタン（実況者）
+
+$('.show-button-2').on('click', function () {
+  $('.close-button-2').fadeIn('slow').show();
+  $('.show-button-2').fadeOut('slow');
+  //$('body').animate({ height: '2000px' }, 400);
+  $('.name-search-commentator').animate({ height: '1130px' }, 400);
+
+  $('.show-screen-2').slideDown(400);
+});
+
+$('.close-button-2').on('click', function () {
+  $('.close-button-2').fadeOut('slow');
+  $('.show-button-2').fadeIn('slow');
+  $('.name-search-commentator').animate({ height: '380px' }, 400);
+
+  $('.show-screen-2').slideUp('fast');
 });
