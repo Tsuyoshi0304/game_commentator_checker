@@ -1,0 +1,23 @@
+<% diagnoses.each.with_index(1).reverse_each do |diagnosis, index| %>
+  <div class="diagnosis-history" id="diagnosis-history-<%= index %>">
+    <div class="diagnosis-count">
+      <%= index %>回目
+      <button type="button" class="down-button-wrapper" value="<%= index %>"><i class="fa fa-angle-down" id="angle-down-<%= index %>"></i></button>
+      <button type="button" class="up-button-wrapper" value="<%= index %>"><i class="fa fa-angle-up" id="angle-up-<%= index %>" style="display: none;"></i></button>
+    </div>
+    <div id="diagnosis-contents-<%= index %>" class="diagnosis-contents" style="display: none;">
+      <h2>モード</h2>
+      <p><%= diagnosis[1][0].mode_i18n %></p>
+      <h2>オススメ実況者名</h2>
+      <% diagnosis[1].size.times do |sizeindex| %>
+        <div class="diagnosis-commentator">
+          <%= link_to diagnosis_histories_show_user_path(index: index, sizeindex: sizeindex), id: sizeindex, class: 'commentator-link', remote: true do %>
+            <%#= link_to  %>
+              <%# binding.pry %>
+              <%= diagnosis[1][sizeindex].commentator.name %><br>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

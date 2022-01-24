@@ -1,0 +1,14 @@
+<div class="col-11 container">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-9 diagnosis-history-wrapper">
+      <h1 class="title round">診断履歴</h1>
+      <div class="diagnosis-back">
+        <%= render 'users/diagnosis_history', diagnoses: @diagnoses %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="mask" class="hidden"></div>
+
+<div id="commentator-modal" class="hidden"></div>

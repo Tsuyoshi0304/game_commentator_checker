@@ -9,13 +9,14 @@ require("channels")
 
 require('jquery')
 import "chartkick/chart.js"
-
 require('simplified/searches/new')
 require('normal/searches/new')
 require('normal/searches/gamegenre')
 require('footer')
 require('name_searches/name_searches')
+require('users/diagnosis_histories')
 
+window.$ = jQuery;
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

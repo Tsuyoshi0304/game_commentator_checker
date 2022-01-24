@@ -58,14 +58,20 @@
   outline: none;
 }
 
-.show-screen {
+.show-screen-2 {
   position: absolute;
-    top: 37%;
-  height: 610px;
+    top: 30%;
+  height: 670px;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .show-question {
   margin: 20px auto;
+  position: absolute;
+    top: 73%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .similar-button-2 {

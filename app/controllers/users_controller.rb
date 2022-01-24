@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: %i[new create destroy]
+  skip_before_action :require_login, only: %i[new create diagnosis_histories destroy]
 
   def new
     @user = User.new
@@ -12,6 +12,23 @@ class UsersController < ApplicationController
     else
       flash.now[:danger] = 'ユーザー登録に失敗しました'
       render :new
+    end
+  end
+
+  def diagnosis_histories
+    @diagnoses = current_user.diagnosis_histories.order(diagnosed_at: :asc).group_by {|d| [d[:diagnosed_at]]}
+  end
+
+  def diagnosis_histories_show
+    @diagnoses = current_user.diagnosis_histories.order(diagnosed_at: :asc).group_by {|d| [d[:diagnosed_at]]}
+
+    @index = params[:index].to_i - 1
+    @sizeindex = params[:sizeindex].to_i
+    @diagnosis = @diagnoses.to_a[@index][1][@sizeindex]
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 

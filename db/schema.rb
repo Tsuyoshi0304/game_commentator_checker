@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_14_134618) do
+ActiveRecord::Schema.define(version: 2022_01_21_171608) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -59,6 +59,17 @@ ActiveRecord::Schema.define(version: 2022_01_14_134618) do
     t.text "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "diagnosis_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "commentator_id", null: false
+    t.datetime "diagnosed_at", default: "2022-01-20 13:36:24", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "mode"
+    t.index ["commentator_id"], name: "index_diagnosis_histories_on_commentator_id"
+    t.index ["user_id"], name: "index_diagnosis_histories_on_user_id"
   end
 
   create_table "game_genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -112,6 +123,8 @@ ActiveRecord::Schema.define(version: 2022_01_14_134618) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "commentators", "movie_styles"
+  add_foreign_key "diagnosis_histories", "commentators"
+  add_foreign_key "diagnosis_histories", "users"
   add_foreign_key "games", "game_genres"
   add_foreign_key "playings", "commentators"
   add_foreign_key "playings", "games"

@@ -11,7 +11,7 @@
       <button id="show-button-<%= index %>" type="button" class="detail-button-2 show-button-2 round" value="<%= index %>"><i class="fa fa-angle-down"></i></button>
 			<button id="close-button-<%= index %>" type="button" class="detail-button-2 close-button-2 round" value="<%= index %>" style="display: none;"><i class="fa fa-angle-up"></i></button>  
 			
-      <div id="show-screen-<%= index %>" class="show-screen round" style="display: none;">
+      <div id="show-screen-<%= index %>" class="show-screen-2 round" style="display: none;">
 				<p class="title round">特徴</p>
 				<p>ゲームジャンルの割合</p>
 				<%= pie_chart aggregate(commentator), height: '40%', width: '100%' %>

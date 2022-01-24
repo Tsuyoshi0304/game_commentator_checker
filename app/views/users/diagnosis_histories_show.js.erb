@@ -1,0 +1,53 @@
+//モーダルを取得
+var commentator_modal = $('#commentator-modal').get(0);
+
+//マスクを取得
+var mask = $('#mask').get(0);
+
+//$("body").append('#{escape_javascript(yield :charts_js)}');
+commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index ) %>" ;
+
+commentator_modal.classList.remove('hidden');
+mask.classList.remove('hidden');
+
+$('#mask').on('click', function() {
+  commentator_modal.classList.add('hidden');
+  mask.classList.add('hidden');
+});
+
+
+//詳細ボタン（実況者）
+//１ページ目右ボタン
+$('.right-button-1').on('click', function () {
+  $(this).fadeOut('slow');
+  $('.left-button-1').fadeIn('slow').show();
+  $('.right-button-2').fadeIn('slow').show();
+  $('.first-page').fadeOut('slow');
+
+  //var pie_chart = $('#pie-chart').get(0);
+  //pie_chart.innerHTML = "<%= j(pie_chart User.group(:name).count, diagnosis: @diagnosis, height: '100%', width: '100%' ) %>" ;
+
+  $('.second-page').fadeIn('slow').show();
+});
+//２ページ目左ボタン
+$('.left-button-1').on('click', function () {
+  $(this).fadeOut('slow');
+  $('.right-button-1').fadeIn('slow').show();
+  $('.second-page').fadeOut('slow');
+  $('.first-page').fadeIn('slow').show();
+});
+//２ページ目右ボタン
+$('.right-button-2').on('click', function () {
+  $(this).fadeOut('slow');
+  $('.left-button-2').fadeIn('slow').show();
+  $('.second-page').fadeOut('slow');
+  $('.third-page').fadeIn('slow').show();
+});
+//３ページ目左ボタン
+$('.left-button-2').on('click', function () {
+  $(this).fadeOut('slow');
+  $('.left-button-1').fadeIn('slow').show();
+  $('.right-button-2').fadeIn('slow').show();
+  $('.third-page').fadeOut('slow');
+  $('.second-page').fadeIn('slow').show();
+});

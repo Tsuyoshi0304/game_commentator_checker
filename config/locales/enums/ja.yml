@@ -34,4 +34,8 @@ ja:
       live:
         live_main: ライブ多め
         edit_main: 編集動画多め
+    diagnosis_history:
+      mode:
+        simplified: サクッとモード
+        normal: じっくりモード
 
