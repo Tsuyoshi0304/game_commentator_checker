@@ -1,19 +1,34 @@
 <div id="result-r-<%= sizeindex + 1 %>" class="col-12 col-md-10 col-lg-6 round name-search-commentator">
 	<div class="commentator-info" id="commentator-info-<%= sizeindex + 1 %>">
-		<div class="commentator-name round">
-			<%= diagnosis.commentator.name %>
-		</div>
-		<%= link_to image_tag(diagnosis.commentator.youtube_icon, class: 'youtube-icon'), diagnosis.commentator.youtube_channel_url %>
-    <div class="video">
-    <iframe width="110%" height="180" src="<%= diagnosis.commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    <div class="first-page">
+      <div class="commentator-name round">
+        <%= diagnosis.commentator.name %>
+      </div>
+      <%= link_to image_tag(diagnosis.commentator.youtube_icon, class: 'youtube-icon'), diagnosis.commentator.youtube_channel_url %>
+      <div class="video">
+        <iframe width="110%" height="180" src="<%= diagnosis.commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+      </div>
+      <!-- 左右ボタン -->
+      <!-- １ページ目の右 -->
+      <button id="right-button-<%= sizeindex + 1 %>" type="button" class="right-button-1 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-right"></i></button>
     </div>
-    <button id="show-button-<%= sizeindex + 1 %>" type="button" class="detail-button-2 show-button-2 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-down"></i></button>
-		<button id="close-button-<%= sizeindex + 1 %>" type="button" class="detail-button-2 close-button-2 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-up"></i></button>
-    <div id="show-screen-<%= sizeindex + 1 %>" class="show-screen-2 round" style="display: none;">
-			<p class="title round">特徴</p>
-			<p>ゲームジャンルの割合</p>
-			<%= pie_chart aggregate(diagnosis.commentator), height: '40%', width: '100%' %>
-      <table class="show-question">
+
+    <!-- 2ページ目 -->
+    <div class="second-page" style="display: none;">
+      <p class="commentator-name round">ゲームジャンルの割合</p>
+      <%# binding.pry %>
+      <div id="pie-chart">
+        <%= pie_chart aggregate(diagnosis.commentator), height: '100%', width: '100%', style: 'position: absolute; top: 0;' %>
+      </div>
+      <!-- ２ぺーじ目の左 -->
+      <button id="left-button-<%= sizeindex + 1 %>" type="button" class="left-button-1 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
+      <!-- ２ページ目の右 -->
+      <button id="right-button-<%= sizeindex + 1 %>" type="button" class="right-button-2 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-right"></i></button>
+    </div>
+    <!-- 3ページ目 -->
+    <div class="third-page" style="display: none;">
+      <p class="commentator-name round">その他詳細</p>
+      <table class="show-question-2">
         <tbody>
           <tr>
             <td>プレイスタイル:</td>
@@ -45,9 +60,10 @@
           </tr>
         </tbody>
       </table>
+      <!-- ３ページ目の左 -->
+      <button id="left-button-<%= sizeindex + 1 %>" type="button" class="left-button-2 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
     </div>
   </div>
   <!-- <button type="button" class="btn btn-danger recommendation-button round similar-button-2" id="<%= index %>">似ている実況者は...</button> -->
 </div>
-  
 
