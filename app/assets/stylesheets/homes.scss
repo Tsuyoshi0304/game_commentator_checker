@@ -10,14 +10,6 @@ header {
 	top: 0;
 }
 
-header nav{
-	height: 60px;
-}
-
-.navbar-brand {
-	padding-left: 20px;
-}
-
 .navbar-nav {
 	display: flex;
 	flex-direction: row;
@@ -37,6 +29,39 @@ header nav{
 	color: black;
 }
 
+//ハンバーガーメニュー
+//div {
+//  position: relative;
+//  width: 50px;
+//  height: 50px;
+//  box-sizing: border-box;
+//}
+//
+///* 三本線のスタイルを決める */
+//span {
+//  display: block;
+//  width: 60px;
+//  height: 10px;
+//  background: #444;
+//  position: absolute;
+//  left: 10px;
+//  transition: all 0.5s ease;
+//}
+//
+///* 線の縦位置の調整 */
+//.bar1 { 
+//  top: 12.5px;
+//}
+//
+//.bar2 {
+//  top: 35px;
+//}
+//
+//.bar3 {
+//  bottom: 12.5px;
+//}
+
+//トップ背景
 .background {
 	background: url("22182134.jpg");
 	background-size: contain;
