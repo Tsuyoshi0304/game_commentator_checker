@@ -61,14 +61,21 @@ header {
 //  bottom: 12.5px;
 //}
 
-//トップ背景
+//トップ画面
+.container, .row {
+	height: 100%;
+}
+
 .background {
+	height: 65%;
+    width: 100%;
 	background: url("22182134.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin-top: 130px;
-	position: relative;
+	position: absolute;
+	top: 20%;
+	left: 0;
 }
 
 .game-fonts, .btn-start, footer { 
@@ -76,10 +83,9 @@ header {
 }
 
 .home-title {
-	height: 120px;
 	h2 {
 		position: absolute;
-		top: -13%;
+		top: 18%;
 		left: 0%;
 		width: 100%;
 		text-align: center;
@@ -88,12 +94,12 @@ header {
 	}
 	
 	h1 {
+		font-size: 210%;
 		width: 100%;
 		text-align: center;
-		font-size: 240%;
 		display: inline-block;
 		position: absolute;
-		top: 45%;
+		top: 50%;
 		left: 0%;
 	}
 }
@@ -105,8 +111,8 @@ header {
 	color: white;
 	text-decoration: none;
 	text-align: center;
-	margin: 100px auto;
-	padding: 20px 20px;
+	margin: 0 auto;
+	padding: 10px 20px;
 	width: 40%;
 }
 
@@ -117,19 +123,21 @@ header {
 }
 
 .link-to-mode {
-	position: relative;
-	height: 250px;
+	position: absolute;
+    top: 520px;
+    left: 0;
+	height: 180px;
 }
 
 #left-start {
 	position: absolute;
-	top: 150px;
+	top: 40px;
 	left: 30%;
 }
 
 #right-start {
 	position: absolute;
-	top: 230px;
+	top: 100px;
 	left: 30%;
 }
 
