@@ -1,16 +1,16 @@
 <header>
-  <nav class="navbar navbar-expand-lg navigation navbar-light">
+  <nav style="height: 100%;">
     <%= link_to root_path, class: 'navbar-brand round' do %>
       <%= image_tag 'search_item/ゲーム実況者診断-removebg-preview.png', size: '200x40' %>
     <% end %>
 
     <!-- ハンバーガーメニュー -->
     <div id="navbarSupportedContent">
-      <!-- <div>
+      <div class="hamburger-wrapper">
         <span class="bar1"></span>
         <span class="bar2"></span>
         <span class="bar3"></span>
-      </div> -->
+      </div> 
       <ul class="navbar-nav ml-auto main-nav align-items-center">
         <li class="nav-item">
           <%= link_to '実況者検索', name_searches_path, class: 'nav-button' %>

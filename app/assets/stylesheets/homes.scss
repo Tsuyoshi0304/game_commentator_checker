@@ -8,15 +8,39 @@ header {
 	z-index: 1;
 	position: fixed;
 	top: 0;
+	height: 60px;
+}
+
+.navbar-brand {
+	padding: 0;
+  position: absolute;
+    top: 15%;
 }
 
 .navbar-nav {
-	display: flex;
-	flex-direction: row;
+	opacity: 0;
+	transition: 1.0s;
+	position: absolute;
+    top: 70px;
+    right: 2%;
+	background-color: rgba(black, 0.3);
+}
+
+.navbar-nav.open {
+	opacity: 1.0;
+	transition: 1.0s;
 }
 
 .nav-item {
-	padding-right: 5px;
+	padding: 7px;
+}
+
+.nav-item a {
+	color: rgba(black, 0.5);
+}
+
+.nav-item a:hover {
+	color: black;
 }
 
 .nav-button {
@@ -29,37 +53,61 @@ header {
 	color: black;
 }
 
+//before_login_header
+.navbar-nav-before {
+	list-style: none;
+	position: absolute;
+    top: 5px;
+    right: 0;
+}
+
 //ハンバーガーメニュー
-//div {
-//  position: relative;
-//  width: 50px;
-//  height: 50px;
-//  box-sizing: border-box;
-//}
-//
-///* 三本線のスタイルを決める */
-//span {
-//  display: block;
-//  width: 60px;
-//  height: 10px;
-//  background: #444;
-//  position: absolute;
-//  left: 10px;
-//  transition: all 0.5s ease;
-//}
-//
-///* 線の縦位置の調整 */
-//.bar1 { 
-//  top: 12.5px;
-//}
-//
-//.bar2 {
-//  top: 35px;
-//}
-//
-//.bar3 {
-//  bottom: 12.5px;
-//}
+.hamburger-wrapper {
+	width: 60px;
+	height: 60px;
+  box-sizing: border-box;
+	position: absolute;
+    top: 3%;
+    right: 1%;
+}
+
+/* 三本線のスタイルを決める */
+span {
+  display: block;
+  width: 40px;
+  height: 6px;
+  background: #444;
+  position: absolute;
+  left: 10px;
+  transition: all 0.5s ease;
+}
+
+/* 線の縦位置の調整 */
+.bar1 { 
+  top: 12.5px;
+}
+
+.bar2 {
+  top: 25px;
+}
+
+.bar3 {
+  top: 37.5px;
+}
+
+.bar1.open {
+	top: 25px;
+	transform: rotate(45deg);
+}
+
+.bar2.open {
+	opacity: 0;
+}
+
+.bar3.open {
+	top: 25px;
+	transform: rotate(-45deg);
+}
 
 //トップ画面
 .container, .row {
@@ -124,7 +172,7 @@ header {
 
 .link-to-mode {
 	position: absolute;
-    top: 520px;
+    top: 630px;
     left: 0;
 	height: 180px;
 }
