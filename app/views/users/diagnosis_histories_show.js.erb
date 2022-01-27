@@ -24,8 +24,8 @@ $('.right-button-1').on('click', function () {
   $('.right-button-2').fadeIn('slow').show();
   $('.first-page').fadeOut('slow');
 
-  //var pie_chart = $('#pie-chart').get(0);
-  //pie_chart.innerHTML = "<%= j(pie_chart User.group(:name).count, diagnosis: @diagnosis, height: '100%', width: '100%' ) %>" ;
+  //ゲームジャンル円グラフ
+  $('#pie-chart-wrapper').append("<%= j(render 'users/pie_chart', diagnosis: @diagnosis) %>") ;
 
   $('.second-page').fadeIn('slow').show();
 });

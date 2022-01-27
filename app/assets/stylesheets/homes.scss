@@ -8,23 +8,39 @@ header {
 	z-index: 1;
 	position: fixed;
 	top: 0;
-}
-
-header nav{
 	height: 60px;
 }
 
 .navbar-brand {
-	padding-left: 20px;
+	padding: 0;
+  position: absolute;
+    top: 15%;
 }
 
 .navbar-nav {
-	display: flex;
-	flex-direction: row;
+	opacity: 0;
+	transition: 1.0s;
+	position: absolute;
+    top: 70px;
+    right: 2%;
+	background-color: rgba(black, 0.3);
+}
+
+.navbar-nav.open {
+	opacity: 1.0;
+	transition: 1.0s;
 }
 
 .nav-item {
-	padding-right: 5px;
+	padding: 7px;
+}
+
+.nav-item a {
+	color: rgba(black, 0.5);
+}
+
+.nav-item a:hover {
+	color: black;
 }
 
 .nav-button {
@@ -37,13 +53,77 @@ header nav{
 	color: black;
 }
 
+//before_login_header
+.navbar-nav-before {
+	list-style: none;
+	position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+//ハンバーガーメニュー
+.hamburger-wrapper {
+	width: 60px;
+	height: 60px;
+  box-sizing: border-box;
+	position: absolute;
+    top: 3%;
+    right: 1%;
+}
+
+/* 三本線のスタイルを決める */
+span {
+  display: block;
+  width: 40px;
+  height: 6px;
+  background: #444;
+  position: absolute;
+  left: 10px;
+  transition: all 0.5s ease;
+}
+
+/* 線の縦位置の調整 */
+.bar1 { 
+  top: 12.5px;
+}
+
+.bar2 {
+  top: 25px;
+}
+
+.bar3 {
+  top: 37.5px;
+}
+
+.bar1.open {
+	top: 25px;
+	transform: rotate(45deg);
+}
+
+.bar2.open {
+	opacity: 0;
+}
+
+.bar3.open {
+	top: 25px;
+	transform: rotate(-45deg);
+}
+
+//トップ画面
+.container, .row {
+	height: 100%;
+}
+
 .background {
+	height: 65%;
+    width: 100%;
 	background: url("22182134.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
-	margin-top: 130px;
-	position: relative;
+	position: absolute;
+	top: 20%;
+	left: 0;
 }
 
 .game-fonts, .btn-start, footer { 
@@ -51,10 +131,9 @@ header nav{
 }
 
 .home-title {
-	height: 120px;
 	h2 {
 		position: absolute;
-		top: -13%;
+		top: 18%;
 		left: 0%;
 		width: 100%;
 		text-align: center;
@@ -63,12 +142,12 @@ header nav{
 	}
 	
 	h1 {
+		font-size: 210%;
 		width: 100%;
 		text-align: center;
-		font-size: 240%;
 		display: inline-block;
 		position: absolute;
-		top: 45%;
+		top: 50%;
 		left: 0%;
 	}
 }
@@ -80,8 +159,8 @@ header nav{
 	color: white;
 	text-decoration: none;
 	text-align: center;
-	margin: 100px auto;
-	padding: 20px 20px;
+	margin: 0 auto;
+	padding: 10px 20px;
 	width: 40%;
 }
 
@@ -92,19 +171,21 @@ header nav{
 }
 
 .link-to-mode {
-	position: relative;
-	height: 250px;
+	position: absolute;
+    top: 630px;
+    left: 0;
+	height: 180px;
 }
 
 #left-start {
 	position: absolute;
-	top: 150px;
+	top: 40px;
 	left: 30%;
 }
 
 #right-start {
 	position: absolute;
-	top: 230px;
+	top: 100px;
 	left: 30%;
 }
 

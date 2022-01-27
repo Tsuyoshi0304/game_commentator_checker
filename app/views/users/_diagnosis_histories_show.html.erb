@@ -1,4 +1,4 @@
-<div id="result-r-<%= sizeindex + 1 %>" class="col-12 col-md-10 col-lg-6 round name-search-commentator">
+<div id="result-r-<%= sizeindex + 1 %>" class="col-12 col-md-10 col-lg-7 round diagnosis-histories-commentator">
 	<div class="commentator-info" id="commentator-info-<%= sizeindex + 1 %>">
     <div class="first-page">
       <div class="commentator-name round">
@@ -16,9 +16,8 @@
     <!-- 2ページ目 -->
     <div class="second-page" style="display: none;">
       <p class="commentator-name round">ゲームジャンルの割合</p>
-      <%# binding.pry %>
-      <div id="pie-chart">
-        <%= pie_chart aggregate(diagnosis.commentator), height: '100%', width: '100%', style: 'position: absolute; top: 0;' %>
+      <div id="pie-chart-wrapper">
+
       </div>
       <!-- ２ぺーじ目の左 -->
       <button id="left-button-<%= sizeindex + 1 %>" type="button" class="left-button-1 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>

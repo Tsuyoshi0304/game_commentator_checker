@@ -12,6 +12,7 @@ import "chartkick/chart.js"
 require('simplified/searches/new')
 require('normal/searches/new')
 require('normal/searches/gamegenre')
+require('header')
 require('footer')
 require('name_searches/name_searches')
 require('users/diagnosis_histories')
