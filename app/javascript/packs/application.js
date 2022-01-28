@@ -16,6 +16,7 @@ require('header')
 require('footer')
 require('name_searches/name_searches')
 require('users/diagnosis_histories')
+require('profiles/preview')
 
 window.$ = jQuery;
 

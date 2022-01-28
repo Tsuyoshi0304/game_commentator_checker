@@ -49,3 +49,4 @@ yarn.lock
 /.env.production
 
 public/sitemap.xml.gz
+/public/uploads/

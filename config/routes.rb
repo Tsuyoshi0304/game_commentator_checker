@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'profiles/show'
   get 'diagnosis_histories/index'
   root to: 'homes#top'
 
@@ -9,6 +10,8 @@ Rails.application.routes.draw do
       get 'diagnosis_histories_show'
     end
   end
+
+  resource :profile, only: %i[show edit update destroy]
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
