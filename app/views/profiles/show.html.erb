@@ -1,0 +1,24 @@
+<div class="col-11 container">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-9 profile-wrapper">
+      <h1 class="title round">プロフィール</h1>
+      <div class="profile round">
+        <div class="profile-avatar">
+          <%= image_tag current_user.avatar.url, id: 'user-avatar', class: 'round', size: '140x140' %>
+        </div>
+        <div class="profile-name">
+          <p class="round">ニックネーム</p>
+          <%= current_user.name %>
+        </div>
+        <div class="profile-email">
+          <p class="round">メールアドレス</p>
+          <%= current_user.email %>
+        </div>
+        <div class="profile-other">
+          <p><button class="round"><i class="fa fa-edit"></i><%= link_to '編集する', edit_profile_path %></button></p>
+          <p>パスワード変更は<%= link_to 'こちら', '#' %>から</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

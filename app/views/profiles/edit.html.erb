@@ -1,0 +1,27 @@
+<div class="col-11 container">
+  <div class="row">
+    <div class="col-12 col-md-10 col-lg-9 profile-wrapper">
+      <h1 class="title round">プロフィール編集</h1>
+      <div class="profile round">
+        <%= form_with model: @user, url: profile_path, id: 'profile-form-with', local: true do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
+          <div class="profile-edit-avatar">
+            <%= f.label :avatar, 'アバター' %>
+            <%= f.file_field :avatar, id: 'avatar-set', class: 'form-control' %>
+            <%= f.hidden_field :avatar_cache %>
+            <%= image_tag @user.avatar.url, class: 'round', id: 'preview', size: '140x140' %>
+          </div>
+          <div class="profile-edit-name">
+            <%= f.label :name, 'ニックネーム' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+          <div class="profile-edit-email">
+            <%= f.label :email, 'メールアドレス' %>
+            <%= f.email_field :email, class: 'form-control' %>
+          </div>
+          <%= f.submit '更新', class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

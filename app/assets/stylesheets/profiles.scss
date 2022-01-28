@@ -1,0 +1,87 @@
+.profile-wrapper {
+  margin: 0 auto;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.profile {
+  margin-top: 40px;
+  height: 74%;
+  background-color: white;
+}
+
+#profile-form-with {
+  height: 115%;
+}
+
+.profile-edit-avatar {
+  padding-top: 20px;
+  height: 43%;
+}
+
+.form-control {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+
+.profile-avatar {
+  height: 40%;
+}
+
+#user-avatar {
+  margin-top: 40px;
+  height: 70%;
+  border: 1px solid black;
+  object-fit: contain;
+}
+
+.profile-name, .profile-email {
+  height: 17%;
+  p {
+    padding: 3px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+  }
+}
+
+.profile-edit-name, .profile-edit-email {
+  height: 15%;
+}
+
+#preview {
+  margin-top: 3%;
+  width: 140px;
+  height: 140px;
+  border-radius: 100px;
+  border: 1px solid black;
+  object-fit: contain;
+}
+
+.profile-other {
+  height: 16%;
+  button {
+    width: 40%;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #cfd6e3;
+    a {
+      color: rgb(56, 45, 45);
+      text-decoration: none;
+      margin-left: 5px;
+    }
+  }
+
+  p {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+
