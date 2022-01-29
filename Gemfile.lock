@@ -1323,6 +1323,7 @@ GEM
       activesupport (>= 3.0.0)
     erubi (1.10.0)
     erubis (2.7.0)
+    excon (0.90.0)
     execjs (2.8.1)
     faraday (1.9.3)
       faraday-em_http (~> 1.0)
@@ -1348,8 +1349,25 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     ffi (1.15.4)
+    fog-aws (3.12.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (2.1.0)
+      builder
+      excon (~> 0.58)
+      formatador (~> 0.2)
+      mime-types
+    fog-json (1.2.0)
+      fog-core
+      multi_json (~> 1.10)
+    fog-xml (0.1.4)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    formatador (0.3.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
     i18n (1.8.11)
@@ -1357,6 +1375,7 @@ GEM
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
+    ipaddress (0.8.3)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
     jmespath (1.4.0)
@@ -1377,6 +1396,9 @@ GEM
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
+    mime-types (3.4.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2022.0105)
     mini_magick (4.11.0)
     mini_mime (1.1.2)
     mini_portile2 (2.6.1)
@@ -1578,6 +1600,7 @@ DEPENDENCIES
   chartkick (~> 3.0, >= 3.0.1)
   dotenv-rails
   enum_help
+  fog-aws
   font-awesome-rails
   jbuilder (~> 2.7)
   jquery-rails
