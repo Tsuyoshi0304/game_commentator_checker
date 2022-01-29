@@ -18,17 +18,37 @@ header {
 }
 
 .navbar-nav {
-	opacity: 0;
+	width: 120px;
+	height: 100vh;
 	transition: 1.0s;
 	position: absolute;
-    top: 70px;
-    right: 2%;
-	background-color: rgba(black, 0.3);
+    top: 60px;
+    right: -120px;
+	background-color: rgba(228, 236, 243, 0.8);
+	z-index: 2;
+}
+
+.header-mask.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.header-mask {
+	height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+	transition: 1.0s;
+	background-color: rgba(black, 0.4);
 }
 
 .navbar-nav.open {
-	opacity: 1.0;
+	position: absolute;
+	top: 60px;
+	right: 0;
 	transition: 1.0s;
+	z-index: 2;
 }
 
 .nav-item {
