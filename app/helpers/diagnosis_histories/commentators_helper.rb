@@ -1,0 +1,2 @@
+module DiagnosisHistories::CommentatorsHelper
+end
