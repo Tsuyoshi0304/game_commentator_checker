@@ -26,6 +26,8 @@ class UsersController < ApplicationController
     @index = params[:index].to_i - 1
     @sizeindex = params[:sizeindex].to_i
     @diagnosis = @diagnoses.to_a[@index][1][@sizeindex]
+    @commentator = @diagnosis.commentator
+    @review = Review.new
 
     respond_to do |format|
       format.html

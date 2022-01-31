@@ -12,8 +12,6 @@
       <% diagnosis[1].size.times do |sizeindex| %>
         <div class="diagnosis-commentator">
           <%= link_to diagnosis_histories_show_user_path(index: index, sizeindex: sizeindex), id: sizeindex, class: 'commentator-link', remote: true do %>
-            <%#= link_to  %>
-              <%# binding.pry %>
               <%= diagnosis[1][sizeindex].commentator.name %><br>
           <% end %>
         </div>

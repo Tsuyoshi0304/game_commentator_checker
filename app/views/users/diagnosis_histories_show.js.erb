@@ -5,7 +5,7 @@ var commentator_modal = $('#commentator-modal').get(0);
 var mask = $('#mask').get(0);
 
 //$("body").append('#{escape_javascript(yield :charts_js)}');
-commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index ) %>" ;
+commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index, review: @review ) %>" ;
 
 commentator_modal.classList.remove('hidden');
 mask.classList.remove('hidden');
@@ -51,3 +51,16 @@ $('.left-button-2').on('click', function () {
   $('.third-page').fadeOut('slow');
   $('.second-page').fadeIn('slow').show();
 });
+
+//評価するボタン
+$('#review-button').on('click', function () {
+  $('.review-form').fadeIn('slow');
+});
+
+$('#review-close').on('click', function () {
+  $('.review-form').fadeOut('slow');
+});
+
+$('#pie-chart-wrapper').append("<%= j(render 'users/pie_chart', diagnosis: @diagnosis) %>") ;
+
+$('.review-form').append("<%= j(render 'users/star' ) %>");
