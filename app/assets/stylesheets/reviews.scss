@@ -1,3 +1,73 @@
-// Place all the styles related to the rankings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.review-wrapper {
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 50px;
+}
+
+.review-user-information {
+  height: 120px;
+  position: relative;
+
+  .review-user-name {
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+      top: 20px;
+      left: 120px;
+  }
+
+  .review-user-avatar {
+    border: 1px solid black;
+    position: absolute;
+      top: 20px;
+      left: 30px;
+  }
+  
+  .review-created-at {
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+      top: 50px;
+      left: 120px;
+  }
+}
+
+.review-information-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.review-commentator-information {
+  position: relative;
+  width: 30%;
+}
+
+  .review-youtube-icon-wrapper {
+    position: relative;
+  }
+
+  .review-youtube-icon {
+    width: 80%;
+    position: absolute;
+      top: 0;
+      left: 10px;
+    border: 1px solid black;
+  }
+
+  .review-detail {
+    width: 70%;
+
+    .review-commentator-name {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .review-body {
+      word-wrap: break-word;
+    }
+  }

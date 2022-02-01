@@ -22,6 +22,9 @@
 @import 'profiles';
 @import 'user_sessions';
 @import 'name_searches';
+@import 'diagnosis_history/commentators';
+@import 'diagnosis_histories';
+@import 'reviews';
 
 /*
 *= require_tree .
@@ -30,6 +33,7 @@
 
 body {
   background-color: #41DBD2;
+  font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .alert {

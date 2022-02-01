@@ -34,6 +34,7 @@ module GameCommentatorChecker
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja
     config.action_controller.include_all_helpers = true
+    config.time_zone = 'Asia/Tokyo'
   end
 end
 
