@@ -1,0 +1,31 @@
+.page-next, .page-last, .page-first {
+  width: 70px;
+  height: 100%;
+
+  span {
+    height: 0;
+  }
+}
+
+.page-preview {
+  width: 100px;
+  height: 100%;
+
+  span {
+    height: 0;
+  }
+}
+
+.page-item {
+  //margin: 0 auto;
+}
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+
+
+

@@ -2,6 +2,7 @@
   <div class="row">
     <h1 class="title round">タイムライン</h1>
     <%= render 'reviews/review', reviews: @reviews %>
+    <%= paginate @reviews %>
   </div>
 </div>
 

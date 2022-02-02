@@ -4,6 +4,7 @@
       <h1 class="title round">診断履歴</h1>
       <div class="diagnosis-back">
         <%= render 'diagnosis_history/commentators/diagnosis_history', diagnoses: @diagnoses %>
+        <%#= paginate @diagnoses_pagination %>
       </div>
     </div>
   </div>

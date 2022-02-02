@@ -46,6 +46,7 @@ gem 'sorcery'
 gem 'chartkick', '~> 3.0', '>= 3.0.1'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
