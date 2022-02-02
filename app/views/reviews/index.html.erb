@@ -1,40 +1,7 @@
 <div class="col-11 col-md-10 col-lg-8 container">
   <div class="row">
     <h1 class="title round">タイムライン</h1>
-    <% @reviews.each.with_index(1) do |review, index| %>
-      <div id="review-<%= index %>" class="col-11 col-md-8 col-lg-8 review-wrapper">
-        <div class="review-user-information">
-          <div class="review-user-name">
-            <p><%= review.user.name %> </p>
-          </div>
-          <%= image_tag review.user.avatar.url, class: 'review-user-avatar round', size: '60x60' %>
-          <div class="review-created-at">
-            <p><%= l review.created_at %></p>
-          </div>
-        </div>
-        <div class="review-information-wrapper">
-          <div class="review-commentator-information">
-            <%= link_to image_tag(review.commentator.youtube_icon, class: 'review-youtube-icon round'), review.commentator.youtube_channel_url %>
-          </div>
-          <div class="review-detail">
-            <p class="review-commentator-name">
-              実況者:<%= review.commentator.name %>
-            </p>
-            <p class="review-evaluation">評価:<%= review.rank %></p>
-            <p class="star-rate" data-score="<%= review.rank %>"></p>
-            <p>コメント</p>
-            <div class="review-body">
-              <% if review.body.present? %>
-                <p><%= review.body %></p>
-              <% else %>
-                <p>コメントはありません。</p>
-              <% end %>
-
-              </div>
-            </div>
-          </div>
-      </div>
-    <% end %>
+    <%= render 'reviews/review', reviews: @reviews %>
   </div>
 </div>
 

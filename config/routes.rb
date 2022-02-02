@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rankings/index'
   root to: 'homes#top'
 
   resources :users, only: %i[new create destroy]
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update destroy]
 
   resources :reviews, only: %i[index]
+
+  resource :ranking, only: %i[index]
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'

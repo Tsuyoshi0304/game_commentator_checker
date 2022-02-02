@@ -4,7 +4,7 @@ class DiagnosisHistory::ReviewsController < ApplicationController
     body = review_params[:body]
     commentator_id = review_params[:commentator_id].to_i
     review = current_user.reviews.build(rank: rank, body: body, commentator_id: commentator_id)
-    binding.pry
+
     if review.save
       redirect_to diagnosis_history_path, success: 'レビューを投稿しました'
     else
