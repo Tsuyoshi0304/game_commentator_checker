@@ -1,0 +1,168 @@
+.review-wrapper {
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 50px;
+}
+
+.review-user-information {
+  height: 120px;
+  position: relative;
+
+  .review-user-name {
+    font-size: 18px;
+    display: inline-block;
+    position: absolute;
+      top: 20px;
+      left: 100px;
+  }
+
+  .review-user-avatar {
+    border: 1px solid black;
+    position: absolute;
+      top: 20px;
+      left: 30px;
+  }
+  
+  .review-updated-at {
+    font-size: 12px;
+    display: inline-block;
+    position: absolute;
+      top: 50px;
+      left: 120px;
+  }
+
+  i {
+    font-size: 130%;
+    cursor: pointer;
+    color: black;
+  }
+
+  .fa-pencil-square-o {
+    position: absolute;
+      top: 25px;
+      right: 35px;
+  }
+
+  .fa-trash {
+    position: absolute;
+      top: 24px;
+      right: 10px;
+  }
+}
+
+.review-information-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.review-commentator-information {
+  position: relative;
+  width: 30%;
+}
+
+  .review-youtube-icon-wrapper {
+    position: relative;
+  }
+
+  .review-youtube-icon {
+    width: 80%;
+    position: absolute;
+      top: 0;
+      left: 10px;
+    border: 1px solid black;
+  }
+
+  .review-detail {
+    width: 70%;
+
+    .review-commentator-name {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .review-body {
+      word-wrap: break-word;
+    }
+  }
+
+
+  //モーダル
+
+#review-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#review-edit-title {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+#review-edit-modal {
+  position: fixed;   /* スクロールで移動しないようmodalの位置を固定します */
+  top: 20vh;
+  /* 以下3行：モーダルを左右中央揃えにする方法 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translate(0, 0) scale(1);
+  transition: 0.2s;   /* transitionでアニメーションを作成 */
+  z-index: 2;   /* マスクより上に重なるようにする */
+  width: 80%;   /* showビューの幅に合わせて設定 */
+}
+
+/* hiddenクラスで最初は表示されないようにする */
+#review-mask.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#review-edit-title.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+#review-edit-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0) scale(0.8);   /* 大きさ0.8倍から等倍にモーダルが拡大される */
+}
+
+.edit-review-information-wrapper {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.edit-review-detail {
+  text-align: center;
+  width: 70%;
+}
+
+#edit-review-label {
+  display: block;
+}
+
+.edit-review-body-label {
+  display: block;
+}
+
+.edit-form-control {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+}

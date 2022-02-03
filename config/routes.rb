@@ -1,17 +1,23 @@
 Rails.application.routes.draw do
-  get 'profiles/show'
-  get 'diagnosis_histories/index'
+  get 'rankings/index'
   root to: 'homes#top'
 
   resources :users, only: %i[new create destroy]
-  resources :users do
-    member do
-      get 'diagnosis_histories'
-      get 'diagnosis_histories_show'
+
+  get 'diagnosis_history', to: 'diagnosis_histories#index'
+  namespace :diagnosis_history, only: %i[show] do
+    resources :commentators, only: %i[show] do
+      resources :reviews, only: %i[create edit show update destroy]
     end
   end
 
+  resources :commentators, only: %i[index show]
+
   resource :profile, only: %i[show edit update destroy]
+
+  resources :reviews, only: %i[index]
+
+  resource :ranking, only: %i[index]
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'

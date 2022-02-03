@@ -1,0 +1,10 @@
+<% if current_user.own?(review) %>
+  
+    <%= link_to edit_diagnosis_history_commentator_review_path(commentator_id: review.commentator.id, id: review.id), remote: true do %>
+      <i class="fa fa-pencil-square-o"></i>
+    <% end %>
+    <%= link_to diagnosis_history_commentator_review_path(commentator_id: review.commentator.id, id: review.id), method: :delete, data: { confirm: '削除しますか？' } do %>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  
+<% end %>

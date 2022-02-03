@@ -1,0 +1,28 @@
+<div class="col-11 col-md-10 col-lg-8 container">
+  <div class="row">
+    <h1 class="title round">タイムライン</h1>
+    <%= render 'reviews/review', reviews: @reviews %>
+    <%= paginate @reviews %>
+  </div>
+</div>
+
+<!-- レビュー編集 -->
+<div id="review-mask" class="hidden"></div>
+
+<p id="review-edit-title" class="col-11 col-md-8 col-lg-8 hidden title round">レビュー編集</p>
+
+<div id="review-edit-modal" class="hidden"></div>
+
+<script>
+  $('.star-rate').raty({
+    starOff: '<%= image_path 'star-off.png' %>',
+    starOn: '<%= image_path 'star-on.png' %>',
+    starHalf: '<%= image_path 'star-half.png' %>',
+    score: function () {
+      $(this).attr('data-score');
+    },
+    size: 20,
+    readOnly: true
+  });
+</script>
+

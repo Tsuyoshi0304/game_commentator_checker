@@ -5,7 +5,7 @@ var commentator_modal = $('#commentator-modal').get(0);
 var mask = $('#mask').get(0);
 
 //$("body").append('#{escape_javascript(yield :charts_js)}');
-commentator_modal.innerHTML = "<%= j(render 'users/diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index ) %>" ;
+commentator_modal.innerHTML = "<%= j(render 'diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index, review: @review, commentator: @commentator ) %>" ;
 
 commentator_modal.classList.remove('hidden');
 mask.classList.remove('hidden');
@@ -25,7 +25,7 @@ $('.right-button-1').on('click', function () {
   $('.first-page').fadeOut('slow');
 
   //ゲームジャンル円グラフ
-  $('#pie-chart-wrapper').append("<%= j(render 'users/pie_chart', diagnosis: @diagnosis) %>") ;
+  $('#pie-chart-wrapper').append("<%= j(render 'pie_chart', diagnosis: @diagnosis) %>") ;
 
   $('.second-page').fadeIn('slow').show();
 });
@@ -51,3 +51,14 @@ $('.left-button-2').on('click', function () {
   $('.third-page').fadeOut('slow');
   $('.second-page').fadeIn('slow').show();
 });
+
+//評価するボタン
+$('#review-button').on('click', function () {
+  $('.review-form').fadeIn('slow');
+});
+
+$('#review-close').on('click', function () {
+  $('.review-form').fadeOut('slow');
+});
+
+$('.review-form').append("<%= j(render 'diagnosis_history/star' ) %>");

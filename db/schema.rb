@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_27_135426) do
+ActiveRecord::Schema.define(version: 2022_01_29_165128) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -111,6 +111,17 @@ ActiveRecord::Schema.define(version: 2022_01_27_135426) do
     t.index ["commentator_id"], name: "index_popular_movies_on_commentator_id"
   end
 
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.float "rank", default: 1.0, null: false
+    t.text "body"
+    t.bigint "user_id", null: false
+    t.bigint "commentator_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["commentator_id"], name: "index_reviews_on_commentator_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -130,4 +141,6 @@ ActiveRecord::Schema.define(version: 2022_01_27_135426) do
   add_foreign_key "playings", "commentators"
   add_foreign_key "playings", "games"
   add_foreign_key "popular_movies", "commentators"
+  add_foreign_key "reviews", "commentators"
+  add_foreign_key "reviews", "users"
 end

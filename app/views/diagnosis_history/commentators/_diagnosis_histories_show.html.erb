@@ -8,9 +8,26 @@
       <div class="video">
         <iframe width="110%" height="180" src="<%= diagnosis.commentator.popular_movies.pluck(:movie).first %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
       </div>
+      <%= link_to 'レビュー', '#', class: 'btn btn-primary', id: 'review-button' %>
       <!-- 左右ボタン -->
       <!-- １ページ目の右 -->
       <button id="right-button-<%= sizeindex + 1 %>" type="button" class="right-button-1 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-right"></i></button>
+    </div>
+
+    <!-- レビューフォーム -->
+    <div class="review-form">
+      <i class="fa fa-close" id="review-close"></i>
+      <%= form_with model: review, url: diagnosis_history_commentator_reviews_path(commentator_id: diagnosis.commentator.id), id: 'review-form-with', local: true do |f| %>
+        <div class="form-group review-star" id="star">
+          <%= f.label :rank, '評価(必須)', id: 'review-label' %>
+          <%= f.hidden_field :rank, id: 'review-star-hidden' %>
+        </div>
+        <div class="form-group review-body">
+          <%= f.label :body, 'コメント' %>
+          <%= f.text_area :body, placeholder: '実況者についてコメントしよう!', class: 'edit-form-control' %>
+        </div>
+        <%= f.submit '投稿', class: 'btn btn-primary' %>
+      <% end %>
     </div>
 
     <!-- 2ページ目 -->

@@ -17,7 +17,13 @@
           <%= link_to '実況者検索', name_searches_path, class: 'nav-button' %>
         </li>
         <li class="nav-item">
-          <%= link_to '診断履歴', diagnosis_histories_user_path(current_user), class: 'nav-button' %>
+          <%= link_to '診断履歴', diagnosis_history_path(current_user), class: 'nav-button' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'レビュー一覧', reviews_path, class: 'nav-button' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ランキング', '#', class: 'nav-button' %>
         </li>
         <li class="nav-item">
           <%= link_to 'プロフィール', profile_path, class: 'nav-button' %>
