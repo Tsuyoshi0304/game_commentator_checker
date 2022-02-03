@@ -12,7 +12,7 @@
       <% diagnosis[1].size.times do |sizeindex| %>
         <div class="diagnosis-commentator">
           <%= link_to diagnosis_history_commentator_path(id: diagnosis[1][sizeindex].commentator.id, index: index, sizeindex: sizeindex), id: sizeindex, class: 'commentator-link', remote: true do %>
-              <%= diagnosis[1][sizeindex].commentator.name %><br>
+            <%= diagnosis[1][sizeindex].commentator.name %><br>
           <% end %>
         </div>
       <% end %>

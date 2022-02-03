@@ -7,4 +7,8 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true, presence: true
   validates :password, presence: true, on: :create
+
+  def own?(object)
+    id == object.user_id
+  end
 end

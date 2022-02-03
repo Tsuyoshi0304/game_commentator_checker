@@ -5,9 +5,13 @@
         <p><%= review.user.name %> </p>
       </div>
       <%= image_tag review.user.avatar.url, class: 'review-user-avatar round', size: '60x60' %>
-      <div class="review-created-at">
-        <p><%= l review.created_at %></p>
+      <div class="review-updated-at">
+        <p><%= l review.updated_at %></p>
       </div>
+      
+
+      <%= render 'crud_menus', review: review %>
+
     </div>
     <div class="review-information-wrapper">
       <div class="review-commentator-information">

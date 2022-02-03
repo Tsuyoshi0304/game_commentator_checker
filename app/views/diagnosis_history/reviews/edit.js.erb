@@ -1,0 +1,29 @@
+//モーダルを取得
+var review_edit_modal = $('#review-edit-modal').get(0);
+
+//マスクを取得
+var review_mask = $('#review-mask').get(0);
+
+//タイトルを取得
+var review_edit_title = $('#review-edit-title').get(0);
+
+review_edit_modal.innerHTML = "<%= j(render 'edit', review: @review ) %>" ;
+
+review_edit_modal.classList.remove('hidden');
+review_mask.classList.remove('hidden');
+review_edit_title.classList.remove('hidden');
+
+$('#review-mask').on('click', function() {
+  review_edit_modal.classList.add('hidden');
+  review_mask.classList.add('hidden');
+  review_edit_title.classList.add('hidden');
+});
+
+$('#edit-star').raty({
+  starOff: '<%= image_path 'star-off.png' %>',
+  starOn: '<%= image_path 'star-on.png' %>',
+  starHalf: '<%= image_path 'star-half.png' %>',
+  scoreName: 'review[rank]',
+  half: true,
+  size: 20
+});

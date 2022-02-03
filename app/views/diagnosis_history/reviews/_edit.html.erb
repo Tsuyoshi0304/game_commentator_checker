@@ -1,0 +1,37 @@
+<div id="review-edit" class="col-11 col-md-8 col-lg-8 review-wrapper">
+  <div class="review-user-information">
+    <div class="review-user-name">
+      <p><%= review.user.name %> </p>
+    </div>
+    <%= image_tag review.user.avatar.url, class: 'review-user-avatar round', size: '60x60' %>
+    <div class="review-updated-at">
+      <p><%= l review.updated_at %></p>
+    </div>
+
+  </div>
+  <div class="edit-review-information-wrapper">
+    <div class="review-commentator-information">
+      <%= link_to image_tag(review.commentator.youtube_icon, class: 'review-youtube-icon round'), review.commentator.youtube_channel_url %>
+    </div>
+    <div class="edit-review-detail">
+      <p class="review-commentator-name">
+        実況者:<%= review.commentator.name %>
+      </p>
+
+      <!-- 編集フォーム -->
+      <%= form_with model: review, url: diagnosis_history_commentator_review_path(commentator_id: review.commentator_id, id: review.id), local: true do |f| %>
+        <div class="form-group edit-review-star" id="edit-star">
+          <%= f.label :rank, '評価(必須)', id: 'edit-review-label' %>
+          <%= f.hidden_field :rank, id: 'edit-review-star-hidden' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :body, 'コメント', class: 'edit-review-body-label' %>
+          <%= f.text_area :body, placeholder: review.body, class: 'edit-form-control' %>
+        </div>
+        <%= f.submit '投稿', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
