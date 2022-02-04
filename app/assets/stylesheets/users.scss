@@ -149,6 +149,10 @@
 
 .review-body {
   margin-top: 0;
+
+  label {
+    display: block;
+  }
 }
 
 .review-star {
