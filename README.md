@@ -61,15 +61,15 @@ https://game-commentator-checker.herokuapp.com
 ● postgresql(10.18)(本番)
 
 ## 主な機能
-●　　ユーザー登録、ログイン機能（sorcery）
+● ユーザー登録、ログイン機能（sorcery）
 
-●　　実況者診断機能(ajax)
+● 実況者診断機能(ajax)
 →　　円グラフ（chartkick, chart.js）
 
-●　　レビュー投稿機能(ajax)
+● レビュー投稿機能(ajax)
 →　　星評価機能(raty.js)
-  
-●　　実況者検索機能(ajax)
+
+● 実況者検索機能(ajax)
 
 ● プロフィール編集機能(carrierwave)
 
