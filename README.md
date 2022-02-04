@@ -56,12 +56,16 @@ Tinder風UI ⇨ jTinder (ライブラリ)
 ## なぜこのサービスを作りたいのか？
 　私はゲーム実況動画をよく見るのですが、何か面白い実況者や動画がないかと思ってYouTubeを開いても、ただ動画が並んでいるだけで、どれが面白いのかが一目でわかりません。さらに、人気実況者ランキングなどを見ても、必ずしもそれが自分にとって面白いとは限りません。そこで、自分の好みのゲームジャンルや実況者のスタイルを選んで診断してくれるサービスがあれば、動画を探す手間や時間が省けるのではないかと感じたからです。あるゲームをやってみたいけど買うお金がない、または買うほどの熱意はない、という方にゲーム実況は最適だと思っています。このサービスを多くの方に気軽に使っていただき、ゲーム実況の面白さや楽しさを広めていきたいと感じています。
 
-**画面遷移図**
-https://www.figma.com/file/ldNrVq05cxh1iMKeVnKX6c/PF-ゲーム実況者診断?node-id=11%3A2
-
 **ER図**
 
 ![ゲーム実況者診断 drawio](https://user-images.githubusercontent.com/85753444/152399116-afb2b5a0-8cbe-4a9c-a0bc-39258a7d9082.png)
 
-
 https://drive.google.com/file/d/1p_zU993TDrp6Cqg9eObDciwa-xxAkJNH/view?usp=sharing
+
+**インフラ構成図**
+
+![infra_diagram drawio](https://user-images.githubusercontent.com/85753444/152522434-94065b74-9a19-474f-907b-4fe6c6114fb4.png)
+
+**画面遷移図**
+https://www.figma.com/file/ldNrVq05cxh1iMKeVnKX6c/PF-ゲーム実況者診断?node-id=11%3A2
+
