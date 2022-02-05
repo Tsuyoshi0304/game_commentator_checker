@@ -5,7 +5,7 @@
 		</div>	
 
 			<% if @commentators.blank? %>
-				<% if @recommendation_commentators.blank? %>
+				<% if @similar_commentators.blank? %>
 					<div class="result-wrapper">
 						<div class="col-12 col-md-10 col-lg-6 result">
 							<p><%= t('.not_found') %></p>
@@ -19,10 +19,10 @@
 							</div>
 							<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に近い実況者は...</button>
 						</div>
-						<%= render 'shared/recommendation_commentators', commentators: @recommendation_commentators %>
+						<%= render 'shared/similar_commentators', commentators: @similar_commentators %>
 					</div>
 					<div class="twitter-wrapper" style="display: none;">
-						<%= render 'shared/twitter', commentators: @recommendation_commentators %>
+						<%= render 'shared/twitter', commentators: @similar_commentators %>
 					</div>
 				<% end %>
 			<% else %>
@@ -31,7 +31,10 @@
 			<% end %>
 
 			<% if not logged_in? %>
-				<%= link_to 'もっとじっくり探す!', login_path, data: {"turbolinks"=>false}, class: 'btn btn-warning round to-more-function' %>
+				<% binding.pry %>
+				<%= link_to 'もっとじっくり探す!', login_path(
+					commentators: @commentators, similar_commentators: @similar_commentators
+					), data: {"turbolinks"=>false}, class: 'btn btn-warning round to-more-function' %>
 			<% end %>
 
 			<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>

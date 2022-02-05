@@ -20,9 +20,9 @@ class Normal::SearchesController < ApplicationController
     @live = params['live']
 
     @commentators = search_for(@genre_name, @sex, @play_style, @is_forming_a_group, @appearance, @vtuber, @length, @live)
-    @recommendation_commentators = recommendation_search_for(@genre_name, @play_style, @vtuber, @sex)
+    @similar_commentators = similar_search_for(@genre_name, @play_style, @vtuber, @sex)
 
-    diagnosis_save
+    diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
   end
 
   private
@@ -45,7 +45,7 @@ class Normal::SearchesController < ApplicationController
                       movie_style_id: movie_style.id)
   end
 
-  def recommendation_search_for(genre_name, play_style, vtuber, sex)
+  def similar_search_for(genre_name, play_style, vtuber, sex)
     game_genres = GameGenre.where(genre_name: genre_name)
     games = Game.where(game_genre_id: game_genres.pluck(:id))
     playings = Playing.where(game_id: games.pluck(:id))

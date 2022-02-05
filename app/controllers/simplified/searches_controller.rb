@@ -14,9 +14,9 @@ class Simplified::SearchesController < ApplicationController
 
     @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
 
-    @recommendation_commentators = recommendation_search_for(@feeling, @vtuber, @sex)
+    @similar_commentators = similar_search_for(@feeling, @vtuber, @sex)
 
-    diagnosis_save
+    diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
   end
 
   private
@@ -31,7 +31,7 @@ class Simplified::SearchesController < ApplicationController
     )
   end
 
-  def recommendation_search_for(feeling, vtuber, sex)
+  def similar_search_for(feeling, vtuber, sex)
     movie_style = MovieStyle.all
     Commentator.where(feeling: feeling,
                       famous: [0,1],
