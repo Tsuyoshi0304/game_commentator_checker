@@ -31,7 +31,7 @@
 			<% end %>
 
 			<% if not logged_in? %>
-				<% binding.pry %>
+				<%# binding.pry %>
 				<%= link_to 'もっとじっくり探す!', login_path(
 					commentators: @commentators, similar_commentators: @similar_commentators
 					), data: {"turbolinks"=>false}, class: 'btn btn-warning round to-more-function' %>

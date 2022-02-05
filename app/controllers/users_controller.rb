@@ -9,15 +9,12 @@ class UsersController < ApplicationController
     @user = User.new
     @commentators = params[:commentators]
     @similar_commentators = params[:similar_commentators]
-    binding.pry
   end
 
   def create
-    binding.pry
     @user = User.new(user_params)
     if @user.save
       login(params[:user][:email], params[:user][:password])
-      binding.pry
       diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
       redirect_to root_path, success: 'ユーザー登録、ログインに成功しました' 
     else
