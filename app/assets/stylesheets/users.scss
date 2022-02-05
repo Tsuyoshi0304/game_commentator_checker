@@ -87,7 +87,7 @@
 
 #commentator-modal {
   position: fixed;   /* スクロールで移動しないようmodalの位置を固定します */
-  top: 1vh;
+  top: 0vh;
   /* 以下3行：モーダルを左右中央揃えにする方法 */
   left: 0;
   right: 0;
@@ -111,7 +111,6 @@
 }
 
 .diagnosis-histories-commentator {
-  font-family: 'Mochiy Pop P One', sans-serif;
   height: 400px;
   background-color: white;
   margin: 30px auto;
@@ -135,7 +134,7 @@
   position: absolute;
     top: 410px;
   width: 100%;
-  height: 55%;
+  height: 60%;
   background-color: white;
   border-radius: 80px;
 
@@ -145,6 +144,10 @@
     top: 10px;
     right: 50px;
   }
+}
+
+#review-label {
+  margin: 0 auto;
 }
 
 .review-body {

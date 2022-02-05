@@ -58,6 +58,9 @@
 //image
 .image {
 	width: 100%;
+	img {
+		object-fit: contain;
+	}
 }
 
 #image-1 {
@@ -85,12 +88,22 @@
 }
 
 //診断ボタン
+.btn-search-wrapper {
+	height: 400px;
+  position: fixed;
+    top: 100px;
+    left: 20%;
+	width: 60%;
+	background-color: white;
+	border-radius: 100px;
+}
+
 .btn-search {
 	position: relative;
 	display: block;
 	width:200px;
 	height: 130px;
-	margin: 300px 0 0 50%;
+	margin: 200px 0 0 50%;
 	transform: translate(-50%, -50%);
 }
 

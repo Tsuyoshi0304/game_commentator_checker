@@ -1,4 +1,5 @@
 .review-wrapper {
+  border: 2px solid black;
   background-color: white;
   margin: 10px auto;
   border-radius: 50px;
@@ -155,6 +156,7 @@
 
 #edit-review-label {
   display: block;
+  margin: 0 auto;
 }
 
 .edit-review-body-label {

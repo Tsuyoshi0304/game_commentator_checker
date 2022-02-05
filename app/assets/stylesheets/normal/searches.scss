@@ -50,11 +50,15 @@
   color: white;
 }
 
+//背景画像全体
+.image img {
+  object-fit: contain;
+}
+
 /* ゲームジャンル */
 #image-tag-1 {
   height: 360px;
   width: 90%;
-  object-fit: cover;
 }
 
 .games-genre {
@@ -198,12 +202,22 @@
 }
 
 //診断ボタン
+.btn-search-wrapper {
+	height: 400px;
+  position: fixed;
+    top: 100px;
+    left: 15%;
+	width: 70%;
+	background-color: white;
+	border-radius: 100px;
+}
+
 .btn-search {
 	position: relative;
 	display: block;
 	width:200px;
 	height: 130px;
-	margin: 300px 0 0 50%;
+	margin: 200px 0 0 50%;
 	transform: translate(-50%, -50%);
 }
 

@@ -9,6 +9,18 @@ label {
 
 .form-group {
 	margin-top: 20px;
+
+	label {
+		display: block;
+    text-align: center;
+    margin: 10px auto;
+    width: 30%;
+		border-radius: 10px;
+	}
+
+	input, textarea {
+		border-radius: 10px;
+	}
 }
 
 .form-control {
@@ -16,12 +28,13 @@ label {
 }
 
 .to-title-2 {
+	margin-top: 40px;
 	width: 40%;
 }
 
 .contacts-confirm {
-	margin-top: -60px;
-	margin-left: 60%;
+	margin-top: 40px;
+	margin-left: 14%;
 }
 
 .contacts-back {

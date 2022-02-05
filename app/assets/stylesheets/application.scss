@@ -34,10 +34,19 @@
 */
 
 body {
-  background-color: #41DBD2;
+  background-color: rgba(203, 218, 241, 0.5);
+  background-image: url('shutterstock_1299896263.png');
+  background-size: cover;
   font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 .alert {
-  margin-top: 60px;
+  z-index: 1;
+  position: absolute;
+    top: 60px;
+    left: 20%;
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
 }
