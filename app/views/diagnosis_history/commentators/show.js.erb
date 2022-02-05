@@ -5,7 +5,7 @@ var commentator_modal = $('#commentator-modal').get(0);
 var mask = $('#mask').get(0);
 
 //$("body").append('#{escape_javascript(yield :charts_js)}');
-commentator_modal.innerHTML = "<%= j(render 'diagnosis_histories_show', diagnosis: @diagnosis, sizeindex: @sizeindex, index: @index, review: @review, commentator: @commentator ) %>" ;
+commentator_modal.innerHTML = "<%= j(render 'diagnosis_histories_show', diagnosis: @diagnosis, frequency: @frequency, index: @index, review: @review, commentator: @commentator ) %>" ;
 
 commentator_modal.classList.remove('hidden');
 mask.classList.remove('hidden');

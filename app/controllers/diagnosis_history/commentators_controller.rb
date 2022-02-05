@@ -3,8 +3,8 @@ class DiagnosisHistory::CommentatorsController < ApplicationController
     @diagnoses = current_user.diagnosis_histories.order(diagnosed_at: :asc).group_by {|d| [d[:diagnosed_at]]}
 
     @index = params[:index].to_i - 1
-    @sizeindex = params[:sizeindex].to_i
-    @diagnosis = @diagnoses.to_a[@index][1][@sizeindex]
+    @frequency = params[:frequency].to_i
+    @diagnosis = @diagnoses.to_a[@index][1][@frequency]
     @commentator = @diagnosis.commentator
     @review = Review.new
 
