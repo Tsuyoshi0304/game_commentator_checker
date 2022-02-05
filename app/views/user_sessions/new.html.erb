@@ -18,7 +18,9 @@
         </div>
       <% end %>
       <div class='text-center'>
-        <%= link_to 'ユーザー登録がお済みでない方はこちら', new_user_path %>/<br>
+        <%= link_to 'ユーザー登録がお済みでない方はこちら', new_user_path(
+          commentators: @commentators, similar_commentators: @similar_commentators
+          ) %>/<br>
         <a href="#">パスワードをお忘れの方はこちら</a>
       </div>
     </div>

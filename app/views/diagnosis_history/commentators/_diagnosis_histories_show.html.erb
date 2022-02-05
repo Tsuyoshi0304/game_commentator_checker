@@ -1,5 +1,5 @@
-<div id="result-r-<%= sizeindex + 1 %>" class="col-12 col-md-10 col-lg-7 round diagnosis-histories-commentator">
-	<div class="commentator-info" id="commentator-info-<%= sizeindex + 1 %>">
+<div id="result-r-<%= frequency + 1 %>" class="col-12 col-md-10 col-lg-7 round diagnosis-histories-commentator">
+	<div class="commentator-info" id="commentator-info-<%= frequency + 1 %>">
     <div class="first-page">
       <div class="commentator-name round">
         <%= diagnosis.commentator.name %>
@@ -11,7 +11,7 @@
       <%= link_to 'レビュー', '#', class: 'btn btn-primary', id: 'review-button' %>
       <!-- 左右ボタン -->
       <!-- １ページ目の右 -->
-      <button id="right-button-<%= sizeindex + 1 %>" type="button" class="right-button-1 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-right"></i></button>
+      <button id="right-button-<%= frequency + 1 %>" type="button" class="right-button-1 round" value="<%= frequency + 1 %>"><i class="fa fa-angle-right"></i></button>
     </div>
 
     <!-- レビューフォーム -->
@@ -37,9 +37,9 @@
 
       </div>
       <!-- ２ぺーじ目の左 -->
-      <button id="left-button-<%= sizeindex + 1 %>" type="button" class="left-button-1 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
+      <button id="left-button-<%= frequency + 1 %>" type="button" class="left-button-1 round" value="<%= frequency + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
       <!-- ２ページ目の右 -->
-      <button id="right-button-<%= sizeindex + 1 %>" type="button" class="right-button-2 round" value="<%= sizeindex + 1 %>"><i class="fa fa-angle-right"></i></button>
+      <button id="right-button-<%= frequency + 1 %>" type="button" class="right-button-2 round" value="<%= frequency + 1 %>"><i class="fa fa-angle-right"></i></button>
     </div>
     <!-- 3ページ目 -->
     <div class="third-page" style="display: none;">
@@ -77,7 +77,7 @@
         </tbody>
       </table>
       <!-- ３ページ目の左 -->
-      <button id="left-button-<%= sizeindex + 1 %>" type="button" class="left-button-2 round" value="<%= sizeindex + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
+      <button id="left-button-<%= frequency + 1 %>" type="button" class="left-button-2 round" value="<%= frequency + 1 %>" style="display: none;"><i class="fa fa-angle-left"></i></button>
     </div>
   </div>
   <!-- <button type="button" class="btn btn-danger recommendation-button round similar-button-2" id="<%= index %>">似ている実況者は...</button> -->

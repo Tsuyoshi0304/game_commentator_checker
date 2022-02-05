@@ -134,43 +134,27 @@ span {
 	height: 100%;
 }
 
-.background {
-	height: 65%;
-    width: 100%;
-	background: url("22182134.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	position: absolute;
-	top: 20%;
-	left: 0;
-}
-
-.game-fonts, .btn-start, footer { 
-	font-family: 'Mochiy Pop P One', sans-serif; 
-}
-
-.home-title {
+.home-background {
 	h2 {
 		position: absolute;
 		top: 18%;
-		left: 0%;
 		width: 100%;
 		text-align: center;
 		display: inline-block;
-		font-size: 170%;
+		font-size: 180%;
 	}
 	
 	h1 {
-		font-size: 210%;
+		font-size: 250%;
 		width: 100%;
 		text-align: center;
 		display: inline-block;
 		position: absolute;
-		top: 50%;
-		left: 0%;
+		top: 45%;
 	}
 }
+
+
 
 .btn-start {
 	display: inline-block;
@@ -190,22 +174,15 @@ span {
 	
 }
 
-.link-to-mode {
-	position: absolute;
-    top: 630px;
-    left: 0;
-	height: 180px;
-}
-
 #left-start {
 	position: absolute;
-	top: 40px;
+	top: 70%;
 	left: 30%;
 }
 
 #right-start {
 	position: absolute;
-	top: 100px;
+	top: 80%;
 	left: 30%;
 }
 
@@ -215,7 +192,7 @@ footer {
 	display: -webkit-flex;
 	display: flex;
 	position: absolute;
-	top: 800px;
+	bottom: 0;
 	height: 50px;
 	width: 100%;
 	justify-content: center;
