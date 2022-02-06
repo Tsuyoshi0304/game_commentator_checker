@@ -3,4 +3,9 @@ class GameGenre < ApplicationRecord
 	has_ancestry
 
 	validates :genre_name, presence: true
+
+	# じっくり診断
+	scope :game_genre_search, -> (genre_name) {
+		where(genre_name: genre_name)
+	}
 end

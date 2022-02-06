@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-xs-12 col-md-12 col-lg-7 form">
-			<%= form_with url: simplified_searches_search_path, method: :get, local: true do |f| %>
+			<%= form_with scope: :simple_search, url: simplified_searches_search_path, method: :get, local: true do |f| %>
 				<div id="q-01" class="q-wrapper fit">
 					<div class="title round">
 						<p>今の気持ちは？</p>
