@@ -56,6 +56,8 @@ https://game-commentator-checker.herokuapp.com
 
 ● Ruby on Rails(6.0.4.1)
 
+● jQuery(3.6.0)
+
 ● Mysql(8.0.26)(ローカル)
 
 ● postgresql(10.18)(本番)
