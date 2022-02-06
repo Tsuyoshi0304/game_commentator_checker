@@ -6,4 +6,9 @@ class Game < ApplicationRecord
 
 	validates :title, presence: true
 	validates :genre, presence: true
+
+	# じっくり診断
+	scope :game_search, -> (game_genres) {
+		where(game_genre_id: game_genres.pluck(:id))
+	}
 end

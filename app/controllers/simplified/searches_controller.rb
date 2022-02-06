@@ -6,38 +6,17 @@ class Simplified::SearchesController < ApplicationController
   def new; end
 
   def search
-    @feeling = params['feeling']
-    @famous = params['famous']
-    @vtuber = params['vtuber']
-    @sex = params['sex']
-    @length = params['length']
-
-    @commentators = search_for(@feeling, @famous, @vtuber, @sex, @length)
-
-    @similar_commentators = similar_search_for(@feeling, @vtuber, @sex)
+    @commentators = Commentator.simple_search(commentator_params)
+    if @commentators.blank?
+      @similar_commentators = Commentator.simple_similar_search(commentator_params)
+    end
 
     diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
   end
 
   private
 
-  def search_for(feeling, famous, vtuber, sex, length)
-    movie_style = MovieStyle.where(length: length)
-    Commentator.where(feeling: feeling,
-                      famous: famous,
-                      vtuber: vtuber,
-                      sex: sex,
-                      movie_style_id: movie_style.pluck(:id)
-    )
-  end
-
-  def similar_search_for(feeling, vtuber, sex)
-    movie_style = MovieStyle.all
-    Commentator.where(feeling: feeling,
-                      famous: [0,1],
-                      vtuber: vtuber,
-                      sex: sex,
-                      movie_style_id: movie_style.pluck(:id)
-    )
+  def commentator_params
+    params.require(:simple_search).permit(:feeling, :famous, :vtuber, :sex, :length)
   end
 end
