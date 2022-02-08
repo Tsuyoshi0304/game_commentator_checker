@@ -1,5 +1,5 @@
 class DiagnosisHistory < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   belongs_to :commentator
 
   validates :diagnosed_at, presence: true

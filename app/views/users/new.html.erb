@@ -21,6 +21,10 @@
           <%= f.label :password_confirmation, 'パスワード確認' %><br>
           <%= f.password_field :password_confirmation, class: 'form_control' %>
         </div>
+        <%= f.hidden_field :commentators, 
+        value: @commentators %>
+        <%= f.hidden_field :similar_commentators, 
+        value: @similar_commentators %>
         <div class="register-button">
           <%= f.submit '登録', class: 'btn btn-primary' %>
         </div>
