@@ -11,8 +11,6 @@ class Simplified::SearchesController < ApplicationController
       @similar_commentators = Commentator.simple_similar_search(commentator_params)
     end
 
-    # binding.pry
-
     diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
   end
 

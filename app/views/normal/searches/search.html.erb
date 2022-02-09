@@ -30,6 +30,15 @@
 				<%= render 'shared/twitter', commentators: @commentators %>
 			<% end %>
 
+			<% if not logged_in? %>
+				<%= link_to 'レビューしてみる!',
+				login_path( commentators: @commentators.present? ? @commentators.map(&:id) : @commentators, 
+										similar_commentators: @similar_commentators.present? ? @similar_commentators.map(&:id) : @similar_commentators
+				), 
+				data: {"turbolinks"=>false}, 
+				class: 'btn btn-warning round to-more-function' %>
+			<% end %>
+
 		<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
 	</div>
 </div>

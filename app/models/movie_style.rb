@@ -11,12 +11,10 @@ class MovieStyle < ApplicationRecord
 
   # サクッと診断
   scope :movie_style_search, -> (commentator_params) {
-    where(length: commentator_params[:length])
-  }
+    where(length: commentator_params[:length]) }
 
   # じっくり診断
 	scope :normal_movie_style_search, -> (length, live) {
-		find_by(length: length,
-            live: live)
-	}
+		where(length: length,
+          live: live) }
 end

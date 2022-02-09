@@ -12,16 +12,15 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
     @user = User.new(@user_params_hash)
-    binding.pry
+
     if @user.save
       login(params[:user][:email], params[:user][:password])
 
       @commentators = params[:user][:commentators]
       @similar_commentators = params[:user][:similar_commentators]
-      binding.pry
       diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
+
       redirect_to root_path, success: 'ユーザー登録、ログインに成功しました' 
     else
       flash.now[:danger] = 'ユーザー登録に失敗しました'
@@ -42,6 +41,5 @@ class UsersController < ApplicationController
     @user_params_hash.delete(:commentators)
 
     @user_params_hash.delete(:similar_commentators)
-    binding.pry
   end
 end

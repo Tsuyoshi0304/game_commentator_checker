@@ -13,6 +13,8 @@
           <%= f.label :password, 'パスワード' %>
           <%= f.password_field :password, class: 'form_control' %>
         </div>
+        <%= f.hidden_field :commentators, value: @commentators %>
+        <%= f.hidden_field :similar_commentators, value: @similar_commentators %>
         <div class="login-button">
           <%= f.submit 'ログイン', class: 'btn btn-primary' %>
         </div>
