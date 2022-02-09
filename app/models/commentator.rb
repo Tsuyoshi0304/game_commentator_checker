@@ -46,66 +46,50 @@ class Commentator < ApplicationRecord
 	scope :name_like, ->  (name) { where('name LIKE ?', "%#{name}%") if name.present? } 
 
 	# サクッと診断
-		# 条件に完全に合致する実況者スコープ
-		scope :simple_search, -> (commentator_params) {
-			movie_style = MovieStyle.movie_style_search(commentator_params)
-			where(
-				feeling: commentator_params[:feeling],
-				famous: commentator_params[:famous],
-				vtuber: commentator_params[:vtuber],
-				sex: commentator_params[:sex],
-				movie_style_id: movie_style.pluck(:id)
-			)
-		}
+	# 条件に完全に合致する実況者スコープ
+	scope :simple_search, -> (commentator_params) {
+		movie_style = MovieStyle.movie_style_search(commentator_params)
+		where(feeling: commentator_params[:feeling],
+					famous: commentator_params[:famous],
+					vtuber: commentator_params[:vtuber],
+					sex: commentator_params[:sex],
+					movie_style_id: movie_style.pluck(:id)) }
 
-		# 似ている実況者スコープ
-		scope :simple_similar_search, -> (commentator_params) {
-			movie_style = MovieStyle.all
-			where(
-				feeling: commentator_params[:feeling],
-				famous: [0,1],
-				vtuber: commentator_params[:vtuber],
-				sex: commentator_params[:sex],
-				movie_style_id: movie_style.pluck(:id)
-			)
-		}
+	# 似ている実況者スコープ
+	scope :simple_similar_search, -> (commentator_params) {
+		where(feeling: commentator_params[:feeling],
+					vtuber: commentator_params[:vtuber],
+					sex: commentator_params[:sex]) }
 
 	# じっくり診断
-		# 条件に完全に合致する実況者スコープ
-		scope :normal_search, -> (hash) {
-			game_genres = GameGenre.game_genre_search(hash[:genre_name])
+	# 条件に完全に合致する実況者スコープ
+	scope :normal_search, -> (hash) {
+		game_genres = GameGenre.game_genre_search(hash[:genre_name])
 
-			games = Game.game_search(game_genres)
+		games = Game.game_search(game_genres)
 
-			playings = Playing.playing_search(games)
+		playings = Playing.playing_search(games)
 
-			movie_style = MovieStyle.normal_movie_style_search(hash[:length], hash[:live])
+		movie_style = MovieStyle.normal_movie_style_search(hash[:length], hash[:live])
 
-			where(id: playings.pluck(:commentator_id), 
-                      sex: hash[:sex], 
-                      play_style: hash[:play_style], 
-                      is_forming_a_group: hash[:is_forming_a_group], 
-                      appearance: hash[:appearance],
-                      vtuber: hash[:vtuber],
-                      movie_style_id: movie_style.id)
-		}
+		where(id: playings.pluck(:commentator_id), 
+          sex: hash[:sex], 
+          play_style: hash[:play_style], 
+          is_forming_a_group: hash[:is_forming_a_group], 
+          appearance: hash[:appearance],
+          vtuber: hash[:vtuber],
+          movie_style_id: movie_style.pluck(:id)) }
 
-		# 似ている実況者スコープ
-		scope :normal_similar_search, -> (hash) {
-			game_genres = GameGenre.game_genre_search(hash[:genre_name])
+	# 似ている実況者スコープ
+	scope :normal_similar_search, -> (hash) {
+		game_genres = GameGenre.game_genre_search(hash[:genre_name])
 
-			games = Game.game_search(game_genres)
+		games = Game.game_search(game_genres)
 
-			playings = Playing.playing_search(games)
+		playings = Playing.playing_search(games)
 
-			movie_style = MovieStyle.all
-
-			where(id: playings.pluck(:commentator_id), 
-                      sex: hash[:sex], 
-                      play_style: hash[:play_style], 
-                      is_forming_a_group: [0,1], 
-                      appearance: [0,1],
-                      vtuber: hash[:vtuber],
-                      movie_style_id: movie_style.pluck(:id))
-		}
+		where(id: playings.pluck(:commentator_id), 
+          sex: hash[:sex], 
+          play_style: hash[:play_style],
+          vtuber: hash[:vtuber]) }
 end
