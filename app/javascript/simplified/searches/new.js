@@ -39,5 +39,9 @@ $(function () {
 		$(".mini-result-wrapper").css("display", "none");
 		$(".recommendation").fadeIn("slow").show();
 		$(".twitter-wrapper").fadeIn("slow").show();
+		$(".registration-notice").fadeIn("slow").show();
+		$(".to-more-function").fadeIn("slow").show();
+		$(".result-screen-login").fadeIn("slow").show();
+		$(".to-title-wrapper").fadeIn("slow").show();
 	});
 });

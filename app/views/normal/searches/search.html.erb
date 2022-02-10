@@ -4,42 +4,36 @@
 			<h1><%= t('.recommendation_commentator') %></h1>
 		</div>	
 
-			<% if @commentators.blank? %>
-				<% if @similar_commentators.blank? %>
-					<div class="result-wrapper">
-						<div class="col-12 col-md-10 col-lg-6 result">
-							<p><%= t('.not_found') %></p>
-						</div>
+		<% if @commentators.blank? %>
+			<% if @similar_commentators.blank? %>
+				<div class="result-wrapper">
+					<div class="col-12 col-md-10 col-lg-7 result">
+						<p><%= t('.not_found') %></p>
 					</div>
-				<% else %>
-					<div class="result-wrapper">
-						<div class="mini-result-wrapper">
-							<div class="col-12 col-md-10 col-lg-6 result">
-								<p class="not-found"><%= t('.not_found') %></p>
-							</div>
-							<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に近い実況者は...</button>
-						</div>
-						<%= render 'shared/similar_commentators', commentators: @similar_commentators %>
-					</div>
-					<div class="twitter-wrapper" style="display: none;">
-						<%= render 'shared/twitter', commentators: 	@similar_commentators %>
-					</div>
-				<% end %>
+				</div>
+				<div class="to-title-wrapper">
+					<%= link_to 'タイトルへ', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
+				</div>
 			<% else %>
-				<%= render 'shared/commentators', commentators: @commentators %>
-				<%= render 'shared/twitter', commentators: @commentators %>
+				<div class="result-wrapper">
+					<div class="mini-result-wrapper">
+						<div class="col-12 col-md-10 col-lg-7 round result-wrapper-normal-not-found">
+							<p class="not-found"><%= t('.not_found') %></p>
+						</div>
+						<button type="button" href="#recommendation" class="btn btn-danger recommendation-button round" id="recommendation-button">検索条件に近い実況者は...</button>
+					</div>
+					<%= render 'shared/similar_commentators', commentators: @similar_commentators %>
+				</div>
+				<div class="twitter-wrapper" style="display: none;">
+					<%= render 'shared/twitter', commentators: 	@similar_commentators %>
+				</div>
+				<%= render 'shared/conductor_to_registration_display_none', commentators: @commentators, similar_commentators: @similar_commentators %>
 			<% end %>
-
-			<% if not logged_in? %>
-				<%= link_to 'レビューしてみる!',
-				login_path( commentators: @commentators.present? ? @commentators.map(&:id) : @commentators, 
-										similar_commentators: @similar_commentators.present? ? @similar_commentators.map(&:id) : @similar_commentators
-				), 
-				data: {"turbolinks"=>false}, 
-				class: 'btn btn-warning round to-more-function' %>
-			<% end %>
-
-		<%= link_to t('.to_title'), root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
+		<% else %>
+			<%= render 'shared/commentators', commentators: @commentators %>
+			<%= render 'shared/twitter', commentators: @commentators %>
+			<%= render 'shared/conductor_to_registration', commentators: @commentators, similar_commentators: @similar_commentators %>
+		<% end %>
 	</div>
 </div>
 
