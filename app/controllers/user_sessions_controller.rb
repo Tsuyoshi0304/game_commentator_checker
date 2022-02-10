@@ -6,6 +6,7 @@ class UserSessionsController < ApplicationController
   def new
     @commentators = params[:commentators]
     @similar_commentators = params[:similar_commentators]
+    binding.pry
   end
 
   def create

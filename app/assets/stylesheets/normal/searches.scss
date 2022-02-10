@@ -302,9 +302,14 @@
 }
 
 /* 結果画面 */
+.mini-result-wrapper {
+  margin-top: -140px;
+}
 
-.result-wrapper, .result-r, .title, .twitter-wrapper, .twitter, .to-title {
-	font-family: 'Mochiy Pop P One', sans-serif; 
+.result-wrapper-normal-not-found {
+  background-color: white;
+  height: 280px;
+  margin: 0 auto;
 }
 
 .result {
@@ -348,6 +353,7 @@
   position: absolute;
   top: 110px;
   left: 7%;
+  width: 32%;
   border-radius: 100px;
 }
 
@@ -387,20 +393,21 @@
   width: 100%;
 }
 
-.twitter {
-  position: relative;
-  height: 0;
-	width: 100%;
+.registration-notice {
+	text-align: center;
+  background-color: black;
+  color: white;
+	padding-top: 11px;
+  word-wrap: break-word;
 }
 
 .twitter-share {
   background-color: white;
   text-decoration: none;
-  position: absolute;
-	top: 30px;
   width: 27%;
   height: 37px;
   padding: 5px 2%;
+  margin-bottom: 20px;
   display: block;
   .fa-twitter {
     color: #3399FF;
@@ -409,14 +416,26 @@
 }
 
 .to-more-function {
-	font-family: 'Mochiy Pop P One', sans-serif; 
-	height: 40px;
-	width: 51%;
+	height: 35px;
+	width: 30%;
+  font-size: 11px;
+}
+
+.result-screen-login {
+	font-size: 12px;
+	width: 30%;
+  height: 35px;
+  margin-left: 5%;
 }
 
 .to-title {
-  margin-left: 60%;
-	margin-top: 0px;
+  margin-left: auto;
+	font-size: 12px;
+	width: 30%;
+	height: 35px;
+	position: absolute;
+    top: -35px;
+    right: 0px;
 }
 
 //オススメボタン

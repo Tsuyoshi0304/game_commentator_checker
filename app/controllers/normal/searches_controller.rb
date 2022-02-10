@@ -5,7 +5,7 @@ class Normal::SearchesController < ApplicationController
 
   before_action :commentator_params_hash, only: %i[search]
 
-  skip_before_action :require_login, only: %i[new search]
+  skip_before_action :require_login, only: %i[new get_gamegenre_children search]
 
   def get_gamegenre_children
     @gamegenre_children = GameGenre.find_by(genre_name: "#{params[:parent_name]}", ancestry: nil).children
