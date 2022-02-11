@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
   create_table "diagnosis_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "commentator_id", null: false
-    t.datetime "diagnosed_at", default: "2022-01-20 13:36:24", null: false
+    t.datetime "diagnosed_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "mode"

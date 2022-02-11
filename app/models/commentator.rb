@@ -18,15 +18,13 @@ class Commentator < ApplicationRecord
 
 	enum sex: { unknown_sex: 0, male: 1, female: 2 }
 	enum age: { unknown_age: 0, around_10: 5, teenager: 10, twenties: 20, thirties: 30, forties: 40, after_fifties: 50 }
-	enum play_style: {
-		good_talk: 10,
-		astringent_voice: 20,
-		changing_voice: 30,
-		playing_well: 40,
-		playing_noisy: 50,
-		playing_happily: 60,
-		healing_playing: 70
-	}
+	enum play_style: {good_talk: 10,
+										astringent_voice: 20,
+										changing_voice: 30,
+										playing_well: 40,
+										playing_noisy: 50,
+										playing_happily: 60,
+										healing_playing: 70}
 	enum feeling: { excitement: 1, calm: 2 }
 	enum famous: { famous_true: 1, famous_false: 0 }
 	enum vtuber: { vtuber_true: 1, vtuber_false: 0 }
@@ -72,10 +70,10 @@ class Commentator < ApplicationRecord
 
 		movie_style = MovieStyle.normal_movie_style_search(hash[:length], hash[:live])
 
-		where(id: playings.pluck(:commentator_id), 
-          sex: hash[:sex], 
-          play_style: hash[:play_style], 
-          is_forming_a_group: hash[:is_forming_a_group], 
+		where(id: playings.pluck(:commentator_id),
+          sex: hash[:sex],
+          play_style: hash[:play_style],
+          is_forming_a_group: hash[:is_forming_a_group],
           appearance: hash[:appearance],
           vtuber: hash[:vtuber],
           movie_style_id: movie_style.pluck(:id)) }
