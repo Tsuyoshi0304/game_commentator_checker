@@ -12,6 +12,7 @@ header {
 }
 
 .navbar-brand {
+	margin-left: 10px;
 	padding: 0;
   position: absolute;
     top: 15%;
@@ -26,6 +27,10 @@ header {
     right: -120px;
 	background-color: rgba(228, 236, 243, 0.8);
 	z-index: 2;
+}
+
+.user-icon {
+	border: 1px solid black;
 }
 
 .header-mask.hidden {

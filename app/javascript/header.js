@@ -4,4 +4,8 @@ $(function () {
     $('.navbar-nav').toggleClass('open');
     $('.header-mask').toggleClass('hidden');
   });
+
+  $('#game-fonts-upper').hide().fadeIn('slow');
+
+  $('#game-fonts-lower').hide().fadeIn('slow');
 });
