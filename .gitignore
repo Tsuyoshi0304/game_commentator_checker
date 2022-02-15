@@ -50,3 +50,5 @@ yarn.lock
 
 public/sitemap.xml.gz
 /public/uploads/
+
+.rubocop.yml

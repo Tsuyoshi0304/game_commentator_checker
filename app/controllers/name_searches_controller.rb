@@ -13,7 +13,7 @@ class NameSearchesController < ApplicationController
 
   private
 
-  def name_params
-    params.fetch(:commentator_search, {}).permit(:name)
-  end
+    def name_params
+      params.fetch(:commentator_search, {}).permit(:name)
+    end
 end
