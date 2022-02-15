@@ -52,17 +52,15 @@ https://game-commentator-checker.herokuapp.com
 ● 動画の長さ など
 
 ## 使用技術
-● Ruby (2.6.6)
+● Ruby (3.0.1)
 
-● Ruby on Rails(6.0.4.1)
+● Ruby on Rails(6.1.4.4)
 
 ● jQuery(3.6.0)
 
 ● bootstrap5
 
-● Mysql(8.0.26)(ローカル)
-
-● postgresql(10.18)(本番)
+● postgresql(10.19)
 
 ## 主な機能
 ● ユーザー登録、ログイン機能（sorcery）
