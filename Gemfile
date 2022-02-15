@@ -47,6 +47,7 @@ gem 'chartkick', '~> 3.0', '>= 3.0.1'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
+gem 'pg', '1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -57,7 +58,6 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'mysql2', '>= 0.4.4'
 
   #gem 'google-api-client', '0.7', require: 'google/api_client'
 end
@@ -77,7 +77,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '1.1'
   gem 'fog-aws'
 end
 

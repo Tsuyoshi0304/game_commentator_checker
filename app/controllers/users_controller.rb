@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user = User.new
     @commentators = params[:commentators]
     @similar_commentators = params[:similar_commentators]
-    binding.pry
   end
 
   def create
@@ -20,7 +19,6 @@ class UsersController < ApplicationController
 
       @commentators = params[:user][:commentators]
       @similar_commentators = params[:user][:similar_commentators]
-      binding.pry
       diagnosis_save(@commentators.present? ? @commentators : @similar_commentators)
 
       redirect_to root_path, success: 'ユーザー登録、ログインに成功しました' 

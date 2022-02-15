@@ -1419,7 +1419,6 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -1618,7 +1617,6 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.2)
-  mysql2 (>= 0.4.4)
   pg (= 1.1)
   pry-rails
   puma (~> 4.1)

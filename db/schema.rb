@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2022_02_07_155210) do
 
-  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -33,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "commentators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "commentators", force: :cascade do |t|
     t.string "name", null: false
     t.text "voice"
     t.text "youtube_icon"
@@ -52,7 +55,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["movie_style_id"], name: "index_commentators_on_movie_style_id"
   end
 
-  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "title"
@@ -61,10 +64,10 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "diagnosis_histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "diagnosis_histories", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "commentator_id", null: false
-    t.datetime "diagnosed_at", null: false
+    t.datetime "diagnosed_at", default: "2022-02-14 18:11:09", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "mode"
@@ -72,14 +75,14 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["user_id"], name: "index_diagnosis_histories_on_user_id"
   end
 
-  create_table "game_genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "game_genres", force: :cascade do |t|
     t.string "genre_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "ancestry"
   end
 
-  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "games", force: :cascade do |t|
     t.string "title", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -87,14 +90,14 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["game_genre_id"], name: "index_games_on_game_genre_id"
   end
 
-  create_table "movie_styles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "movie_styles", force: :cascade do |t|
     t.integer "length", null: false
     t.integer "live", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "playings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "playings", force: :cascade do |t|
     t.bigint "game_id", null: false
     t.bigint "commentator_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -103,7 +106,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["game_id"], name: "index_playings_on_game_id"
   end
 
-  create_table "popular_movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "popular_movies", force: :cascade do |t|
     t.text "movie", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -111,7 +114,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["commentator_id"], name: "index_popular_movies_on_commentator_id"
   end
 
-  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
     t.float "rank", default: 1.0, null: false
     t.text "body"
     t.bigint "user_id", null: false
@@ -122,7 +125,7 @@ ActiveRecord::Schema.define(version: 2022_02_07_155210) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
