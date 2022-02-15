@@ -55,6 +55,8 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-rails'
   gem 'rubocop-performance'
+  gem 'onkcop'
+  gem 'pre-commit'
   gem 'rails_best_practices'
   gem 'better_errors'
   gem 'binding_of_caller'

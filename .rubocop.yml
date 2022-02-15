@@ -1,0 +1,21 @@
+require:
+  - rubocop-rails
+
+inherit_gem:
+  onkcop:
+    - "config/rubocop.yml"
+    # uncomment if use performance cops
+    # - "config/performance.yml"
+    # uncomment if use rails cops
+    # - "config/rails.yml"
+    # uncomment if use rspec cops
+    # - "config/rspec.yml"
+
+AllCops:
+  TargetRubyVersion: 3.0.1
+  TargetRailsVersion: 6.1.4.4
+  Exclude:
+    - "vendor/**/*" # rubocop config/default.yml
+    - "db/schema*.rb"
+    - "node_modules/**/*"
+    - "db/migrate/**/*"
