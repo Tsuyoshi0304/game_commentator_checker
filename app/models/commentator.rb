@@ -46,12 +46,13 @@ class Commentator < ApplicationRecord
   # サクッと診断
   # 条件に完全に合致する実況者スコープ
   scope :simple_search, ->(commentator_params) {
-                          movie_style = MovieStyle.movie_style_search(commentator_params)
                           where(feeling: commentator_params[:feeling],
                                 famous: commentator_params[:famous],
                                 vtuber: commentator_params[:vtuber],
                                 sex: commentator_params[:sex],
-                                movie_style_id: movie_style.pluck(:id))
+                                )
+                          .joins(:movie_style)
+                          .merge(MovieStyle.movie_style_search(commentator_params))
                         }
 
   # 似ている実況者スコープ
@@ -64,34 +65,31 @@ class Commentator < ApplicationRecord
   # じっくり診断
   # 条件に完全に合致する実況者スコープ
   scope :normal_search, ->(hash) {
-                          game_genres = GameGenre.game_genre_search(hash[:genre_name])
+                          game_genre = GameGenre.game_genre_search(hash[:genre_name]).first
 
-                          games = Game.game_search(game_genres)
+                          game = Game.game_search(game_genre).first
 
-                          playings = Playing.playing_search(games)
-
-                          movie_style = MovieStyle.normal_movie_style_search(hash[:length], hash[:live])
-
-                          where(id: playings.pluck(:commentator_id),
-                                sex: hash[:sex],
+                          where(sex: hash[:sex],
                                 play_style: hash[:play_style],
                                 is_forming_a_group: hash[:is_forming_a_group],
                                 appearance: hash[:appearance],
-                                vtuber: hash[:vtuber],
-                                movie_style_id: movie_style.pluck(:id))
+                                vtuber: hash[:vtuber])
+                          .joins(:playings)
+                          .merge(Playing.playing_search(game))
+                          .joins(:movie_style)
+                          .merge(MovieStyle.normal_movie_style_search(hash[:length], hash[:live]))
                         }
 
   # 似ている実況者スコープ
   scope :normal_similar_search, ->(hash) {
-                                  game_genres = GameGenre.game_genre_search(hash[:genre_name])
+                                  game_genre = GameGenre.game_genre_search(hash[:genre_name]).first
 
-                                  games = Game.game_search(game_genres)
+                                  game = Game.game_search(game_genre).first
 
-                                  playings = Playing.playing_search(games)
-
-                                  where(id: playings.pluck(:commentator_id),
-                                        sex: hash[:sex],
+                                  where(sex: hash[:sex],
                                         play_style: hash[:play_style],
                                         vtuber: hash[:vtuber])
+                                  .joins(:playings)
+                                  .merge(Playing.playing_search(game))
                                 }
 end
