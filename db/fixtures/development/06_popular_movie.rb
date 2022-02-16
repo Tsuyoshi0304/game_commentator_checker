@@ -201,3 +201,33 @@ PopularMovie.seed do |s|
   s.movie = "https://www.youtube.com/embed/gtaFVePr04M"
   s.commentator_id = 34
 end
+
+PopularMovie.seed do |s|
+  s.id = 35
+  s.movie = "https://www.youtube.com/embed/j20NH-VF_1c"
+  s.commentator_id = 35
+end
+
+PopularMovie.seed do |s|
+  s.id = 36
+  s.movie = "https://www.youtube.com/embed/GWQU7nTUtqg"
+  s.commentator_id = 36
+end
+
+PopularMovie.seed do |s|
+  s.id = 37
+  s.movie = "https://www.youtube.com/embed/yosxQk3pMQE"
+  s.commentator_id = 37
+end
+
+PopularMovie.seed do |s|
+  s.id = 38
+  s.movie = "https://www.youtube.com/embed/_0BDgUOsopI"
+  s.commentator_id = 38
+end
+
+PopularMovie.seed do |s|
+  s.id = 39
+  s.movie = "https://www.youtube.com/embed/yww0vprNUmI"
+  s.commentator_id = 39
+end

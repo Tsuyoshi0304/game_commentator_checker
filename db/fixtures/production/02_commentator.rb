@@ -541,3 +541,83 @@ Commentator.seed do |s|
   s.famous = 1
   s.movie_style_id = 2
 end
+
+Commentator.seed do |s|
+  s.id = 35
+  s.name = "たくっち"
+  s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open("./app/assets/images/takutti.jpeg"), filename: "takutti.jpeg")
+  s.youtube_channel_url = "https://www.youtube.com/c/%E3%81%9F%E3%81%8F%E3%81%A3%E3%81%A1"
+  s.sex = 2
+  s.age = 0
+  s.is_forming_a_group = 0
+  s.play_style = 30
+  s.appearance = 0
+  s.vtuber = 0
+  s.feeling = 1
+  s.famous = 1
+  s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 36
+  s.name = "マミルトン"
+  s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open("./app/assets/images/mamiruton.jpeg"), filename: "mamiruton.jpeg")
+  s.youtube_channel_url = "https://www.youtube.com/c/mamirutonchannel/videos"
+  s.sex = 2
+  s.age = 30
+  s.is_forming_a_group = 0
+  s.play_style = 60
+  s.appearance = 1
+  s.vtuber = 0
+  s.feeling = 2
+  s.famous = 0
+  s.movie_style_id = 3
+end
+
+Commentator.seed do |s|
+  s.id = 37
+  s.name = "明日香ちゃんねる"
+  s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open("./app/assets/images/asuka.jpeg"), filename: "asuka.jpeg")
+  s.youtube_channel_url = "https://www.youtube.com/c/%E6%98%8E%E6%97%A5%E9%A6%99%E3%81%A1%E3%82%83%E3%82%93%E3%81%AD%E3%82%8B"
+  s.sex = 2
+  s.age = 30
+  s.is_forming_a_group = 0
+  s.play_style = 60
+  s.appearance = 1
+  s.vtuber = 0
+  s.feeling = 1
+  s.famous = 0
+  s.movie_style_id = 2
+end
+
+Commentator.seed do |s|
+  s.id = 38
+  s.name = "茶々茶(chachacha)"
+  s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open("./app/assets/images/chachacha.jpeg"), filename: "chachacha.jpeg")
+  s.youtube_channel_url = "https://www.youtube.com/c/namayara"
+  s.sex = 2
+  s.age = 0
+  s.is_forming_a_group = 0
+  s.play_style = 70
+  s.appearance = 1
+  s.vtuber = 0
+  s.feeling = 1
+  s.famous = 0
+  s.movie_style_id = 3
+end
+
+Commentator.seed do |s|
+  s.id = 39
+  s.name = "kson ONAIR"
+  s.youtube_icon = ActiveStorage::Blob.create_and_upload!(io: File.open("./app/assets/images/kson.jpeg"), filename: "kson.jpeg")
+  s.youtube_channel_url = "https://www.youtube.com/c/ksonONAIR"
+  s.sex = 2
+  s.age = 0
+  s.is_forming_a_group = 0
+  s.play_style = 10
+  s.appearance = 1
+  s.vtuber = 0
+  s.feeling = 1
+  s.famous = 1
+  s.movie_style_id = 3
+end
