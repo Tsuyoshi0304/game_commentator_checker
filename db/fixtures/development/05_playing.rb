@@ -2487,3 +2487,183 @@ Playing.seed do |s|
   s.game_id = 21
   s.commentator_id = 34
 end
+
+Playing.seed do |s|
+  s.id = 414
+  s.game_id = 2
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 415
+  s.game_id = 18
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 416
+  s.game_id = 40
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 417
+  s.game_id = 37
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 418
+  s.game_id = 3
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 419
+  s.game_id = 5
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 420
+  s.game_id = 6
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 421
+  s.game_id = 14
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 422
+  s.game_id = 10
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 423
+  s.game_id = 34
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 424
+  s.game_id = 1
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 425
+  s.game_id = 7
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 426
+  s.game_id = 21
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 427
+  s.game_id = 26
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 428
+  s.game_id = 6
+  s.commentator_id = 36
+end
+
+Playing.seed do |s|
+  s.id = 429
+  s.game_id = 22
+  s.commentator_id = 36
+end
+
+Playing.seed do |s|
+  s.id = 430
+  s.game_id = 10
+  s.commentator_id = 36
+end
+
+Playing.seed do |s|
+  s.id = 431
+  s.game_id = 9
+  s.commentator_id = 36
+end
+
+Playing.seed do |s|
+  s.id = 432
+  s.game_id = 3
+  s.commentator_id = 37
+end
+
+Playing.seed do |s|
+  s.id = 433
+  s.game_id = 1
+  s.commentator_id = 37
+end
+
+Playing.seed do |s|
+  s.id = 434
+  s.game_id = 21
+  s.commentator_id = 37
+end
+
+Playing.seed do |s|
+  s.id = 435
+  s.game_id = 14
+  s.commentator_id = 38
+end
+
+Playing.seed do |s|
+  s.id = 436
+  s.game_id = 10
+  s.commentator_id = 38
+end
+
+Playing.seed do |s|
+  s.id = 437
+  s.game_id = 2
+  s.commentator_id = 38
+end
+
+Playing.seed do |s|
+  s.id = 438
+  s.game_id = 3
+  s.commentator_id = 38
+end
+
+Playing.seed do |s|
+  s.id = 439
+  s.game_id = 18
+  s.commentator_id = 39
+end
+
+Playing.seed do |s|
+  s.id = 440
+  s.game_id = 10
+  s.commentator_id = 39
+end
+
+Playing.seed do |s|
+  s.id = 441
+  s.game_id = 37
+  s.commentator_id = 39
+end
+
+Playing.seed do |s|
+  s.id = 442
+  s.game_id = 32
+  s.commentator_id = 39
+end
+
+Playing.seed do |s|
+  s.id = 443
+  s.game_id = 1
+  s.commentator_id = 39
+end
