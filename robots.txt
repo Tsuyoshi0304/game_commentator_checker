@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /profile/
+Sitemap: https://game-commentator-checker.com/sitemap.xml
+Sitemap: https://www.game-commentator-checker.com/sitemap.xml
