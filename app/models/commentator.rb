@@ -35,28 +35,27 @@ class Commentator < ApplicationRecord
   scope :aggregate_game_genre, ->(commentator) { commentator.playing_games.pluck(:game_genre_id) }
 
   # 名前検索
-  scope :commentator_search, ->(name_params) do
+  scope :commentator_search, lambda { |name_params|
     return if name_params[:name].blank?
 
     name_like(name_params[:name])
-  end
+  }
 
-  scope :name_like, ->(name) { where("name LIKE ?", "%#{name}%") if name.present? }
+  scope :name_like, ->(name) { where('name LIKE ?', "%#{name}%") if name.present? }
 
   # サクッと診断
   # 条件に完全に合致する実況者スコープ
-  scope :simple_search, ->(commentator_params) {
+  scope :simple_search, lambda { |commentator_params|
                           where(feeling: commentator_params[:feeling],
                                 famous: commentator_params[:famous],
                                 vtuber: commentator_params[:vtuber],
-                                sex: commentator_params[:sex],
-                                )
-                          .joins(:movie_style)
-                          .merge(MovieStyle.movie_style_search(commentator_params))
+                                sex: commentator_params[:sex])
+                            .joins(:movie_style)
+                            .merge(MovieStyle.movie_style_search(commentator_params))
                         }
 
   # 似ている実況者スコープ
-  scope :simple_similar_search, ->(commentator_params) {
+  scope :simple_similar_search, lambda { |commentator_params|
                                   where(feeling: commentator_params[:feeling],
                                         vtuber: commentator_params[:vtuber],
                                         sex: commentator_params[:sex])
@@ -64,7 +63,7 @@ class Commentator < ApplicationRecord
 
   # じっくり診断
   # 条件に完全に合致する実況者スコープ
-  scope :normal_search, ->(hash) {
+  scope :normal_search, lambda { |hash|
                           game_genre = GameGenre.game_genre_search(hash[:genre_name]).first
 
                           game = Game.game_search(game_genre).first
@@ -74,14 +73,14 @@ class Commentator < ApplicationRecord
                                 is_forming_a_group: hash[:is_forming_a_group],
                                 appearance: hash[:appearance],
                                 vtuber: hash[:vtuber])
-                          .joins(:playings)
-                          .merge(Playing.playing_search(game))
-                          .joins(:movie_style)
-                          .merge(MovieStyle.normal_movie_style_search(hash[:length], hash[:live]))
+                            .joins(:playings)
+                            .merge(Playing.playing_search(game))
+                            .joins(:movie_style)
+                            .merge(MovieStyle.normal_movie_style_search(hash[:length], hash[:live]))
                         }
 
   # 似ている実況者スコープ
-  scope :normal_similar_search, ->(hash) {
+  scope :normal_similar_search, lambda { |hash|
                                   game_genre = GameGenre.game_genre_search(hash[:genre_name]).first
 
                                   game = Game.game_search(game_genre).first
@@ -89,7 +88,7 @@ class Commentator < ApplicationRecord
                                   where(sex: hash[:sex],
                                         play_style: hash[:play_style],
                                         vtuber: hash[:vtuber])
-                                  .joins(:playings)
-                                  .merge(Playing.playing_search(game))
+                                    .joins(:playings)
+                                    .merge(Playing.playing_search(game))
                                 }
 end
