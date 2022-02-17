@@ -8,7 +8,7 @@ class Game < ApplicationRecord
   validates :genre, presence: true
 
   # じっくり診断
-  scope :game_search, ->(game_genre) {
+  scope :game_search, lambda { |game_genre|
     where(game_genre_id: game_genre.id)
   }
 end

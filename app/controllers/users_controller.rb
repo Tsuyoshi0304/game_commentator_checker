@@ -21,25 +21,26 @@ class UsersController < ApplicationController
       @similar_commentators = params[:user][:similar_commentators]
       diagnosis_save(@commentators.presence || @similar_commentators)
 
-      redirect_to root_path, success: "ユーザー登録、ログインに成功しました"
+      redirect_to root_path, success: 'ユーザー登録、ログインに成功しました'
     else
-      flash.now[:danger] = "ユーザー登録に失敗しました"
+      flash.now[:danger] = 'ユーザー登録に失敗しました'
       render :new
     end
   end
 
-  def destroy
-  end
+  def destroy; end
 
   private
 
-    def user_params_hash
-      @params = params.require(:user).permit(:name, :email, :password, :password_confirmation, :commentators, :similar_commentators)
+  def user_params_hash
+    @params = params.require(:user).permit(:name, :email, :password, :password_confirmation, :commentators,
+                                           :similar_commentators)
 
-      @user_params_hash = @params.permit(:name, :email, :password, :password_confirmation, :commentators, :similar_commentators).to_h
+    @user_params_hash = @params.permit(:name, :email, :password, :password_confirmation, :commentators,
+                                       :similar_commentators).to_h
 
-      @user_params_hash.delete(:commentators)
+    @user_params_hash.delete(:commentators)
 
-      @user_params_hash.delete(:similar_commentators)
-    end
+    @user_params_hash.delete(:similar_commentators)
+  end
 end

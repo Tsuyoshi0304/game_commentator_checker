@@ -1,8 +1,6 @@
 class NameSearchesController < ApplicationController
   def index
-    if name_params == {}
-      @commentators = {}
-    end
+    @commentators = {} if name_params == {}
 
     return if name_params[:name].blank?
 
@@ -13,7 +11,7 @@ class NameSearchesController < ApplicationController
 
   private
 
-    def name_params
-      params.fetch(:commentator_search, {}).permit(:name)
-    end
+  def name_params
+    params.fetch(:commentator_search, {}).permit(:name)
+  end
 end

@@ -10,12 +10,12 @@ class MovieStyle < ApplicationRecord
   enum live: { live_main: 1, edit_main: 2 }
 
   # サクッと診断
-  scope :movie_style_search, ->(commentator_params) {
+  scope :movie_style_search, lambda { |commentator_params|
                                where(length: commentator_params[:length])
                              }
 
   # じっくり診断
-  scope :normal_movie_style_search, ->(length, live) {
+  scope :normal_movie_style_search, lambda { |length, live|
                                       where(length: length,
                                             live: live)
                                     }

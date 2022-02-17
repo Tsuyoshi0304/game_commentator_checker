@@ -11,8 +11,7 @@ class Normal::SearchesController < ApplicationController
     @gamegenre_children = GameGenre.find_by(genre_name: params[:parent_name].to_s, ancestry: nil).children
   end
 
-  def new
-  end
+  def new; end
 
   def search
     genre_name = params[:child_genre_name].nil? ? params[:normal_search][:parent_genre_name] : params[:child_genre_name]
@@ -22,22 +21,22 @@ class Normal::SearchesController < ApplicationController
     @commentator_params_hash.store(:genre_name, genre_name)
 
     @commentators = Commentator.normal_search(@commentator_params_hash)
-    if @commentators.blank?
-      @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash)
-    end
+    @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash) if @commentators.blank?
 
     diagnosis_save(@commentators.presence || @similar_commentators)
   end
 
   private
 
-    def set_gamegenre
-      @parents = GameGenre.where(ancestry: nil)
-    end
+  def set_gamegenre
+    @parents = GameGenre.where(ancestry: nil)
+  end
 
-    def commentator_params_hash
-      @params = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group, :appearance, :vtuber, :length, :live)
+  def commentator_params_hash
+    @params = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group,
+                                                    :appearance, :vtuber, :length, :live)
 
-      @commentator_params_hash = @params.permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group, :appearance, :vtuber, :length, :live).to_h
-    end
+    @commentator_params_hash = @params.permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group,
+                                              :appearance, :vtuber, :length, :live).to_h
+  end
 end
