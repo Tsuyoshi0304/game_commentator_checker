@@ -73,8 +73,6 @@ Rails.application.configure do
     enable_starttls_auto: true,
   }
 
-  config.action_mailer.default_url_options = Settings.default_url_options.to_h
-
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
