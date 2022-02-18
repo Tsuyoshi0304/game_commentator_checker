@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row password-resets-row">
+    <div class="title round">
+      <h1>パスワードリセット申請</h1>
+    </div>
+    <div class="col-md-8 col-lg-6 password-resets-wrapper">
+      <%= form_with url: password_resets_path, local: true do |f| %>
+        <div class="form-group">
+          <%= f.label :email, 'メールアドレス' %>
+          <%= f.email_field :email, class: 'form_control' %>
+        </div>
+        <%= f.submit '送信', class: 'btn btn-primary sending-password-resets-email' %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

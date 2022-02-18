@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   get "rankings/index"
   root to: "homes#top"
 
   resources :users, only: %i[new create destroy]
+
+  resources :password_resets, only: %i[new create edit update]
 
   get "diagnosis_history", to: "diagnosis_histories#index"
   namespace :diagnosis_history, only: %i[show] do

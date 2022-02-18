@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /profile/
+Disallow: /password_resets/
 Sitemap: https://game-commentator-checker.com/sitemap.xml
 Sitemap: https://www.game-commentator-checker.com/sitemap.xml

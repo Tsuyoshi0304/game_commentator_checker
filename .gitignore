@@ -52,3 +52,7 @@ public/sitemap.xml.gz
 /public/uploads/
 
 .rubocop.yml
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
