@@ -36,16 +36,8 @@ Rails.application.configure do
 
   config.action_mailer.raise_delivery_errors = true
 
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    port: 587,
-    address: "smtp.gmail.com",
-    domain: "gmail.com",
-    user_name: ENV["SMTP_USERNAME"],
-    password: ENV["SMTP_PASSWORD"],
-    enable_starttls_auto: true,
-  }
+  config.action_mailer.delivery_method = :letter_opener_web
+  config.action_mailer.default_url_options = Settings.default_url_options.to_h
 
   config.action_mailer.perform_caching = false
 
