@@ -34,6 +34,7 @@ gem "aws-sdk-s3", require: false
 gem "bootstrap"
 gem "carrierwave"
 gem "chartkick", "~> 3.0", ">= 3.0.1"
+gem 'config'
 gem "dotenv-rails"
 gem "enum_help"
 gem "font-awesome-rails"
@@ -54,7 +55,6 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem 'config'
   gem 'letter_opener_web'
   gem "onkcop"
   gem "pre-commit"
