@@ -6,19 +6,19 @@
     <div class="col-md-8 col-lg-8 register-wrapper">
       <%= form_with model: @user, local: true do |f| %>
         <div class="form-group">
-          <%= f.label :name, '名前' %><br>
+          <%= f.label :name, '名前', class: 'label round' %><br>
           <%= f.text_field :name, class: 'form_control' %>
         </div>
         <div class="form-group">
-          <%= f.label :email, 'メールアドレス' %><br>
+          <%= f.label :email, 'メールアドレス', class: 'label round' %><br>
           <%= f.email_field :email, class: 'form_control' %>
         </div>
         <div class="form-group">
-          <%= f.label :password, 'パスワード' %><br>
+          <%= f.label :password, 'パスワード', class: 'label round' %><br>
           <%= f.password_field :password, class: 'form_control' %>
         </div>
         <div class="form-group">
-          <%= f.label :password_confirmation, 'パスワード確認' %><br>
+          <%= f.label :password_confirmation, 'パスワード確認', class: 'label round' %><br>
           <%= f.password_field :password_confirmation, class: 'form_control' %>
         </div>
         <%= f.hidden_field :commentators, value: @commentators %>
@@ -28,9 +28,7 @@
         </div>
       <% end %>
     </div>
-    <div class="to-login-button-wrapper">
-      <%= link_to 'ログインページはこちら', login_path, class: 'btn btn-danger to-login-button' %>
-    </div>
+    <%= link_to 'ログインページはこちら', login_path, class: 'btn btn-danger to-login-button' %>
   </div>
 </div>
 

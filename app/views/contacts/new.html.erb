@@ -7,7 +7,7 @@
 			<%= form_with model: @contact, url: contacts_confirm_path, local: true do |f| %>
 				<%= render 'shared/error_messages', model: f.object %>
 				<div class="form-group">
-					<%= f.label :name, 'お名前', class: 'label' %>
+					<%= f.label :name, 'お名前', class: 'label round' %>
 					<%= f.text_field :name, class: 'form-control' %>
 				</div>
 
