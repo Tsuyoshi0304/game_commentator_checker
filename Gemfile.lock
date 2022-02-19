@@ -1455,6 +1455,8 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
     matrix (0.4.2)
+    meta-tags (2.16.0)
+      actionpack (>= 3.2.0, < 7.1)
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -1674,6 +1676,7 @@ DEPENDENCIES
   kaminari
   letter_opener_web
   listen (~> 3.2)
+  meta-tags
   onkcop
   pg (= 1.1)
   pre-commit
