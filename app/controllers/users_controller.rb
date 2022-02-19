@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     @commentators = params[:commentators]
     @similar_commentators = params[:similar_commentators]
     @mode = params[:mode]
-    binding.pry
   end
 
   def create
@@ -24,8 +23,7 @@ class UsersController < ApplicationController
       @similar_commentators = params[:user][:similar_commentators]
       @mode = params[:user][:mode]
 
-      binding.pry
-      if @mode == "1"
+      if @mode == '1'
         simplified_diagnosis_save(@commentators.presence || @similar_commentators)
       else
         normal_diagnosis_save(@commentators.presence || @similar_commentators)

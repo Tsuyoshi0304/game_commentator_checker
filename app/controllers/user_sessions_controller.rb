@@ -17,7 +17,7 @@ class UserSessionsController < ApplicationController
       @similar_commentators = params[:similar_commentators]
       @mode = params[:mode]
 
-      if @mode == "1"
+      if @mode == '1'
         simplified_diagnosis_save(@commentators.presence || @similar_commentators)
       else
         normal_diagnosis_save(@commentators.presence || @similar_commentators)
