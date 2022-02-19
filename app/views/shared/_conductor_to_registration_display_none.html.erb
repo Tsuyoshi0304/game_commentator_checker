@@ -2,13 +2,15 @@
 	<p class="registration-notice round" style="display: none;">※診断結果の保存、実況者のレビューをするにはユーザー登録が必要です。</p>
 	<%= link_to 'ユーザー登録',
 	new_user_path( commentators: commentators.present? ? commentators.map(&:id) : commentators, 
-								similar_commentators: similar_commentators.present? ? similar_commentators.map(&:id) : similar_commentators
+								similar_commentators: similar_commentators.present? ? similar_commentators.map(&:id) : similar_commentators,
+                mode: mode
 	), 
 	data: {"turbolinks"=>false}, 
 	class: 'btn btn-warning round to-more-function', style: 'display: none;' %>
 	<%= link_to 'ログイン',
 			login_path(commentators: commentators.present? ? commentators.map(&:id) : commentators, 
-								similar_commentators: similar_commentators.present? ? similar_commentators.map(&:id) : similar_commentators
+								similar_commentators: similar_commentators.present? ? similar_commentators.map(&:id) : similar_commentators,
+                mode: mode
 	), 
 	data: {"turbolinks"=>false}, 
 	class: 'btn btn-danger result-screen-login', style: 'display: none;' %>

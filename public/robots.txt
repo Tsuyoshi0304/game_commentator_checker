@@ -1,1 +1,6 @@
-Sitemap: https://s3-ap-northeast-1.amazonaws.com/game-commentator-checker-bucket/sitemaps/sitemap.xml.gz
+User-agent: *
+Disallow: /profile/
+Disallow: /password_resets/
+
+Sitemap: https://game-commentator-checker.com/sitemap.xml
+Sitemap: https://www.game-commentator-checker.com/sitemap.xml

@@ -1,5 +1,5 @@
 module Simplified::SearchesHelper
-  def diagnosis_save(commentators)
+  def simplified_diagnosis_save(commentators)
     return unless current_user && commentators.present?
 
     if commentators.is_a?(String)
