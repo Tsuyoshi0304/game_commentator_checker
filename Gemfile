@@ -34,12 +34,13 @@ gem "aws-sdk-s3", require: false
 gem "bootstrap"
 gem "carrierwave"
 gem "chartkick", "~> 3.0", ">= 3.0.1"
-gem 'config'
+gem "config"
 gem "dotenv-rails"
 gem "enum_help"
 gem "font-awesome-rails"
 gem "jquery-rails"
 gem "kaminari"
+gem "meta-tags"
 gem "pg", "1.1"
 gem "pry-rails"
 gem "rails-i18n"
@@ -55,7 +56,7 @@ group :development, :test do
   gem "better_errors"
   gem "binding_of_caller"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem 'letter_opener_web'
+  gem "letter_opener_web"
   gem "onkcop"
   gem "pre-commit"
   gem "rails_best_practices"
