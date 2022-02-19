@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   include Simplified::SearchesHelper
+  include Normal::SearchesHelper
 
   before_action :user_params_hash, only: %i[create]
 
@@ -9,6 +10,8 @@ class UsersController < ApplicationController
     @user = User.new
     @commentators = params[:commentators]
     @similar_commentators = params[:similar_commentators]
+    @mode = params[:mode]
+    binding.pry
   end
 
   def create
@@ -19,7 +22,14 @@ class UsersController < ApplicationController
 
       @commentators = params[:user][:commentators]
       @similar_commentators = params[:user][:similar_commentators]
-      diagnosis_save(@commentators.presence || @similar_commentators)
+      @mode = params[:user][:mode]
+
+      binding.pry
+      if @mode == "1"
+        simplified_diagnosis_save(@commentators.presence || @similar_commentators)
+      else
+        normal_diagnosis_save(@commentators.presence || @similar_commentators)
+      end
 
       redirect_to root_path, success: 'ユーザー登録、ログインに成功しました'
     else
@@ -34,13 +44,15 @@ class UsersController < ApplicationController
 
   def user_params_hash
     @params = params.require(:user).permit(:name, :email, :password, :password_confirmation, :commentators,
-                                           :similar_commentators)
+                                           :similar_commentators, :mode)
 
     @user_params_hash = @params.permit(:name, :email, :password, :password_confirmation, :commentators,
-                                       :similar_commentators).to_h
+                                       :similar_commentators, :mode).to_h
 
     @user_params_hash.delete(:commentators)
 
     @user_params_hash.delete(:similar_commentators)
+
+    @user_params_hash.delete(:mode)
   end
 end

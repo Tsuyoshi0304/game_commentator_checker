@@ -1,5 +1,5 @@
 module Normal::SearchesHelper
-  def diagnosis_save(commentators)
+  def normal_diagnosis_save(commentators)
     return unless current_user && commentators.present?
 
     if commentators.is_a?(String)

@@ -27,12 +27,12 @@
 				<div class="twitter-wrapper" style="display: none;">
 					<%= render 'shared/twitter', commentators: @similar_commentators %>
 				</div>
-				<%= render 'shared/conductor_to_registration_display_none', commentators: @commentators, similar_commentators: @similar_commentators %>
+				<%= render 'shared/conductor_to_registration_display_none', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
 			<% end %>
 		<% else %>
 			<%= render 'shared/commentators', commentators: @commentators %>
 			<%= render 'shared/twitter', commentators: @commentators %>
-			<%= render 'shared/conductor_to_registration', commentators: @commentators, similar_commentators: @similar_commentators %>
+			<%= render 'shared/conductor_to_registration', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
 		<% end %>
 	</div>
 </div>

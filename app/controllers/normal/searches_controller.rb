@@ -20,10 +20,11 @@ class Normal::SearchesController < ApplicationController
 
     @commentator_params_hash.store(:genre_name, genre_name)
 
-    @commentators = Commentator.normal_search(@commentator_params_hash)
-    @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash) if @commentators.blank?
+    @commentators = Commentator.normal_search(@commentator_params_hash).to_a
+    @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash).to_a if @commentators.blank?
+    @mode = DiagnosisHistory.modes[:normal]
 
-    diagnosis_save(@commentators.presence || @similar_commentators)
+    normal_diagnosis_save(@commentators.presence || @similar_commentators)
   end
 
   private
