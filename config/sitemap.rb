@@ -14,7 +14,5 @@ SitemapGenerator::Sitemap.adapter = SitemapGenerator::AwsSdkAdapter.new(
 
 SitemapGenerator::Sitemap.create do
   add simplified_searches_new_path
-  add simplified_searches_search_path
   add normal_searches_new_path
-  add normal_searches_search_path
 end
