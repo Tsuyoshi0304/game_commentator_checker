@@ -1,5 +1,5 @@
 # game_commentator_checker
-https://game-commentator-checker.herokuapp.com
+https://game-commentator-checker.com
 
 ## タイトル
 「ゲーム実況者診断」
