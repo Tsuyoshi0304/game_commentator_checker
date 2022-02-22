@@ -35,9 +35,7 @@ class DiagnosisHistory::ReviewsController < ApplicationController
 
   def review_params
     @params = params.require(:review).permit(:rank, :body).merge(commentator_id: params[:commentator_id])
-    if @params[:body].blank?
-      @params[:body] = 'コメントはありません'
-    end
+    @params[:body] = 'コメントはありません' if @params[:body].blank?
 
     @params
   end

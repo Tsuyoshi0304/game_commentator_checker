@@ -12,7 +12,7 @@ module RankingsHelper
   end
 
   def find_commentator_movie(commentator_id)
-    Commentator.find(commentator_id).popular_movies.pluck(:movie).first
+    Commentator.find(commentator_id).popular_movies.pick(:movie)
   end
 
   def find_commentator_reviews(commentator_id)
@@ -20,7 +20,7 @@ module RankingsHelper
   end
 
   def output_rank_average
-    commentator_ids = Review.pluck(:commentator_id).uniq
+    commentator_ids = Review.distinct.pluck(:commentator_id)
 
     total_rank_average = {}
 
@@ -30,6 +30,6 @@ module RankingsHelper
       total_rank_average[commentator_id] = rank_average
     end
 
-    total_rank_average.sort_by { |k, v| -v }.take(5).to_h
+    total_rank_average.sort_by { |_k, v| -v }.take(5).to_h
   end
 end
