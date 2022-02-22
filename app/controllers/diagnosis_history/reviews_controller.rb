@@ -34,7 +34,12 @@ class DiagnosisHistory::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:rank, :body).merge(commentator_id: params[:commentator_id])
+    @params = params.require(:review).permit(:rank, :body).merge(commentator_id: params[:commentator_id])
+    if @params[:body].blank?
+      @params[:body] = 'コメントはありません'
+    end
+
+    @params
   end
 
   def set_review
