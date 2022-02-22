@@ -1,0 +1,28 @@
+<% output_rank_average.each.with_index(1) do |(k, v), index| %>
+  <div id="ranking-wrapper-<%= index %>" class="ranking-wrapper">
+    <h2 class="ranking-title"><p class="ranking-order"><%= index %>位</p><p class="ranking-commentator-name"><%= find_commentator_name(k) %></p></h2>
+    <h2 class="ranking-star" data-score="<%= v %>" id="ranking-star-rank-<%= index %>">平均評価 : <%= v %><br></h2>
+    <%= link_to image_tag(find_commentator_icon(k), class: 'ranking-youtube-icon'), find_commentator_url(k) %>
+    <div class="ranking-video">
+      <iframe width="110%" height="180" src="<%= find_commentator_movie(k) %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    </div>
+    <button id="ranking-show-button-<%= index %>" type="button" value="<%= index %>" class="ranking-detail-button ranking-detail-button ranking-show-button round"><i class="fa fa-angle-down"></i></button>
+    <button id="ranking-close-button-<%= index %>" type="button" value="<%= index %>" class="ranking-detail-button ranking-close-button round" style="display: none;"><i class="fa fa-angle-up"></i></button>
+
+    <div id="show-comment-<%= index %>" class="show-comment" style="display: none;">
+      <p class="show-comment-p">レビュー一覧</p>
+      <% find_commentator_reviews(k).each do |r| %>
+        <div class="ranking-comment">
+          <div class="ranking-comment-user">
+            <%= r.user.name %><br>
+            <%= image_tag(r.user.avatar.url, class: 'review-image round') %>
+          </div>
+          <div class="ranking-comment-content">
+            <p class="ranking-comment-star" data-score="<%= r.rank %>"></p>
+            <p class="ranking-comment-sentence"><%= r.body %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

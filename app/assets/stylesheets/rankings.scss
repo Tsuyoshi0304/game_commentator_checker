@@ -1,0 +1,156 @@
+.ranking-row {
+  height: 0;
+}
+
+.ranking-total-wrapper {
+  position: relative;
+  margin: 20px auto;
+}
+
+.ranking-wrapper {
+  position: relative;
+  background-color: white;
+  height: 380px;
+  border-radius: 70px;
+  margin-bottom: 20px;
+}
+
+.ranking-title {
+  padding-top: 9px;
+  padding-left: 30px;
+  text-align: left;
+  border-bottom: 2px solid black;
+
+  .ranking-commentator-name {
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 6px;
+  }
+}
+
+//順位
+.ranking-order {
+  display: inline-block;
+  font-size: 20px;
+}
+
+//#ranking-order-1 {
+//  color: #e2d06e;
+//  position: absolute;
+//    top: 30px;
+//    left: 50px;
+//}
+//
+//#ranking-order-2 {
+//  color: #C9CACA;
+//  position: absolute;
+//    top: 430px;
+//    left: 50px;
+//}
+//
+//#ranking-order-3 {
+//  color: #C47022;
+//  position: absolute;
+//    top: 830px;
+//    left: 50px;
+//}
+//
+//#ranking-order-4 {
+//  color: black;
+//  position: absolute;
+//    top: 1230px;
+//    left: 50px;
+//}
+//
+//#ranking-order-5 {
+//  color: black;
+//  position: absolute;
+//    top: 1630px;
+//    left: 50px;
+//}
+
+.mgr-20 {
+  margin-right: 20px;
+}
+
+.ranking-star {
+  font-size: 120%;
+  text-align: center;
+}
+
+.ranking-youtube-icon {
+  position: absolute;
+  top: 150px;
+  left: 7%;
+	width: 28%;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+.ranking-video {
+  position: absolute;
+    left: 45%;
+    top: 140px;
+  width: 40%;
+}
+
+.ranking-detail-button {
+  position: absolute;
+  top: 330px;
+  left: 43%;
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  padding-left: 11px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.show-comment {
+  position: absolute;
+    top: 400px;
+  width: 100%;
+
+  .show-comment-p {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .review-image {
+    width: 60%;
+    border: 1px solid black;
+  }
+
+  .ranking-comment {
+    display: flex;
+    margin-bottom: 10px;
+    border-top: 1px solid black;
+
+    .ranking-comment-user {
+      width: 30%;
+      text-align: center;
+    }
+
+    .ranking-comment-content {
+      width: 70%;
+      text-align: center;
+
+      .ranking-comment-star {
+        height: 20px;
+        margin-top: 20px;
+      }
+
+      .ranking-comment-sentence {
+        word-wrap: break-word;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+
