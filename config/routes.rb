@@ -33,6 +33,8 @@ Rails.application.routes.draw do
     get 'game_genre'
   end
 
+  get 'game_genre_children', to: 'commentator_searches#game_genre_children', defaults: { format: 'json' }
+
   namespace :simplified do
     get 'searches/new'
     get 'searches/search'
