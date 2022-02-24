@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include NameSearchesHelper
+  include CommentatorSearchesHelper
 
   add_flash_types :danger, :success
 

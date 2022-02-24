@@ -21,7 +21,7 @@
 @import 'users';
 @import 'profiles';
 @import 'user_sessions';
-@import 'name_searches';
+@import 'commentator_searches';
 @import 'diagnosis_history/commentators';
 @import 'diagnosis_histories';
 @import 'reviews';
@@ -36,7 +36,7 @@
 */
 
 body {
-  background-color: rgba(203, 218, 241, 0.5);
+  background-color: rgba(219, 224, 227, 0.8);
   background-image: url('background4.png');
   font-family: 'Mochiy Pop P One', sans-serif;
 }

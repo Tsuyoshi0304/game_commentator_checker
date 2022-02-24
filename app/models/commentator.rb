@@ -35,10 +35,15 @@ class Commentator < ApplicationRecord
   scope :aggregate_game_genre, ->(commentator) { commentator.playing_games.pluck(:game_genre_id) }
 
   # 名前検索
-  scope :commentator_search, lambda { |name_params|
+  scope :name_search, lambda { |name_params|
     return if name_params[:name].blank?
 
     name_like(name_params[:name])
+  }
+
+  # プレイスタイル検索
+  scope :play_style_search, lambda { |play_style_params|
+    where(play_style: play_style_params[:play_style])
   }
 
   scope :name_like, ->(name) { where('name LIKE ?', "%#{name}%") if name.present? }

@@ -1,5 +1,5 @@
 module ApplicationHelper
-  include NameSearchesHelper
+  include CommentatorSearchesHelper
 
   def default_meta_tags
     {

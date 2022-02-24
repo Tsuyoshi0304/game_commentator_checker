@@ -1,4 +1,4 @@
-module NameSearchesHelper
+module CommentatorSearchesHelper
   def aggregate(commentator)
     array = Commentator.aggregate_game_genre(commentator)
     aggregate_game_genre(array)

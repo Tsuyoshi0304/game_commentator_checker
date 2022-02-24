@@ -1,0 +1,69 @@
+<div class="col-11 container container-1">
+  <div class="row row-1">
+    <div class="searches-wrapper">
+      <div class="searches">
+        <h2 class="search-title round">何で探す？</h2>
+        <div class="col-12 col-md-8 col-lg-7 search-method-wrapper">
+          <button id="search-name-button" type="button" class="search-name-button round">名前</button>
+          <button id="search-play-style-button" type="button" class="search-play-style-button round">プレイスタイル</button>
+          <button id="search-game-genre-button" type="button" class="search-game-genre-button round">ゲームジャンル</button>
+        </div>
+      </div>
+
+      <!-- 名前検索 -->
+      <div class="name-searches-wrapper" style="display: none;">
+        <h2 class="search-title round">実況者名で検索</h2>
+        <div class="name-searches">
+          <%= form_with scope: :name_search, url: commentator_searches_name_path, method: :get, remote: true do |f| %>
+            <div class="name-field"> 
+              <%= f.text_field :name, placeholder: '実況者名' %>
+            </div>
+            <%= button_tag type: 'submit', id: 'name-searches-submit' do %>
+              <i class="fa fa-search"></i> 
+            <% end %> 
+          <% end %>
+        </div>
+        <div class="name-result-wrapper">
+        </div>
+        <%=link_to '戻る', commentator_searches_path, class: 'btn btn-primary to-searches-button-name' %>
+      </div>
+
+      <!-- プレイスタイル検索 -->
+      <div class="play-style-searches-wrapper" style="display: none;">
+        <h2 class="search-title round">プレイスタイルで検索</h2>
+        <div class="col-12 col-md-10 col-lg-6 play-style-searches">
+          <%= form_with scope: :play_style_search, url: commentator_searches_play_style_path, method: :get, remote: true do |f| %>
+            <div class="play-style-field"> 
+              <%= f.select :play_style, options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }), {}, {class: 'play-style-search-select-box'} %>
+            </div>
+            <%= button_tag type: 'submit', class: 'btn btn-danger', id: 'play-style-searches-submit' do %>
+              探す!
+            <% end %> 
+          <% end %>
+        </div>
+        <div class="play-style-result-wrapper">
+        </div>
+        <%=link_to '戻る', commentator_searches_path, class: 'btn btn-primary to-searches-button-play-style' %>
+      </div>
+
+      <!-- ゲームジャンル検索 -->
+      <div class="game-genre-searches-wrapper" style="display: none;">
+        <h2 class="search-title round">ゲームジャンルで検索</h2>
+        <div class="col-12 col-md-10 col-lg-6 game-genre-searches">
+          <%= form_with scope: :game_genre_search, url: commentator_searches_game_genre_path, method: :get, remote: true do |f| %>
+            <div class="game-genre-field"> 
+              <%#= f.select :play_style, options_for_select({ 'トーク系' => '10', '渋い声' => '20', 'ボイチェン' => '30', '上手い、攻略系' => '40', 'テンション高い、うるさい系' => '50', 'それなりのテンション系' => '60', '癒し、優しい系' => '70' }), {}, {class: 'play-style-search-select-box'} %>
+            </div>
+            <%= button_tag type: 'submit', class: 'btn btn-danger', id: 'game-genre-searches-submit' do %>
+              探す!
+            <% end %> 
+          <% end %>
+        </div>
+        <div class="game-genre-result-wrapper">
+        </div>
+        <%=link_to '戻る', commentator_searches_path, class: 'btn btn-primary to-searches-button-game-genre' %>
+      </div>
+    </div>
+    <%#= link_to 'タイトルに戻る', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round name-search-to-title' %>
+  </div>
+</div>
