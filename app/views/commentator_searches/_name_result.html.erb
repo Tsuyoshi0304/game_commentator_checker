@@ -1,0 +1,14 @@
+<div id="name-result-js" class="name-result">
+  <p class="title round">検索結果</p>
+  <% if commentators.blank? %>
+    <div class="result-wrapper">
+      <div class="col-12 col-md-10 col-lg-6 result">
+        <p><%= '見つかりませんでした。' %></p>
+      </div>
+    </div>
+  <% else %>
+    <%= render 'commentator_searches/commentators', commentators: commentators %>
+  <% end %>
+</div>
+
+

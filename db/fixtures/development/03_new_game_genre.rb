@@ -1,6 +1,6 @@
 parents = %w[アクション マインクラフト マリオ ポケモン シューティング アドベンチャー RPG パズル レース シミュレーション スポーツ 音ゲー テーブルゲーム ホラー]
 action_children = %w[対戦アクション アクションアドベンチャー]
-mario_children = %w[アクション マリオカート マリオパーティ スポーツ系]
+mario_children = %w[アクション系 マリオカート マリオパーティ スポーツ系]
 shooting_children = %w[FPS TPS バトルロワイヤル]
 rpg_children = %w[シミュレーションRPG アクションRPG]
 simulation_children = %w[ターン制 育成系 どうぶつの森]

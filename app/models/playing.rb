@@ -3,7 +3,7 @@ class Playing < ApplicationRecord
   belongs_to :commentator
 
   # じっくり診断
-  scope :playing_search, lambda { |game|
-    where(game_id: game.id)
+  scope :playing_search, lambda { |games|
+    where(game_id: games.ids)
   }
 end

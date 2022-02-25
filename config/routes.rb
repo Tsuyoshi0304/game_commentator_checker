@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
-  get 'rankings/index'
   root to: 'homes#top'
+  get 'ranking', to: 'rankings#index'
 
   resources :users, only: %i[new create destroy]
 
@@ -26,8 +26,14 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
-  get 'name_searches', to: 'name_searches#index'
-  get 'name_searches_search', to: 'name_searches#search'
+  get 'commentator_searches', to: 'commentator_searches#index'
+  namespace :commentator_searches do
+    get 'name'
+    get 'play_style'
+    get 'game_genre'
+  end
+
+  get 'game_genre_children', to: 'commentator_searches#game_genre_children', defaults: { format: 'json' }
 
   namespace :simplified do
     get 'searches/new'

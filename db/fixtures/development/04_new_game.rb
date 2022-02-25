@@ -243,3 +243,58 @@ Game.seed do |s|
   s.title = "Alan Wake（アランウェイク）"
   s.game_genre_id = 33
 end
+
+Game.seed do |s|
+  s.id = 42
+  s.title = "スマブラ"
+  s.game_genre_id = 17
+end
+
+Game.seed do |s|
+  s.id = 43
+  s.title = "マリオパーティ"
+  s.game_genre_id = 19
+end
+
+Game.seed do |s|
+  s.id = 44
+  s.title = "マリオゴルフ"
+  s.game_genre_id = 20
+end
+
+Game.seed do |s|
+  s.id = 45
+  s.title = "シミュレーションRPG"
+  s.game_genre_id = 24
+end
+
+Game.seed do |s|
+  s.id = 46
+  s.title = "レース"
+  s.game_genre_id = 9
+end
+
+Game.seed do |s|
+  s.id = 47
+  s.title = "ターン制"
+  s.game_genre_id = 26
+end
+
+Game.seed do |s|
+  s.id = 48
+  s.title = "野球"
+  s.game_genre_id = 29
+end
+
+Game.seed do |s|
+  s.id = 49
+  s.title = "音ゲー"
+  s.game_genre_id = 12
+end
+
+Game.seed do |s|
+  s.id = 50
+  s.title = "カードゲーム"
+  s.game_genre_id = 32
+end
+
