@@ -2667,3 +2667,411 @@ Playing.seed do |s|
   s.game_id = 1
   s.commentator_id = 39
 end
+
+Playing.seed do |s|
+  s.id = 444
+  s.game_id = 42
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 445
+  s.game_id = 42
+  s.commentator_id = 2
+end
+
+Playing.seed do |s|
+  s.id = 446
+  s.game_id = 42
+  s.commentator_id = 6
+end
+
+Playing.seed do |s|
+  s.id = 447
+  s.game_id = 42
+  s.commentator_id = 7
+end
+
+Playing.seed do |s|
+  s.id = 448
+  s.game_id = 42
+  s.commentator_id = 9
+end
+
+Playing.seed do |s|
+  s.id = 449
+  s.game_id = 42
+  s.commentator_id = 10
+end
+
+Playing.seed do |s|
+  s.id = 450
+  s.game_id = 42
+  s.commentator_id = 12
+end
+
+Playing.seed do |s|
+  s.id = 451
+  s.game_id = 42
+  s.commentator_id = 13
+end
+
+Playing.seed do |s|
+  s.id = 452
+  s.game_id = 42
+  s.commentator_id = 19
+end
+
+Playing.seed do |s|
+  s.id = 453
+  s.game_id = 42
+  s.commentator_id = 28
+end
+
+Playing.seed do |s|
+  s.id = 454
+  s.game_id = 43
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 455
+  s.game_id = 43
+  s.commentator_id = 2
+end
+
+Playing.seed do |s|
+  s.id = 456
+  s.game_id = 43
+  s.commentator_id = 6
+end
+
+Playing.seed do |s|
+  s.id = 457
+  s.game_id = 44
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 458
+  s.game_id = 44
+  s.commentator_id = 2
+end
+
+Playing.seed do |s|
+  s.id = 459
+  s.game_id = 44
+  s.commentator_id = 3
+end
+
+Playing.seed do |s|
+  s.id = 460
+  s.game_id = 44
+  s.commentator_id = 4
+end
+
+Playing.seed do |s|
+  s.id = 461
+  s.game_id = 44
+  s.commentator_id = 6
+end
+
+Playing.seed do |s|
+  s.id = 462
+  s.game_id = 44
+  s.commentator_id = 9
+end
+
+Playing.seed do |s|
+  s.id = 463
+  s.game_id = 44
+  s.commentator_id = 10
+end
+
+Playing.seed do |s|
+  s.id = 464
+  s.game_id = 44
+  s.commentator_id = 11
+end
+
+Playing.seed do |s|
+  s.id = 465
+  s.game_id = 45
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 466
+  s.game_id = 45
+  s.commentator_id = 2
+end
+
+Playing.seed do |s|
+  s.id = 467
+  s.game_id = 45
+  s.commentator_id = 3
+end
+
+Playing.seed do |s|
+  s.id = 468
+  s.game_id = 45
+  s.commentator_id = 4
+end
+
+Playing.seed do |s|
+  s.id = 469
+  s.game_id = 45
+  s.commentator_id = 5
+end
+
+Playing.seed do |s|
+  s.id = 470
+  s.game_id = 45
+  s.commentator_id = 7
+end
+
+Playing.seed do |s|
+  s.id = 471
+  s.game_id = 45
+  s.commentator_id = 11
+end
+
+Playing.seed do |s|
+  s.id = 472
+  s.game_id = 45
+  s.commentator_id = 16
+end
+
+Playing.seed do |s|
+  s.id = 473
+  s.game_id = 45
+  s.commentator_id = 21
+end
+
+Playing.seed do |s|
+  s.id = 474
+  s.game_id = 45
+  s.commentator_id = 22
+end
+
+Playing.seed do |s|
+  s.id = 475
+  s.game_id = 45
+  s.commentator_id = 23
+end
+
+Playing.seed do |s|
+  s.id = 476
+  s.game_id = 45
+  s.commentator_id = 24
+end
+
+Playing.seed do |s|
+  s.id = 477
+  s.game_id = 45
+  s.commentator_id = 25
+end
+
+Playing.seed do |s|
+  s.id = 478
+  s.game_id = 45
+  s.commentator_id = 26
+end
+
+Playing.seed do |s|
+  s.id = 479
+  s.game_id = 45
+  s.commentator_id = 27
+end
+
+Playing.seed do |s|
+  s.id = 480
+  s.game_id = 45
+  s.commentator_id = 31
+end
+
+Playing.seed do |s|
+  s.id = 481
+  s.game_id = 45
+  s.commentator_id = 38
+end
+
+Playing.seed do |s|
+  s.id = 482
+  s.game_id = 45
+  s.commentator_id = 39
+end
+
+Playing.seed do |s|
+  s.id = 483
+  s.game_id = 46
+  s.commentator_id = 11
+end
+
+Playing.seed do |s|
+  s.id = 484
+  s.game_id = 46
+  s.commentator_id = 12
+end
+
+Playing.seed do |s|
+  s.id = 485
+  s.game_id = 46
+  s.commentator_id = 21
+end
+
+Playing.seed do |s|
+  s.id = 486
+  s.game_id = 46
+  s.commentator_id = 22
+end
+
+Playing.seed do |s|
+  s.id = 487
+  s.game_id = 46
+  s.commentator_id = 23
+end
+
+Playing.seed do |s|
+  s.id = 488
+  s.game_id = 47
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 489
+  s.game_id = 47
+  s.commentator_id = 3
+end
+
+Playing.seed do |s|
+  s.id = 490
+  s.game_id = 47
+  s.commentator_id = 5
+end
+
+Playing.seed do |s|
+  s.id = 491
+  s.game_id = 47
+  s.commentator_id = 7
+end
+
+Playing.seed do |s|
+  s.id = 492
+  s.game_id = 47
+  s.commentator_id = 10
+end
+
+Playing.seed do |s|
+  s.id = 493
+  s.game_id = 47
+  s.commentator_id = 15
+end
+
+Playing.seed do |s|
+  s.id = 494
+  s.game_id = 47
+  s.commentator_id = 20
+end
+
+Playing.seed do |s|
+  s.id = 495
+  s.game_id = 47
+  s.commentator_id = 24
+end
+
+Playing.seed do |s|
+  s.id = 496
+  s.game_id = 47
+  s.commentator_id = 26
+end
+
+Playing.seed do |s|
+  s.id = 497
+  s.game_id = 47
+  s.commentator_id = 28
+end
+
+Playing.seed do |s|
+  s.id = 498
+  s.game_id = 47
+  s.commentator_id = 30
+end
+
+Playing.seed do |s|
+  s.id = 499
+  s.game_id = 47
+  s.commentator_id = 35
+end
+
+Playing.seed do |s|
+  s.id = 500
+  s.game_id = 48
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 501
+  s.game_id = 48
+  s.commentator_id = 10
+end
+
+Playing.seed do |s|
+  s.id = 502
+  s.game_id = 48
+  s.commentator_id = 15
+end
+
+Playing.seed do |s|
+  s.id = 503
+  s.game_id = 48
+  s.commentator_id = 19
+end
+
+Playing.seed do |s|
+  s.id = 504
+  s.game_id = 49
+  s.commentator_id = 11
+end
+
+Playing.seed do |s|
+  s.id = 505
+  s.game_id = 49
+  s.commentator_id = 5
+end
+
+Playing.seed do |s|
+  s.id = 506
+  s.game_id = 50
+  s.commentator_id = 1
+end
+
+Playing.seed do |s|
+  s.id = 507
+  s.game_id = 50
+  s.commentator_id = 2
+end
+
+Playing.seed do |s|
+  s.id = 508
+  s.game_id = 50
+  s.commentator_id = 3
+end
+
+Playing.seed do |s|
+  s.id = 509
+  s.game_id = 50
+  s.commentator_id = 4
+end
+
+Playing.seed do |s|
+  s.id = 510
+  s.game_id = 50
+  s.commentator_id = 6
+end
+
+Playing.seed do |s|
+  s.id = 511
+  s.game_id = 50
+  s.commentator_id = 9
+end
