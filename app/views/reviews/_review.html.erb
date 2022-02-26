@@ -9,8 +9,9 @@
         <p><%= l review.updated_at %></p>
       </div>
       
-
-      <%= render 'crud_menus', review: review %>
+      <% if logged_in? %>
+        <%= render 'crud_menus', review: review %>
+      <% end %>
 
     </div>
     <div class="review-information-wrapper">

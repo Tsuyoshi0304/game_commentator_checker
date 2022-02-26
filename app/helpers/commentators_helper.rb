@@ -1,0 +1,2 @@
+module CommentatorsHelper
+end

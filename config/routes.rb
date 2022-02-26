@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
+  resources :commentators, only: %i[index]
+
   get 'commentator_searches', to: 'commentator_searches#index'
   namespace :commentator_searches do
     get 'name'
