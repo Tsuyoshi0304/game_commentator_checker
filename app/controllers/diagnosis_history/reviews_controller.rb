@@ -1,13 +1,24 @@
 class DiagnosisHistory::ReviewsController < ApplicationController
   before_action :set_review, only: %i[edit update destroy]
+  before_action :review_params, only: %i[create update]
 
   def create
-    review = current_user.reviews.build(review_params)
+    review = current_user.reviews.build(@params)
 
-    if review.save
-      redirect_to diagnosis_history_path, success: 'レビューを投稿しました'
+    path = Rails.application.routes.recognize_path(request.referrer)
+    binding.pry
+    if path[:controller] == 'commentators'
+      if review.save
+        redirect_to commentators_path, success: 'レビューを投稿しました'
+      else
+        redirect_to commentators_path, danger: '投稿に失敗しました'
+      end
     else
-      redirect_to diagnosis_history_path, danger: '投稿に失敗しました'
+      if review.save
+        redirect_to diagnosis_history_path, success: 'レビューを投稿しました'
+      else
+        redirect_to diagnosis_history_path, danger: '投稿に失敗しました'
+      end
     end
   end
 
@@ -19,6 +30,7 @@ class DiagnosisHistory::ReviewsController < ApplicationController
   end
 
   def update
+    binding.pry
     if @review.update(review_params)
       redirect_to reviews_path, success: 'レビューを更新しました'
     else
@@ -35,6 +47,7 @@ class DiagnosisHistory::ReviewsController < ApplicationController
 
   def review_params
     @params = params.require(:review).permit(:rank, :body).merge(commentator_id: params[:commentator_id])
+
     @params[:body] = 'コメントはありません' if @params[:body].blank?
 
     @params
