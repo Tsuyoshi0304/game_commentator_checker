@@ -1,6 +1,14 @@
 <div class="col-11 col-md-10 col-lg-8 container">
   <div class="row">
     <h1 class="title round">タイムライン</h1>
+
+    <% if logged_in? %>
+    <% else %>
+      <div class="login-warning round">
+        <i class="fa fa-exclamation-triangle"></i><p>レビューを投稿するには、ログインが必要です</p>
+      </div>
+    <% end %>
+
     <%= render 'reviews/review', reviews: @reviews %>
     <%= paginate @reviews %>
   </div>

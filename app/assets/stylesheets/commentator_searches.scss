@@ -2,6 +2,67 @@
   height: 100%;
 }
 
+.commentators-index-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.commentators-index-mask.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+//.not-logged-in-modal {
+//  height: 40%;
+//  width: 80%;   /* showビューの幅に合わせて設定 */
+//  background-color: white;
+//  border-radius: 80px;
+//  position: fixed;   /* スクロールで移動しないようmodalの位置を固定します */
+//  top: 20vh;
+//  /* 以下3行：モーダルを左右中央揃えにする方法 */
+//  left: 0;
+//  right: 0;
+//  margin: 0 auto;
+//  transform: translate(0, 0) scale(1);
+//  transition: 0.2s;   /* transitionでアニメーションを作成 */
+//  z-index: 2;   /* マスクより上に重なるようにする */
+
+//  .review-login-wrapper {
+//    margin-top: 30px;
+//    position: relative;
+//
+//    .to-login-page-button {
+//      width: 40%;
+//    }
+//  }
+
+//  .review-registration-wrapper {
+//    margin-top: 30px;
+//    position: relative;
+//
+//    i {
+//      position: absolute;
+//      top: 25px;
+//      left: 49%;
+//    }
+//
+//    .to-registration-page-button {
+//      width: 40%;
+//      margin-top: 10px;
+//    }
+//  }
+//}
+
+.not-logged-in-modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .search-title {
   background-color: black;
   color: white;
@@ -43,6 +104,7 @@
         background: transparent; /* 背景の灰色を消す */
         height: 40px;
         width: 70%;
+        color: black;
       }
 
       .search-name-button {
@@ -94,6 +156,8 @@
         position: absolute;
         top: 125px;
         right: 12%;
+        width: 40px;
+        height: 30px;
       }
     }
   }
@@ -198,16 +262,33 @@
   position: relative;
 }
 
-.detail-button-2 {
+.commentator-detail-button {
   background-color: black;
   color: white;
   font-size: 150%;
   width: 40px;
   height: 40px;
-	padding-left: 11px;
+  padding-left: 11px;
   position: absolute;
   top: 320px;
-  left: 43%;
+  left: 65%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+.before-login-commentator-detail-button {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  padding-left: 11px;
+  position: absolute;
+  top: 320px;
+  left: 45%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

@@ -5,13 +5,19 @@ class DiagnosisHistory::ReviewsController < ApplicationController
   def create
     review = current_user.reviews.build(@params)
 
-    path = Rails.application.routes.recognize_path(request.referrer)
-    binding.pry
+    path = Rails.application.routes.recognize_path(request.referer)
+
     if path[:controller] == 'commentators'
       if review.save
         redirect_to commentators_path, success: 'レビューを投稿しました'
       else
         redirect_to commentators_path, danger: '投稿に失敗しました'
+      end
+    elsif path[:controller] == 'commentator_searches'
+      if review.save
+        redirect_to commentator_searches_path, success: 'レビューを投稿しました'
+      else
+        redirect_to commentator_searches_path, danger: '投稿に失敗しました'
       end
     else
       if review.save
@@ -30,8 +36,7 @@ class DiagnosisHistory::ReviewsController < ApplicationController
   end
 
   def update
-    binding.pry
-    if @review.update(review_params)
+    if @review.update(@params)
       redirect_to reviews_path, success: 'レビューを更新しました'
     else
       redirect_to reviews_path, danger: '更新に失敗しました'
