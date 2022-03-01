@@ -19,12 +19,10 @@ class DiagnosisHistory::ReviewsController < ApplicationController
       else
         redirect_to commentator_searches_path, danger: '投稿に失敗しました'
       end
+    elsif review.save
+      redirect_to diagnosis_history_path, success: 'レビューを投稿しました'
     else
-      if review.save
-        redirect_to diagnosis_history_path, success: 'レビューを投稿しました'
-      else
-        redirect_to diagnosis_history_path, danger: '投稿に失敗しました'
-      end
+      redirect_to diagnosis_history_path, danger: '投稿に失敗しました'
     end
   end
 

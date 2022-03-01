@@ -9,11 +9,15 @@
 				<div class="result-wrapper">
 					<div class="col-12 col-md-10 col-lg-7 result">
 						<p><%= t('.not_found') %></p>
+            <button type="button" class="btn btn-danger random-button">ランダムで出す</button>
 					</div>
 				</div>
-				<div class="to-title-wrapper">
-					<%= link_to 'タイトルへ', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title' %>
-				</div>
+        <div class="random-commentators" style="display: none;">
+          <%= render 'shared/commentators', commentators: @random_commentators %>
+        </div>
+				<!-- <div class="to-title-random-wrapper">
+					<%= link_to 'タイトルへ', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title-random' %>
+				</div> -->
 			<% else %>
 				<div class="result-wrapper">
 					<div class="mini-result-wrapper">
