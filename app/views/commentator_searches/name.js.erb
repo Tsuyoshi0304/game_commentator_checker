@@ -1,7 +1,8 @@
 $('#name-result-js').remove();
-$('.name-result-wrapper').append("<%= j(render 'name_result', commentators: @commentators) %>").hide().fadeIn('slow');
+$('.name-result-wrapper').append("<%= j(render 'name_result', commentators: @commentators, review: @review) %>").hide().fadeIn('slow');
 
 //詳細ボタン
+//ログイン後
 $('.show-button-2').on('click', function () {
   var index = $(this).val();
   $(`#close-button-${index}`).fadeIn('slow').show();
@@ -10,7 +11,17 @@ $('.show-button-2').on('click', function () {
   $(`#show-screen-${index}`).slideDown(400);
 });
 
+//ログイン前
+$('.show-button-3').on('click', function () {
+  var index = $(this).val();
+  $(`#before-login-close-button-${index}`).fadeIn('slow').show();
+  $(`#before-login-show-button-${index}`).fadeOut('slow');
+  $(`#result-r-${index}`).animate({ height: '1100px' }, 400);
+  $(`#show-screen-${index}`).slideDown(400);
+});
+
 //閉じるボタン
+//ログイン後
 $('.close-button-2').on('click', function () {
   var index = $(this).val();
   $(`#close-button-${index}`).fadeOut('slow');
@@ -18,3 +29,92 @@ $('.close-button-2').on('click', function () {
   $(`#result-r-${index}`).animate({ height: '380px' }, 400);
   $(`#show-screen-${index}`).slideUp('fast');
 });
+
+//ログイン前
+$('.close-button-3').on('click', function () {
+  var index = $(this).val();
+  $(`#before-login-close-button-${index}`).fadeOut('slow');
+  $(`#before-login-show-button-${index}`).fadeIn('slow');
+  $(`#result-r-${index}`).animate({ height: '380px' }, 400);
+  $(`#show-screen-${index}`).slideUp('fast');
+});
+
+//星評価
+$('.star').raty({
+  size: 36,
+  starOff: '<%= image_path 'star-off.png' %>',
+  starOn: '<%= image_path 'star-on.png' %>',
+  starHalf: '<%= image_path 'star-half.png' %>',
+  scoreName: 'review[rank]', 
+  half: true
+});
+
+//1.ログイン後
+//ログイン後のレビューボタン
+$('.logged-in-review-button').on('click', function () {
+  var index = $(this).val();
+
+  //マスクを取得
+  var mask = $('.commentators-index-mask').get(index - 1);
+
+  //レビューフォームを取得
+  var review_form = $(`#logged-in-review-form-${index}`).get(0);
+
+  mask.classList.remove('hidden');
+  review_form.classList.remove('hidden');
+});
+
+//マスクをクリックしたら、マスクとフォームを非表示
+$('.commentators-index-mask').on('click', function () {
+  var index = $(this).attr('id');
+
+  //マスクを取得
+  var mask = $('.commentators-index-mask').get(index - 1);
+  //レビューフォームを取得
+
+  var review_form = $(`#logged-in-review-form-${index}`).get(0);
+
+  mask.classList.add('hidden');
+  review_form.classList.add('hidden');
+});
+
+//閉じるボタン
+$('.review-close').on('click', function () {
+  var index = $(this).attr('id');
+
+  //マスクを取得
+  var mask = $('.commentators-index-mask').get(index - 1);
+
+  //レビューフォームを取得
+  var review_form = $(`#logged-in-review-form-${index}`).get(0);
+
+  mask.classList.add('hidden');
+  review_form.classList.add('hidden');
+});
+
+//2.ログイン前
+//ログイン前のレビューボタン
+//$('.not-logged-in-review-button').on('click', function () {
+//
+//  //マスクを取得
+//  var mask = $('.commentators-index-mask').get(0);
+//
+//  //ログインモーダルを取得
+//  var login_modal = $('.not-logged-in-modal').get(0);
+//
+//  mask.classList.remove('hidden');
+//  login_modal.classList.remove('hidden');
+//});
+
+//マスクをクリックしたら、マスクとフォームを非表示
+//$('.commentators-index-mask').on('click', function () {
+//
+//  //マスクを取得
+//  var mask = $('.commentators-index-mask').get(0);
+//  //レビューフォームを取得
+//
+//  var login_modal = $('.not-logged-in-modal').get(0);
+//
+//  mask.classList.add('hidden');
+//  login_modal.classList.add('hidden');
+//});

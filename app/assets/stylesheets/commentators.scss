@@ -1,0 +1,81 @@
+.commentators-index-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.commentators-index-mask.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.commentator-review-button {
+  display: inline-block;
+  position: absolute;
+  top: 320px;
+  left: 13%;
+  width: 40%;
+}
+
+#review-button {
+  display: inline-block;
+  position: absolute;
+  top: 340px;
+  left: 13%;
+  width: 40%;
+}
+
+.commentators-index-review-form {
+  height: 40%;
+  width: 80%;   /* showビューの幅に合わせて設定 */
+  background-color: white;
+  border-radius: 80px;
+  position: fixed;   /* スクロールで移動しないようmodalの位置を固定します */
+  top: 20vh;
+  /* 以下3行：モーダルを左右中央揃えにする方法 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translate(0, 0) scale(1);
+  transition: 0.2s;   /* transitionでアニメーションを作成 */
+  z-index: 2;   /* マスクより上に重なるようにする */
+
+  i {
+    font-size: 35px;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+  }
+
+  .review-post-button {
+    margin-top: 20px;
+  }
+}
+
+.commentators-index-review-form.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.commentator-detail-button {
+  background-color: black;
+  color: white;
+  font-size: 150%;
+  width: 40px;
+  height: 40px;
+  padding-left: 11px;
+  position: absolute;
+  top: 320px;
+  left: 65%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+

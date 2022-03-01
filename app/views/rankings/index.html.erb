@@ -1,13 +1,16 @@
 <div class="col-11 col-md-10 col-lg-8 container">
   <div class="row ranking-row">
     <h1 class="title round">ランキング</h1>
+
+    <% if logged_in? %>
+    <% else %>
+      <div class="login-warning round">
+        <i class="fa fa-exclamation-triangle"></i><p>レビューを投稿するには、ログインが必要です</p>
+      </div>
+    <% end %>
+
     <div class="col-12 col-md-9 col-lg-9 ranking-total-wrapper">
       <%= render 'rankings/ranking' %>
-      <!-- <p class="ranking-order" id="ranking-order-1">1位</p>
-      <p class="ranking-order" id="ranking-order-2">2位</p>
-      <p class="ranking-order" id="ranking-order-3">3位</p>
-      <p class="ranking-order" id="ranking-order-4">4位</p>
-      <p class="ranking-order" id="ranking-order-5">5位</p> -->
     </div>
   </div>
 </div>

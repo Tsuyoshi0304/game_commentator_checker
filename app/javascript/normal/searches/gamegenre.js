@@ -11,7 +11,6 @@ $(function () {
 												<label for="child_gamegenre" class="label" id="small-category">小カテゴリー</label>
 												<div class='select-wrapper gamegenre'>
 													<select class="select" id="child_gamegenre" name="child_genre_name">
-														<option value>選択してください</option>
 														${insertHTML}
 													</select>
 												</div>

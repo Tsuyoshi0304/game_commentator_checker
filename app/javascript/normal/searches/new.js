@@ -1,51 +1,59 @@
 $(function () {
-	$('.radio-button').on('click', function () {
-		//radio-buttonクラスをクリック後の関数処理
-		$(this).closest(".q-wrapper").css("display", "none");
-		//$("#children_wrapper").css("display", "none");
-		//質問画面にあたる親要素div(class="q-wrapper")をdisplay:none;にする
-		id = $(this).attr("href");
-		//次の質問idをidに格納
-		$(id).addClass("fit").fadeIn("slow").show();
-		//次の質問にfitをつけて出力。
-	});
+  $('.radio-button').on('click', function () {
+    //radio-buttonクラスをクリック後の関数処理
+    $(this).closest(".q-wrapper").css("display", "none");
+    //$("#children_wrapper").css("display", "none");
+    //質問画面にあたる親要素div(class="q-wrapper")をdisplay:none;にする
+    id = $(this).attr("href");
+    //次の質問idをidに格納
+    $(id).addClass("fit").fadeIn("slow").show();
+    //次の質問にfitをつけて出力。
+  });
 
-	//一つ戻るボタン
-	$('.back-button').on('click', function () {
-		$(this).closest(".q-wrapper").css("display", "none");
-		id = $(this).attr("href");
-		$(id).addClass("fit").fadeIn("slow").show();
-	});
+  //一つ戻るボタン
+  $('.back-button').on('click', function () {
+    $(this).closest(".q-wrapper").css("display", "none");
+    id = $(this).attr("href");
+    $(id).addClass("fit").fadeIn("slow").show();
+  });
 
-	//詳細ボタン
+  //結果画面
+  //ランダムボタン
+  $('.random-button').on('click', function () {
+    $('.result-wrapper').fadeOut('slow');
+    $('.random-commentators').fadeIn('slow');
+    //$('.to-title-random-wrapper').fadeIn('slow');
+  });
 
-	$('.show-button').on('click', function () {
-		var index = $(this).val();
-		$(`#close-button-${index}`).fadeIn('slow').show();
-		$(`#show-button-${index}`).fadeOut('slow');
-		$(`#result-r-${index}`).animate({ height: '1130px' }, 400);
+  //詳細ボタン
 
-		$(`#show-screen-${index}`).slideDown(400);
-	});
+  $('.show-button').on('click', function () {
+    var index = $(this).val();
+    $(`#close-button-${index}`).fadeIn('slow').show();
+    $(`#show-button-${index}`).fadeOut('slow');
+    $(`#result-r-${index}`).animate({ height: '1130px' }, 400);
 
-	$('.close-button').on('click', function () {
-		var index = $(this).val();
-		$(`#close-button-${index}`).fadeOut('slow');
-		$(`#show-button-${index}`).fadeIn('slow');
-		$(`#result-r-${index}`).animate({ height: '380px' }, 400);
+    $(`#show-screen-${index}`).slideDown(400);
+  });
 
-		$(`#show-screen-${index}`).slideUp('fast');
-	});
+  $('.close-button').on('click', function () {
+    var index = $(this).val();
+    $(`#close-button-${index}`).fadeOut('slow');
+    $(`#show-button-${index}`).fadeIn('slow');
+    $(`#result-r-${index}`).animate({ height: '380px' }, 400);
 
-	//オススメボタン
-	$('#recommendation-button').on('click', function () {
-		$(".mini-result-wrapper").css("display", "none");
-		$(".recommendation").fadeIn("slow").show();
-		$(".twitter-wrapper").fadeIn("slow").show();
-		$(".registration-notice").fadeIn("slow").show();
-		$(".to-more-function").fadeIn("slow").show();
-		$(".result-screen-login").fadeIn("slow").show();
-		$(".to-title-wrapper").fadeIn("slow").show();
-	});
+    $(`#show-screen-${index}`).slideUp('fast');
+  });
+
+  //オススメボタン
+  $('#recommendation-button').on('click', function () {
+    $(".mini-result-wrapper").css("display", "none");
+    $(".recommendation").fadeIn("slow").show();
+    $(".twitter-wrapper").fadeIn("slow").show();
+    $(".registration-notice").fadeIn("slow").show();
+    $(".to-more-function").fadeIn("slow").show();
+    $(".result-screen-login").fadeIn("slow").show();
+    $(".to-title-wrapper").fadeIn("slow").show();
+  });
 });
 

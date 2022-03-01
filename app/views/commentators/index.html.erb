@@ -1,0 +1,20 @@
+<div class="col-11 container container-1">
+  <div class="row row-1">
+    <h2 class="title round">実況者一覧</h2>
+
+    <% if logged_in? %>
+    <% else %>
+      <div class="login-warning round">
+        <i class="fa fa-exclamation-triangle"></i><p>レビューを投稿するには、ログインが必要です</p>
+      </div>
+    <% end %>
+
+    <div class="" style="margin: 0 auto;">
+      <%= render 'commentator', commentators: @commentators, review: @review %>
+    </div>
+  </div>
+</div>
+
+<%= render 'star' %>
+
+

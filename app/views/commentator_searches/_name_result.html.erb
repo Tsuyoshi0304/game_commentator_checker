@@ -1,5 +1,13 @@
 <div id="name-result-js" class="name-result">
   <p class="title round">検索結果</p>
+
+  <% if logged_in? %>
+  <% else %>
+    <div class="login-warning round">
+      <i class="fa fa-exclamation-triangle"></i><p>レビューを投稿するには、ログインが必要です</p>
+    </div>
+  <% end %>
+
   <% if commentators.blank? %>
     <div class="result-wrapper">
       <div class="col-12 col-md-10 col-lg-6 result">
@@ -7,7 +15,7 @@
       </div>
     </div>
   <% else %>
-    <%= render 'commentator_searches/commentators', commentators: commentators %>
+    <%= render 'commentator_searches/commentators', commentators: commentators, review: review %>
   <% end %>
 </div>
 

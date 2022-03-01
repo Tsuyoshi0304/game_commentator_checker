@@ -4,10 +4,29 @@
       <%= image_tag 'search_item/ゲーム実況者診断-ロゴ.png', size: '200x40' %>
     <% end %>
 
+    <!-- ハンバーガーメニュー -->
     <div id="navbarSupportedContent">
-      <ul class="navbar-nav-before ml-auto main-nav align-items-center">
+      <div class="hamburger-wrapper">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+      </div>
+      <div class="header-mask hidden"></div>
+      <ul class="navbar-nav ml-auto main-nav align-items-center">
+        <li class="nav-item nav-commentators-index">
+          <%= link_to '実況者一覧', commentators_path, class: 'nav-button' %>
+        </li>
         <li class="nav-item">
-          <%= link_to 'ログイン', login_path ,class: 'nav-link' %>
+          <%= link_to '実況者検索', commentator_searches_path, class: 'nav-button' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'レビュー一覧', reviews_path, class: 'nav-button' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ランキング', ranking_path, class: 'nav-button' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ログイン', login_path, class: 'nav-button' %>
         </li>
       </ul>
     </div>

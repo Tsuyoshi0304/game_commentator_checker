@@ -1,4 +1,12 @@
 <div id="play-style-result-js" class="play-style-result">
   <p class="title round">検索結果</p>
-  <%= render 'commentator_searches/commentators', commentators: commentators %>
+
+  <% if logged_in? %>
+  <% else %>
+    <div class="login-warning round">
+      <i class="fa fa-exclamation-triangle"></i><p>レビューを投稿するには、ログインが必要です</p>
+    </div>
+  <% end %>
+
+  <%= render 'commentator_searches/commentators', commentators: commentators, review: review %>
 </div>
