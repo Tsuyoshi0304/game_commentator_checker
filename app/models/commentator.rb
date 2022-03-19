@@ -56,7 +56,7 @@ class Commentator < ApplicationRecord
 
                                        playings = Playing.playing_search(games)
 
-                                       where(id: playings.pluck(:commentator_id))
+                                       where(id: playings.map(&:commentator_id))
                                      }
 
   # サクッと診断
