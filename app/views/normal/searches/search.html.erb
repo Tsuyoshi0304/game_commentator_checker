@@ -15,9 +15,6 @@
         <div class="random-commentators" style="display: none;">
           <%= render 'shared/commentators', commentators: @random_commentators %>
         </div>
-				<!-- <div class="to-title-random-wrapper">
-					<%= link_to 'タイトルへ', root_path, data: {"turbolinks"=>false}, class: 'btn btn-primary round to-title-random' %>
-				</div> -->
 			<% else %>
 				<div class="result-wrapper">
 					<div class="mini-result-wrapper">
@@ -31,12 +28,12 @@
 				<div class="twitter-wrapper" style="display: none;">
 					<%= render 'shared/twitter', commentators: 	@similar_commentators %>
 				</div>
-				<%= render 'shared/conductor_to_registration_display_none', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
+				<%= render 'shared/registration_and_login_similar_commentators', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
 			<% end %>
 		<% else %>
 			<%= render 'shared/commentators', commentators: @commentators %>
 			<%= render 'shared/twitter', commentators: @commentators %>
-			<%= render 'shared/conductor_to_registration', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
+			<%= render 'shared/registration_and_login', commentators: @commentators, similar_commentators: @similar_commentators, mode: @mode %>
 		<% end %>
 	</div>
 </div>

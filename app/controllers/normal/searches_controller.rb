@@ -3,7 +3,7 @@ class Normal::SearchesController < ApplicationController
 
   before_action :set_gamegenre, only: %i[new]
 
-  before_action :commentator_params_hash, only: %i[search]
+  before_action :to_h_commentator_params, only: %i[search]
 
   skip_before_action :require_login, only: %i[new take_gamegenre_children search]
 
@@ -20,9 +20,9 @@ class Normal::SearchesController < ApplicationController
 
     @commentator_params_hash.store(:genre_name, genre_name)
 
-    @commentators = Commentator.normal_search(@commentator_params_hash).to_a.uniq
+    @commentators = Commentator.normal_search(@commentator_params_hash).uniq
 
-    @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash).to_a.uniq if @commentators.blank?
+    @similar_commentators = Commentator.normal_similar_search(@commentator_params_hash).uniq if @commentators.blank?
 
     if @commentators.blank? && @similar_commentators.blank?
       array = []
@@ -41,11 +41,7 @@ class Normal::SearchesController < ApplicationController
     @parents = GameGenre.where(ancestry: nil)
   end
 
-  def commentator_params_hash
-    @params = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group,
-                                                    :appearance, :vtuber, :length, :live)
-
-    @commentator_params_hash = @params.permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group,
-                                              :appearance, :vtuber, :length, :live).to_h
+  def to_h_commentator_params
+    @commentator_params_hash = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group, :appearance, :vtuber, :length, :live).to_h
   end
 end
