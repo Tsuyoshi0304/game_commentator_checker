@@ -6,8 +6,8 @@ class Simplified::SearchesController < ApplicationController
   def new; end
 
   def search
-    @commentators = Commentator.simple_search(commentator_params).to_a
-    @similar_commentators = Commentator.simple_similar_search(commentator_params).to_a if @commentators.blank?
+    @commentators = Commentator.simple_search(commentator_params)
+    @similar_commentators = Commentator.simple_similar_search(commentator_params) if @commentators.blank?
     @mode = DiagnosisHistory.modes[:simplified]
 
     simplified_diagnosis_save(@commentators.presence || @similar_commentators)
