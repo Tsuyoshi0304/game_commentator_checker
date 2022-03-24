@@ -32,7 +32,7 @@ class Commentator < ApplicationRecord
   enum appearance: { appearance_true: 1, appearance_false: 0 }
 
   # 円グラフ
-  scope :aggregate_game_genre, ->(commentator) { commentator.playing_games.pluck(:game_genre_id) }
+  scope :aggregate_game_genre, ->(commentator) { commentator.playing_games.map(&:game_genre_id) }
 
   # 名前検索
   scope :name_search, lambda { |name_params|

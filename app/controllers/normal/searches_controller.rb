@@ -27,7 +27,7 @@ class Normal::SearchesController < ApplicationController
     if @commentators.blank? && @similar_commentators.blank?
       array = []
       random_commentator = Commentator.offset(rand(Commentator.count)).first
-      @random_commentators = array.push(random_commentator)
+      @random_commentator = array.push(random_commentator)
     end
 
     @mode = DiagnosisHistory.modes[:normal]

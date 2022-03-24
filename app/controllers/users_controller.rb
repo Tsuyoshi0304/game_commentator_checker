@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(@user_params_hash)
 
     if @user.save
-      login(params[:user][:email], params[:user][:password])
+      auto_login(@user)
 
       @commentators = params[:user][:commentators]
       @similar_commentators = params[:user][:similar_commentators]
