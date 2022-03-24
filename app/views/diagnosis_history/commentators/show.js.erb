@@ -4,6 +4,7 @@ var commentator_modal = $('#commentator-modal').get(0);
 //マスクを取得
 var mask = $('#mask').get(0);
 
+//実況者モーダルの表示
 commentator_modal.innerHTML = "<%= j(render 'diagnosis_histories_show', diagnosis: @diagnosis, frequency: @frequency, index: @index, review: @review, commentator: @commentator ) %>" ;
 
 commentator_modal.classList.remove('hidden');
