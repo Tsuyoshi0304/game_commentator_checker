@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2022_02_17_164134) do
   create_table "diagnosis_histories", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "commentator_id", null: false
-    t.datetime "diagnosed_at", precision: 0, default: -> { "(CURRENT_TIMESTAMP)::timestamp(0) without time zone" }, null: false
+    t.datetime "diagnosed_at", default: "2022-03-24 11:18:49", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "mode"

@@ -35,5 +35,15 @@ module GameCommentatorChecker
     config.i18n.default_locale = :ja
     config.action_controller.include_all_helpers = true
     config.time_zone = 'Asia/Tokyo'
+
+    config.generators do |g|
+      g.test_framework :rspec,
+        fixtures: true,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs: true,
+        request_specs: true
+    end
   end
 end
