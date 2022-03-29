@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
     end
 
     it '違うemailならok' do
-      user = create(:user)
+      create(:user)
       user_with_another_email = build(:user)
       expect(user_with_another_email).to be_valid
       expect(user_with_another_email.errors).to be_empty

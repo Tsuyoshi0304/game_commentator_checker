@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Users", type: :system do
+RSpec.describe 'Users', type: :system do
   describe 'ユーザー登録に関して' do
-
     before do
       visit new_user_path
     end
@@ -57,7 +56,6 @@ RSpec.describe "Users", type: :system do
   end
 
   describe 'ログインに関して' do
-
     let(:user) { create(:user) }
 
     context '入力値が正常' do
