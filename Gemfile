@@ -56,13 +56,16 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails'
   gem 'letter_opener_web'
   gem 'onkcop'
   gem 'pre-commit'
   gem 'rails_best_practices'
+  gem 'rspec-rails'
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
+  gem 'spring-commands-rspec'
 
   # gem 'google-api-client', '0.7', require: 'google/api_client'
 end
@@ -78,7 +81,8 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'rspec-rails'
+  gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 group :production do

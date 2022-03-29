@@ -1311,6 +1311,7 @@ GEM
       mini_mime (>= 0.1.3)
       ssrf_filter (~> 1.0)
     chartkick (3.4.2)
+    childprocess (4.1.0)
     chronic (0.10.2)
     code_analyzer (0.5.5)
       sexp_processor
@@ -1365,6 +1366,13 @@ GEM
     erubis (2.7.0)
     excon (0.91.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (2.20.0)
+      i18n (>= 1.8.11, < 2)
     faraday (1.9.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -1596,6 +1604,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
+    rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -1609,6 +1618,10 @@ GEM
     seed-fu (2.3.9)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
+    selenium-webdriver (4.1.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2)
     sexp_processor (4.16.0)
     sitemap_generator (6.2.1)
       builder (~> 3.0)
@@ -1617,6 +1630,8 @@ GEM
       oauth (~> 0.5, >= 0.5.5)
       oauth2 (~> 1.0, >= 0.8.0)
     spring (2.1.1)
+    spring-commands-rspec (1.0.4)
+      spring (>= 0.9.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
       spring (>= 1.2, < 3.0)
@@ -1669,6 +1684,8 @@ DEPENDENCIES
   config
   dotenv-rails
   enum_help
+  factory_bot_rails
+  faker
   fog-aws
   font-awesome-rails
   jbuilder (~> 2.7)
@@ -1693,9 +1710,11 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (>= 6)
   seed-fu
+  selenium-webdriver
   sitemap_generator
   sorcery
   spring
+  spring-commands-rspec
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   web-console (>= 3.3.0)

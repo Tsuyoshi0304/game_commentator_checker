@@ -42,6 +42,7 @@ class Normal::SearchesController < ApplicationController
   end
 
   def to_h_commentator_params
-    @commentator_params_hash = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group, :appearance, :vtuber, :length, :live).to_h
+    @commentator_params_hash = params.require(:normal_search).permit(:parent_genre_name, :sex, :play_style, :is_forming_a_group,
+                                                                     :appearance, :vtuber, :length, :live).to_h
   end
 end
